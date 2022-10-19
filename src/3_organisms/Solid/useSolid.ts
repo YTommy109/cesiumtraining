@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { Color } from "cesium"
 
-const data:Pyramid[] = [{
+const CASHKEY = 'pyramid'
+
+const init:Pyramid[] = [{
   id:           'BB60367D-68D9-4438-9CC5-875AEAFE98FD',
   name:         '東京タワー',
   description:  '# 東京タワー\n\n![東京タワー](https://jiyujin.me/wp-content/uploads/2021/08/tokyotower02-1280x720.jpg)\n\n東京の名所',
@@ -22,11 +24,18 @@ const data:Pyramid[] = [{
 }]
 
 export const useSolid = () => {
-  const [solids, setSolids] = useState<Pyramid[]>(data)
+  const quetyClient = useQueryClient()
+  const { data } = useQuery<Pyramid[], Error>(
+    [CASHKEY],
+    async () => init,
+    {
+      staleTime: Infinity
+    }
+  )
 
   const changeLocation = (id:string, location:GeoLocation):void => {
-    setSolids((state) => state.map((it) => it.id === id ? {...it, location: location} : it))
+    quetyClient.setQueryData<Pyramid[]>([CASHKEY], (state) => state?.map((it) => it.id === id ? {...it, location: location} : it))
   }
 
-  return {solids, changeLocation}
+  return {solids: data ?? [], changeLocation}
 }

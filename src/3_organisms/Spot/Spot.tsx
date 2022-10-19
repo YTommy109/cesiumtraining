@@ -5,7 +5,6 @@ import { SpotInfoBox } from './SpotInfoBox'
 
 type Props = {
   spot:Spot
-  changeLocation:(id:string, location:GeoLocation)=>void
 }
 export const Spot:FC<Props> = ({spot, ...props}) => {
   const getGround = (location:GeoLocation):Cartesian3 =>
@@ -33,10 +32,7 @@ export const Spot:FC<Props> = ({spot, ...props}) => {
       }}
     >
     <EntityDescription>
-      <SpotInfoBox
-        spot    = {spot}
-        changeLocation  = {props.changeLocation}
-      />
+      <SpotInfoBox spot = {spot} />
     </EntityDescription>
     </Entity>
     <PolylineCollection>

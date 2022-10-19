@@ -1,20 +1,18 @@
-import { SceneMode, Camera, Rectangle } from "cesium";
-import { Viewer, Scene } from "resium"
-import { GeoJsonPanel } from '1_atoms/GeoJsonPanel'
+import { FC } from 'react'
+import { SceneMode, Camera, Rectangle } from 'cesium'
+import { Viewer, Scene } from 'resium'
+import { GeoJsonTray } from '3_organisms/GeoJsonTray'
 import { plateauTerrain } from '1_atoms/plateauTerrain'
 import { CameraMan } from '2_molecules/CameraMan'
 import { CameraBar } from '2_molecules/CameraBar'
 import { ClickMarker } from '2_molecules/ClickMarker'
-import { useSpot, SpotTray } from '3_organisms/Spot'
-import { useSolid, SolidTray } from '3_organisms/Solid'
+import { SpotTray } from '3_organisms/Spot'
+import { SolidTray } from '3_organisms/Solid'
 
-Camera.DEFAULT_VIEW_RECTANGLE = Rectangle.fromDegrees(138.6639149119039, 35.674570308151374, 140.6639149119039, 35.674570308151374);
+Camera.DEFAULT_VIEW_RECTANGLE = Rectangle.fromDegrees(135.9091994686757, 37.65489776142851, 141.78139179481337, 34.99557096196444);
 
-const CesiumPanel = () => {
-  const {spots, changeLocation: changeLocationMarkLocation} = useSpot()
-  const {solids, changeLocation: changeSolidLocation} = useSolid()
-
-  return <>
+const CesiumPanel:FC = () =>
+  <>
     <Viewer full>
       <Scene
         mode            = {SceneMode.SCENE3D}
@@ -23,20 +21,11 @@ const CesiumPanel = () => {
       <CameraMan />
       <CameraBar />
       <ClickMarker />
-      <GeoJsonPanel
-          disabled      = {false}
-      />
-      <SpotTray
-        spots           = {spots}
-        changeLocation  = {changeLocationMarkLocation}
-      />
-      <SolidTray
-        solids          = {solids}
-        changeLocation  = {changeSolidLocation}
-      />
+      <GeoJsonTray />
+      <SpotTray />
+      <SolidTray />
     </Viewer>
   </>
-}
 
 const App = () => <CesiumPanel />
 

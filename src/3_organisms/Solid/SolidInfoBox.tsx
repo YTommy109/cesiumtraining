@@ -11,9 +11,8 @@ const STL = {
 
 type Props = {
   pyramid:Pyramid
-  changeLocation:(id:string, location:GeoLocation)=>void
 }
-export const SolidInfoBox:FC<Props> = ({pyramid, changeLocation}) => {
+export const SolidInfoBox:FC<Props> = ({pyramid}) => {
   const [mode, setMode] = useState<string>('info')
 
   return <div style={STL.BOX}>
@@ -24,10 +23,6 @@ export const SolidInfoBox:FC<Props> = ({pyramid, changeLocation}) => {
       </ReactMarkdown>
 
     }
-    {mode === 'edit' && <SolidEditor
-        pyramid         = {pyramid}
-        changeLocation  = {changeLocation}
-      />
-    }
+    {mode === 'edit' && <SolidEditor pyramid = {pyramid} />}
   </div>
 }

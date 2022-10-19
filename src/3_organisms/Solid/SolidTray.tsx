@@ -1,18 +1,16 @@
 import { FC } from 'react'
 import { SolidPyramid } from '3_organisms/Solid/SolidPyramid'
+import { useSolid } from './useSolid'
 
-type Props = {
-  solids:Pyramid[]
-  changeLocation:(id:string, location:GeoLocation)=>void
-}
+export const SolidTray:FC = () => {
+  const {solids} = useSolid()
 
-export const SolidTray:FC<Props> = ({solids, changeLocation}) =>
-  <>
+  return <>
     {solids.map(it =>
       <SolidPyramid
-        key             = {it.id}
-        pyramid         = {it}
-        changeLocation  = {changeLocation}
+        key     = {it.id}
+        pyramid = {it}
       />
     )}
   </>
+}

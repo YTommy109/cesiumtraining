@@ -1,6 +1,8 @@
-import { useState } from 'react'
+import { useQuery, useQueryClient } from '@tanstack/react-query'
 
-const data:Spot[] = [{
+const CASHKEY = 'spot'
+
+const init:Spot[] = [{
   id:           'B9A77CAA-4995-493B-B20E-9FA4AE5CFEC3',
   title:        'wacca',
   description:  '# wacca\n\n![wacca](https://pbs.twimg.com/media/FfFJ1bnX0AAhd_v?format=jpg&name=small)\n\nめちゃ美味しい',
@@ -13,11 +15,18 @@ const data:Spot[] = [{
 }]
 
 export const useSpot = () => {
-  const [spots, setSpots] = useState<Spot[]>(data)
+  const quetyClient = useQueryClient()
+  const { data } = useQuery<Spot[], Error>(
+    [CASHKEY],
+    async () => init,
+    {
+      staleTime: Infinity
+    }
+  )
 
   const changeLocation = (id:string, location:GeoLocation):void => {
-    setSpots((state) => state.map((it) => it.id === id ? {...it, location: location} : it))
+    quetyClient.setQueryData<Spot[]>([CASHKEY], (state) => state?.map((it) => it.id === id ? {...it, location: location} : it))
   }
 
-  return {spots, changeLocation}
+  return {spots: data ?? [], changeLocation}
 }

@@ -11,9 +11,8 @@ const STL = {
 
 type Props = {
   spot:Spot
-  changeLocation:(id:string, location:GeoLocation)=>void
 }
-export const SpotInfoBox:FC<Props> = ({spot, changeLocation}) => {
+export const SpotInfoBox:FC<Props> = ({spot}) => {
   const [mode, setMode] = useState<string>('info')
 
   return <div style={STL.BOX}>
@@ -23,9 +22,6 @@ export const SpotInfoBox:FC<Props> = ({spot, changeLocation}) => {
         {`${spot.description}`}
       </ReactMarkdown>
     }
-    {mode === 'edit' && <SpotEditor
-        spot            = {spot}
-        changeLocation  = {changeLocation}
-    />}
+    {mode === 'edit' && <SpotEditor spot = {spot}/>}
   </div>
 }

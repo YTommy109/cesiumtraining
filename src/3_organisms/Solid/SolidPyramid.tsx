@@ -5,9 +5,8 @@ import { SolidInfoBox } from './SolidInfoBox'
 
 type Props = {
   pyramid:Pyramid
-  changeLocation:(id:string, location:GeoLocation)=>void
 }
-export const SolidPyramid:FC<Props> = ({pyramid, changeLocation}) =>
+export const SolidPyramid:FC<Props> = ({pyramid}) =>
   <Entity
     name        = {pyramid.name}
     position    = {Cartesian3.fromDegrees(pyramid.location.lon, pyramid.location.lat)}
@@ -24,7 +23,6 @@ export const SolidPyramid:FC<Props> = ({pyramid, changeLocation}) =>
       <EntityDescription>
         <SolidInfoBox
           pyramid         = {pyramid}
-          changeLocation  = {changeLocation}
           />
       </EntityDescription>
     }

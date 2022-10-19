@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import styled from 'styled-components'
 import { RightBottomStyle } from '4_templates/AbsoluteStyle'
-import { ReactComponent as CommpassIcon } from './compass_icon.svg'
+import { ReactComponent as CommpassIcon } from './icon/compass.svg'
 
 const Div = styled(RightBottomStyle)<{direction:number}>`
   svg {
