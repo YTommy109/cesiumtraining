@@ -10,7 +10,7 @@ const Table = styled.table`
 `
 
 type Props = {
-  dataListItems:DataListItem[]
+  dataListItems:DataItem[]
 }
 export const DataList:FC<Props> = ({dataListItems, ...props}) =>
   <Table>
@@ -23,8 +23,8 @@ export const DataList:FC<Props> = ({dataListItems, ...props}) =>
     </thead>
     <tbody>
       {dataListItems.map((it, idx) =>
-        <tr key={it.id} className={it.selected ? 'active' : undefined}>
-          <td>{it.selected ? '■' : '□'}</td>
+        <tr key={it.id} className={it.screenState?.selected ? 'active' : undefined}>
+          <td>{it.screenState?.selected ? '■' : '□'}</td>
           <td>{idx+1}</td>
           <td>{it.title}</td>
           <td>...</td>

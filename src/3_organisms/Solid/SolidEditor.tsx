@@ -3,7 +3,7 @@ import { LocationEntry } from '2_molecules/infobox/LocationEntry'
 import { useSolid } from './useSolid'
 
 type Props = {
-  pyramid:Pyramid
+  pyramid:PyramidItem
 }
 export const SolidEditor:FC<Props> = ({pyramid}) => {
   const {changeLocation} = useSolid()

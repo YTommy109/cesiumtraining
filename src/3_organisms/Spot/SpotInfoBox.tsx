@@ -10,7 +10,7 @@ const STL = {
 }
 
 type Props = {
-  spot:Spot
+  spot:SpotItem
 }
 export const SpotInfoBox:FC<Props> = ({spot}) => {
   const [mode, setMode] = useState<string>('info')
@@ -18,10 +18,12 @@ export const SpotInfoBox:FC<Props> = ({spot}) => {
   return <div style={STL.BOX}>
     <TabBar mode={mode} setMode={setMode} />
     {mode === 'info' &&
-      <ReactMarkdown>
+      <ReactMarkdown
+        components={{img:({node,...props})=><img style={{maxWidth:'100%'}}{...props}/>}}
+      >
         {`${spot.description}`}
       </ReactMarkdown>
     }
-    {mode === 'edit' && <SpotEditor spot = {spot}/>}
+    {mode === 'edit' && <SpotEditor spot={spot}/>}
   </div>
 }

@@ -4,7 +4,7 @@ import { Entity, EntityDescription } from "resium"
 import { SolidInfoBox } from './SolidInfoBox'
 
 type Props = {
-  pyramid:Pyramid
+  pyramid:PyramidItem
 }
 export const SolidPyramid:FC<Props> = ({pyramid}) =>
   <Entity

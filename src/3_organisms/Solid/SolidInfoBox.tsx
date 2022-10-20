@@ -10,7 +10,7 @@ const STL = {
 }
 
 type Props = {
-  pyramid:Pyramid
+  pyramid:PyramidItem
 }
 export const SolidInfoBox:FC<Props> = ({pyramid}) => {
   const [mode, setMode] = useState<string>('info')

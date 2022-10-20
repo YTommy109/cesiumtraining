@@ -4,7 +4,7 @@ import { PolylineCollection, Polyline, Entity, EntityDescription } from "resium"
 import { SpotInfoBox } from './SpotInfoBox'
 
 type Props = {
-  spot:Spot
+  spot:SpotItem
 }
 export const Spot:FC<Props> = ({spot, ...props}) => {
   const getGround = (location:GeoLocation):Cartesian3 =>

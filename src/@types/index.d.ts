@@ -1,11 +1,3 @@
-/// <reference types="vite-plugin-svgr/client" />
-
-type DataListItem = {
-  id:string,
-  title:string,
-  selected:boolean
-}
-
 type GeoRotation = {
   heading:number
   pitch:number
@@ -18,20 +10,36 @@ type GeoLocation = {
   height?:number
 }
 
-type Spot = {
-  id:string
-  title:string
-  description:string
-  location:GeoLocation
+type ScreenState = {
+  show:boolean          // 表示状態
+  selected:boolean      // 選択候補状態 (リスト上で選択)
+  active:boolean        // 選択状態 (地図上で選択)
+  focuse:boolean        // 焦点状態 (*予約)
 }
 
-type Pyramid = {
+type FileItem = {
   id:string
-  name:string
-  description?:string
-  location:GeoLocation
-  topRadius:number
-  bottomRadius:number
-  length:number
-  color:Color
+  title:string
+  url:string
 }
+interface DataItem {
+  id:string
+  title:string
+  description?:string
+  screenState?:ScreenState
+}
+
+  interface PointItem extends DataItem {
+    location:GeoLocation
+  }
+  
+    interface SpotItem extends PointItem {
+      files:FileItem[]
+    }
+
+    interface PyramidItem extends PointItem {
+      topRadius:number
+      bottomRadius:number
+      length:number
+      color:Color
+    }
