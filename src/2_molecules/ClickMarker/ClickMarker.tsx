@@ -1,6 +1,6 @@
-import { FC, useState } from 'react'
-import { Cartesian2, Cartesian3, Cartographic, ScreenSpaceEventType, Color, HorizontalOrigin, HeightReference } from "cesium"
-import { ScreenSpaceEventHandler, ScreenSpaceEvent, Entity, useCesium, EllipseGraphics, PolylineCollection, Polyline, LabelCollection, Label } from "resium"
+import {FC, useState} from 'react'
+import {Cartesian2, Cartesian3, Cartographic, ScreenSpaceEventType, Color, HorizontalOrigin, HeightReference} from 'cesium'
+import {ScreenSpaceEventHandler, ScreenSpaceEvent, Entity, useCesium, EllipseGraphics, PolylineCollection, Polyline, LabelCollection, Label} from 'resium'
 
 /**
  * クリックマーカー
@@ -8,7 +8,7 @@ import { ScreenSpaceEventHandler, ScreenSpaceEvent, Entity, useCesium, EllipseGr
 export const ClickMarker:FC = () => {
   const {camera, scene, globe} = useCesium()
   const [cartesian3, setCartesian3] = useState<Cartesian3|null>(null)
-  const [timeoutID, setTimeoutID] = useState<ReturnType<typeof setTimeout>|null>(null)
+  const [timeoutID, setTimeoutID] = useState<ReturnType<typeof setTimeout> | null>(null)
 
   const size = (camera.getMagnitude() - 6371655) / 50
   const ssize = (camera.getMagnitude() - 6371655) / 200
@@ -18,7 +18,7 @@ export const ClickMarker:FC = () => {
     return Cartesian3.fromRadians(temp.longitude, temp.latitude, temp.height + (camera.getMagnitude() - 6371655) / 10)
   }
 
-  const handleClick = (e: {position:Cartesian2} | {startPosition:Cartesian2; endPosition:Cartesian2} ): void => {
+  const handleClick = (e:{position:Cartesian2} | {startPosition:Cartesian2, endPosition:Cartesian2}):void => {
     timeoutID && clearTimeout(timeoutID)
     setTimeoutID(null)
 
@@ -52,10 +52,10 @@ export const ClickMarker:FC = () => {
           height        = {0}
           semiMajorAxis = {ssize}
           semiMinorAxis = {ssize}
-          material      = {Color.fromAlpha(Color.BLACK, .1)}
+          material      = {Color.fromAlpha(Color.BLACK, 0.1)}
           fill          = {true}
           outline       = {true}
-          outlineColor  = {Color.fromAlpha(Color.WHITE, .7)}
+          outlineColor  = {Color.fromAlpha(Color.WHITE, 0.7)}
           heightReference = {HeightReference.RELATIVE_TO_GROUND}
         />
       </Entity>
@@ -67,10 +67,10 @@ export const ClickMarker:FC = () => {
           height        = {0}
           semiMajorAxis = {size}
           semiMinorAxis = {size}
-          material      = {Color.fromAlpha(Color.BLACK, .7)}
+          material      = {Color.fromAlpha(Color.BLACK, 0.7)}
           fill          = {true}
           outline       = {true}
-          outlineColor  = {Color.fromAlpha(Color.WHITE, .5)}
+          outlineColor  = {Color.fromAlpha(Color.WHITE, 0.5)}
           heightReference = {HeightReference.RELATIVE_TO_GROUND}
         />
       </Entity>

@@ -1,13 +1,13 @@
-import { FC, useId, ChangeEventHandler } from 'react'
+import {FC, useId, ChangeEventHandler} from 'react'
 
 const STL = {
   SPAN: {
-    display:              'grid',
-    gridTemplateColumns:  '40px 200px 60px',
-    alignItems:           'center'
+    display:             'grid',
+    gridTemplateColumns: '40px 200px 60px',
+    alignItems:          'center'
   },
   LABEL_DISABLE: {
-    color:                'gray'
+    color: 'gray'
   }
 }
 
@@ -18,11 +18,11 @@ type Props = {
   max?:number
   step?:number
   disabled?:boolean
-  changeValue:(v:number)=>void
+  changeValue:(v:number) => void
 }
-export const RangeInput:FC<Props> = ({label, value, min=0, max=100, changeValue, ...props}) => {
+export const RangeInput:FC<Props> = ({label, value, min = 0, max = 100, changeValue, ...props}) => {
   const id = useId()
-  const list_id = `list_${id}`
+  const listId = `list_${id}`
 
   const handleChange:ChangeEventHandler<HTMLInputElement> = (e) => {
     changeValue(Number(e.target.value))
@@ -41,16 +41,16 @@ export const RangeInput:FC<Props> = ({label, value, min=0, max=100, changeValue,
       min           = {min}
       max           = {max}
       step          = {props.step}
-      list          = {list_id}
+      list          = {listId}
       defaultValue  = {value}
       onChange      = {handleChange}
       disabled      = {props.disabled}
     />
     <span style={{textAlign: 'right'}}>{value}</span>
-    <datalist id={list_id}>
-      <option value={min+(max - min)/4}></option>
-      <option value={min+(max - min)/2}></option>
-      <option value={min+(max - min)/4*3}></option>
+    <datalist id={listId}>
+      <option value={min + (max - min) / 4}></option>
+      <option value={min + (max - min) / 2}></option>
+      <option value={min + (max - min) / 4 * 3}></option>
     </datalist>
   </span>
 }

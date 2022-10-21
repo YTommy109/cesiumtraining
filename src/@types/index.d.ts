@@ -29,17 +29,17 @@ interface DataItem {
   screenState?:ScreenState
 }
 
-  interface PointItem extends DataItem {
-    location:GeoLocation
-  }
-  
-    interface SpotItem extends PointItem {
-      files:FileItem[]
-    }
+interface PointItem extends DataItem {
+  location:GeoLocation
+}
 
-    interface PyramidItem extends PointItem {
-      topRadius:number
-      bottomRadius:number
-      length:number
-      color:Color
-    }
+interface SpotItem extends PointItem {
+  files:FileItem[]
+}
+
+interface PyramidItem extends PointItem {
+  topRadius:number
+  bottomRadius:number
+  length:number
+  color:Color
+}

@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import {FC} from 'react'
 import styled from 'styled-components'
 
 const Table = styled.table`
@@ -25,7 +25,7 @@ export const DataList:FC<Props> = ({dataListItems, ...props}) =>
       {dataListItems.map((it, idx) =>
         <tr key={it.id} className={it.screenState?.selected ? 'active' : undefined}>
           <td>{it.screenState?.selected ? '■' : '□'}</td>
-          <td>{idx+1}</td>
+          <td>{idx + 1}</td>
           <td>{it.title}</td>
           <td>...</td>
         </tr>

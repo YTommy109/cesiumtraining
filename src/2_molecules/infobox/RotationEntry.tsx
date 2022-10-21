@@ -1,4 +1,4 @@
-import { FC, useId, ChangeEventHandler } from 'react'
+import {FC, useId, ChangeEventHandler} from 'react'
 
 type Props = {
   label:string
@@ -17,22 +17,22 @@ const DegreeRange:FC<Props> = ({label, value, handleChange, list}) => {
 
 const STL = {
   FIELDSET: {
-    borderRadius:         '8px',
-    borderColor:          'dimgray'
+    borderRadius: '8px',
+    borderColor:  'dimgray'
   },
   UL: {
-    listStyle:            'none',
-    padding:              '0'
+    listStyle: 'none',
+    padding:   '0'
   },
   LI: {
-    display:              'grid',
-    gridTemplateColumns:  '80px 220px 60px',
+    display:             'grid',
+    gridTemplateColumns: '80px 220px 60px'
   }
 }
 
 type Props2 = {
   rotation:GeoRotation
-  setRotation:(state:any)=>any
+  setRotation:(state:any) => any
 }
 export const RotationEntry:FC<Props2> = ({rotation, setRotation}) => {
   const setHeading:ChangeEventHandler<HTMLInputElement> = (e) => setRotation((state:any) => ({...state, heading: parseFloat(e.target.value)}))

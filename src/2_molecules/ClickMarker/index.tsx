@@ -1,1 +1,1 @@
-export { ClickMarker } from './ClickMarker'
+export * from './ClickMarker'

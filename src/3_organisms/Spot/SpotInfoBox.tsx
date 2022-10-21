@@ -1,11 +1,11 @@
-import { FC, useState } from 'react'
-import { TabBar } from '2_molecules/infobox/TabBar'
-import { SpotEditor } from './SpotEditor'
+import {FC, useState} from 'react'
+import {TabBar} from '2_molecules/infobox/TabBar'
+import {SpotEditor} from './SpotEditor'
 import ReactMarkdown from 'react-markdown'
 
 const STL = {
   BOX: {
-    height:         '800px'
+    height: '800px'
   }
 }
 
@@ -19,7 +19,7 @@ export const SpotInfoBox:FC<Props> = ({spot}) => {
     <TabBar mode={mode} setMode={setMode} />
     {mode === 'info' &&
       <ReactMarkdown
-        components={{img:({node,...props})=><img style={{maxWidth:'100%'}}{...props}/>}}
+        components={{img: ({node, ...props}) => <img style={{maxWidth: '100%'}}{...props}/>}}
       >
         {`${spot.description}`}
       </ReactMarkdown>

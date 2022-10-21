@@ -1,11 +1,11 @@
-import { FC, useState } from 'react'
-import { TabBar } from '2_molecules/infobox/TabBar'
-import { SolidEditor } from './SolidEditor'
+import {FC, useState} from 'react'
+import {TabBar} from '2_molecules/infobox/TabBar'
+import {SolidEditor} from './SolidEditor'
 import ReactMarkdown from 'react-markdown'
 
 const STL = {
   BOX: {
-    height:         '800px'
+    height: '800px'
   }
 }
 

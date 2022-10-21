@@ -1,29 +1,29 @@
-import { FC } from 'react'
-import { RangeInput } from '2_molecules/infobox/RangeInput'
+import {FC} from 'react'
+import {RangeInput} from '2_molecules/infobox/RangeInput'
 
 const STL = {
   FIELDSET: {
-    borderRadius:         '8px',
-    borderColor:          'dimgray'
+    borderRadius: '8px',
+    borderColor:  'dimgray'
   },
   UL: {
-    listStyle:            'none',
-    padding:              '0'
+    listStyle: 'none',
+    padding:   '0'
   },
   LI: {
-    display:              'grid',
-    gridTemplateColumns:  '80px 220px 80px'
+    display:             'grid',
+    gridTemplateColumns: '80px 220px 80px'
   }
 }
 
 type Props = {
   location:GeoLocation
-  changeLocation:(location:GeoLocation)=>void
+  changeLocation:(location:GeoLocation) => void
 }
 export const LocationEntry:FC<Props> = ({location, changeLocation}) => {
-  const setLon    = (val:number) => changeLocation({...location, lon:val})
-  const setLat    = (val:number) => changeLocation({...location, lat:val})
-  const setHeight = (val:number) => changeLocation({...location, height:val})
+  const setLon    = (val:number):void => changeLocation({...location, lon: val})
+  const setLat    = (val:number):void => changeLocation({...location, lat: val})
+  const setHeight = (val:number):void => changeLocation({...location, height: val})
 
   return <fieldset style={STL.FIELDSET}>
     <legend>位置</legend>
@@ -35,7 +35,7 @@ export const LocationEntry:FC<Props> = ({location, changeLocation}) => {
           changeValue = {setLon}
           min         = {-180}
           max         = {180}
-          step        = {.001}
+          step        = {0.001}
         />
       </li>
       <li style={STL.LI}>
@@ -45,7 +45,7 @@ export const LocationEntry:FC<Props> = ({location, changeLocation}) => {
           changeValue = {setLat}
           min         = {-90}
           max         = {90}
-          step        = {.001}
+          step        = {0.001}
         />
       </li>
       <li style={STL.LI}>
@@ -56,7 +56,7 @@ export const LocationEntry:FC<Props> = ({location, changeLocation}) => {
           min           = {0}
           max           = {10000}
           step          = {10}
-          disabled      = {!location.height}
+          disabled      = {!(location.height ?? true)}
         />}
       </li>
     </ul>

@@ -1,7 +1,7 @@
-import { FC } from 'react'
+import {FC} from 'react'
 import styled from 'styled-components'
-import { DataList } from '2_molecules/DataList'
-import { LeftTopStyle } from '4_templates/AbsoluteStyle'
+import {DataList} from '2_molecules/DataList'
+import {LeftTopStyle} from '4_templates/AbsoluteStyle'
 
 const ListPalet = styled(LeftTopStyle)`
   top:              80px;

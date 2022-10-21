@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import { GeoJsonDataSource } from 'resium'
+import {FC} from 'react'
+import {GeoJsonDataSource} from 'resium'
 
 export const GeoJsonTray:FC = () =>
   <>
