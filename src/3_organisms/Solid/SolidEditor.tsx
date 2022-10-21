@@ -1,12 +1,14 @@
 import { FC } from 'react'
 import { LocationEntry } from '2_molecules/infobox/LocationEntry'
-import { useSolid } from './useSolid'
+import { usePointItemUtil } from 'controller/useDataItem'
+
+const CASHKEY = 'pyramid'
 
 type Props = {
   pyramid:PyramidItem
 }
 export const SolidEditor:FC<Props> = ({pyramid}) => {
-  const {changeLocation} = useSolid()
+  const {changeLocation} = usePointItemUtil(CASHKEY)
   const setLocation = (val:GeoLocation) => changeLocation(pyramid.id, val)
 
   return <>

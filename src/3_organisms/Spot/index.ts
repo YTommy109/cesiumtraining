@@ -1,2 +1,1 @@
-export { SpotTray } from './SpotTray'
-export { useSpot } from './useSpot'
+export * from './SpotTray'

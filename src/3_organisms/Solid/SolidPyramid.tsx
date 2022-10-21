@@ -8,7 +8,7 @@ type Props = {
 }
 export const SolidPyramid:FC<Props> = ({pyramid}) =>
   <Entity
-    name        = {pyramid.name}
+    name        = {pyramid.title}
     position    = {Cartesian3.fromDegrees(pyramid.location.lon, pyramid.location.lat)}
     cylinder    = {{
       topRadius:        pyramid.topRadius,

@@ -1,2 +1,1 @@
-export { SolidTray } from './SolidTray'
-export { useSolid } from './useSolid'
+export * from './SolidTray'

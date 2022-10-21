@@ -1,13 +1,14 @@
 import { FC } from 'react'
 import { LocationEntry } from '2_molecules/infobox/LocationEntry'
-import { useSpot } from './useSpot'
+import { usePointItemUtil } from 'controller/useDataItem'
 
+const CASHKEY = 'spot'
 const COLORS = ['black', 'gray', 'red', 'pink', 'blue', 'green', 'yellow', 'white']
 type Props = {
   spot:SpotItem
 }
 export const SpotEditor:FC<Props> = ({spot}) => {
-  const {changeLocation} = useSpot()
+  const {changeLocation} = usePointItemUtil(CASHKEY)
   const setLocation = (val:GeoLocation) => changeLocation(spot.id, val)
 
   return <>
