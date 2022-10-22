@@ -16,28 +16,22 @@ type ScreenState = {
   active:boolean        // 選択状態 (地図上で選択)
   focuse:boolean        // 焦点状態 (*予約)
 }
-
-type FileItem = {
-  id:string
-  title:string
-  url:string
-}
-interface DataItem {
+interface VisualItem {
   id:string
   title:string
   description?:string
   screenState?:ScreenState
 }
 
-interface PointItem extends DataItem {
+interface LocationItem extends VisualItem {
   location:GeoLocation
 }
 
-interface SpotItem extends PointItem {
-  files:FileItem[]
+interface SpotItem extends LocationItem {
+  links:string[]
 }
 
-interface PyramidItem extends PointItem {
+interface PyramidItem extends LocationItem {
   topRadius:number
   bottomRadius:number
   length:number

@@ -1,15 +1,18 @@
-import {FC} from 'react'
+import {FC, Fragment} from 'react'
 import {LocationEntry} from '2_molecules/infobox/LocationEntry'
-import {usePointItemUtil} from 'controller/useDataItem'
+import {LinkImageInput} from '2_molecules/infobox/LinkImageInput'
+import {useLocationItem} from 'controller/useVisualItem'
+import {CASHKEY, useSpotItem} from './useSpotItem'
 
-const CASHKEY = 'spot'
 const COLORS = ['black', 'gray', 'red', 'pink', 'blue', 'green', 'yellow', 'white']
 interface Props {
   spot:SpotItem
 }
 export const SpotEditor:FC<Props> = ({spot}) => {
-  const {changeLocation} = usePointItemUtil(CASHKEY)
+  const {changeLocation} = useLocationItem(CASHKEY)
+  const {pushLink} = useSpotItem()
   const setLocation = (val:GeoLocation):void => changeLocation(spot.id, val)
+  const addLink = (url:string):void => pushLink(spot.id, url)
 
   return <>
     <LocationEntry
@@ -24,22 +27,26 @@ export const SpotEditor:FC<Props> = ({spot}) => {
     </div>
     <br />
     <div>
-      <input type="radio" style={{display: 'none'}} /><img src="https://pbs.twimg.com/media/Fcvzw3aWYAAvYAk?format=jpg&name=small" style={{width: '80px', height: '60px'}} />
-      <input type="radio" style={{display: 'none'}} /><img src="https://pbs.twimg.com/media/FYFHgdtXkAA9MPq?format=jpg&name=small" style={{width: '80px', height: '60px'}} />
-      <input type="radio" style={{display: 'none'}} /><img src="https://pbs.twimg.com/media/FSiACdhXsAAbZGM?format=jpg&name=small" style={{width: '80px', height: '60px'}} />
-      <input type="radio" style={{display: 'none'}} /><img src="https://pbs.twimg.com/media/FPKIu18XEAAqXlb?format=jpg&name=small" style={{width: '80px', height: '60px'}} />
-      <input type="radio" style={{display: 'none'}} /><img src="https://pbs.twimg.com/media/FOCrLatWYAsisz8?format=jpg&name=small" style={{width: '80px', height: '60px'}} />
-      <input type="radio" style={{display: 'none'}} /><img src="https://pbs.twimg.com/media/FNZeYSYX0AIasA9?format=jpg&name=small" style={{width: '80px', height: '60px'}} />
+      {spot.links.map(it =>
+        <Fragment key={it}>
+          <input type="radio" style={{display: 'none'}} />
+          <img src={it} style={{width: '80px', height: '60px'}} />
+        </Fragment>
+      )}
     </div>
     <br />
-    <input type="file" />
+    <LinkImageInput
+      label        = "URL"
+      placeholder  = 'URL for the image.'
+      addLink      = {addLink}
+      />
     <br />
     <br />
     <textarea
       defaultValue = {spot.description}
       style = {{resize: 'vertical'}}
       rows = {20}
-      cols = {55}
+      cols = {56}
     />
   </>
 }

@@ -1,9 +1,9 @@
 import {useQuery, useQueryClient} from '@tanstack/react-query'
 
-type ReturnDataItem<T> = {
+type ReturnVisualItem<T> = {
   data:T[]
 }
-export const useDataItem = <T extends DataItem = DataItem>(cashkey:string, initialData?:T[]):ReturnDataItem<T> => {
+export const useVisualItem = <T extends VisualItem = VisualItem>(cashkey:string, initialData?:T[]):ReturnVisualItem<T> => {
   const {data} = useQuery<T[], Error>(
     [cashkey],
     {enabled: false, initialData}
@@ -12,18 +12,18 @@ export const useDataItem = <T extends DataItem = DataItem>(cashkey:string, initi
   return {data: data ?? []}
 }
 
+const toShow = (state:ScreenState):ScreenState => ({...state, selected: true})
+const toHide = (state:ScreenState):ScreenState => ({...state, selected: false})
+
 type ReturnDataItemUtil = {
-  selectDataItem:(id:string) => void
-  deselectDataItem:(id:string) => void
+  select:(id:string) => void
+  deselect:(id:string) => void
 }
-export const useDataItemUtil = (cashkey:string):ReturnDataItemUtil => {
+export const useVisualItemUtil = (cashkey:string):ReturnDataItemUtil => {
   const quetyClient = useQueryClient()
 
-  const toShow = (state:ScreenState):ScreenState => ({...state, selected: true})
-  const toHide = (state:ScreenState):ScreenState => ({...state, selected: false})
-
-  const selectDataItem = (id:string):void => {
-    quetyClient.setQueryData<Array<Required<DataItem>>>([cashkey], (state) => {
+  const select = (id:string):void => {
+    quetyClient.setQueryData<Array<Required<VisualItem>>>([cashkey], (state) => {
       if (state == null) return []
       return state.map((it) =>
         it.id !== id
@@ -33,8 +33,8 @@ export const useDataItemUtil = (cashkey:string):ReturnDataItemUtil => {
     })
   }
 
-  const deselectDataItem = (id:string):void => {
-    quetyClient.setQueryData<Array<Required<DataItem>>>([cashkey], (state) => {
+  const deselect = (id:string):void => {
+    quetyClient.setQueryData<Array<Required<VisualItem>>>([cashkey], (state) => {
       if (state == null) return []
       return state.map((it) =>
         it.id !== id
@@ -44,17 +44,17 @@ export const useDataItemUtil = (cashkey:string):ReturnDataItemUtil => {
     })
   }
 
-  return {selectDataItem, deselectDataItem}
+  return {select, deselect}
 }
 
-type ReturnPointItemUtil = {
+type ReturnLocationItem = {
   changeLocation:(id:string, location:GeoLocation) => void
 }
-export const usePointItemUtil = (cashkey:string):ReturnPointItemUtil => {
+export const useLocationItem = (cashkey:string):ReturnLocationItem => {
   const quetyClient = useQueryClient()
 
   const changeLocation = (id:string, location:GeoLocation):void => {
-    quetyClient.setQueryData<Array<Required<PointItem>>>([cashkey], (state) => {
+    quetyClient.setQueryData<LocationItem[]>([cashkey], (state) => {
       if (state == null) return []
       return state.map((it) =>
         it.id !== id

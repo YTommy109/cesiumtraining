@@ -1,7 +1,7 @@
 import {FC} from 'react'
 import {Color} from 'cesium'
 import {SolidPyramid} from '3_organisms/Solid/SolidPyramid'
-import {useDataItem} from 'controller/useDataItem'
+import {useVisualItem} from 'controller/useVisualItem'
 
 const CASHKEY = 'pyramid'
 
@@ -26,7 +26,7 @@ const init:PyramidItem[] = [{
 }]
 
 export const SolidTray:FC = () => {
-  const {data:solids} = useDataItem<PyramidItem>(CASHKEY, init)
+  const {data:solids} = useVisualItem<PyramidItem>(CASHKEY, init)
 
   return <>
     {solids.map(it =>

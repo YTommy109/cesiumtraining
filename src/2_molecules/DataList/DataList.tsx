@@ -10,7 +10,7 @@ const Table = styled.table`
 `
 
 type Props = {
-  dataListItems:DataItem[]
+  dataListItems:VisualItem[]
 }
 export const DataList:FC<Props> = ({dataListItems, ...props}) =>
   <Table>
