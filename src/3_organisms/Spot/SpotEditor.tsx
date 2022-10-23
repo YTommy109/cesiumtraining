@@ -11,11 +11,13 @@ interface Props {
 export const SpotEditor:FC<Props> = ({spot}) => {
   const id = useId()
   const {changeLocation} = useLocationItem(CASHKEY)
-  const {pushLink, choseBillboard} = useSpotItem()
+  const {pushLink, choseBillboard, setBgColor} = useSpotItem()
   const setLocation = (val:GeoLocation):void => changeLocation(spot.id, val)
   const addLink = (url:string):void => pushLink(spot.id, url)
   const clickImage:ChangeEventHandler<HTMLInputElement> = (e) =>
     choseBillboard(spot.id, parseInt(e.target.value))
+  const clickBgColor:ChangeEventHandler<HTMLInputElement> = (e) =>
+    setBgColor(spot.id, e.target.value)
 
   return <>
     <LocationEntry
@@ -25,7 +27,11 @@ export const SpotEditor:FC<Props> = ({spot}) => {
     <br />
     <div style={{display: 'grid', gridTemplateColumns: '30px repeat(8, 20px)'}}>色:
       {COLORS.map(it =>
-        <span key={it} style={{backgroundColor: it}}></span>
+      <Fragment key={it}>
+        <input id={`${id}_color_${it}`} type="radio" name="bgcolor" style={{display: 'none'}} value={it} onChange={clickBgColor} />
+        <label htmlFor={`${id}_color_${it}`} style={{backgroundColor: it, width: '20px'}}>
+        </label>
+      </Fragment>
       )}
     </div>
     <br />

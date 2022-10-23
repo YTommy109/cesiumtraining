@@ -26,7 +26,7 @@ export const Spot:FC<Props> = ({spot}) => {
       label       = {{
         text:              spot.title,
         scale:             0.4,
-        backgroundColor:   Color.fromAlpha(Color.BLUE, 0.4),
+        backgroundColor:   Color.fromAlpha(Color.fromCssColorString(spot.bgColor), 0.5),
         showBackground:    true,
         backgroundPadding: padding
       }}

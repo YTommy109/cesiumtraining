@@ -28,8 +28,9 @@ interface LocationItem extends VisualItem {
 }
 
 interface SpotItem extends LocationItem {
-  keylink:number|null   // リンクのうち地図表示で使うもの
   links:string[]        // 画像リンク集
+  keylink:number|null   // リンクのうち地図表示で使うもの
+  bgColor:string        // ラベル背景色 (css カラー文字列)
 }
 
 interface PyramidItem extends LocationItem {

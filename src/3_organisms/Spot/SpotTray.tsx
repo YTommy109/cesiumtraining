@@ -9,6 +9,7 @@ const init:SpotItem[] = [{
   title:       'wacca',
   description: '# wacca\n\n![wacca](https://pbs.twimg.com/media/FfFJ1bnX0AAhd_v?format=jpg&name=small)\n\nめちゃ美味しい',
   location:    {lon: 139.77386052796396, lat: 35.68312191668824},
+  bgColor:     'black',
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/FfkDbYWXoAAAcg7?format=jpg&name=small',
@@ -20,6 +21,7 @@ const init:SpotItem[] = [{
   title:       'and Curry',
   description: '# and Curry\n\n![and Curry 1](https://pbs.twimg.com/media/Fcvzw3aWYAAvYAk?format=jpg&name=small)\n\nめちゃ美味しい\n\nターメリックミルクも落ち着く味わい\n\n![and Curry 2](https://pbs.twimg.com/media/FSiACdhXsAAbZGM?format=jpg&name=small)',
   location:    {lon: 139.65856919807263, lat: 35.664074212990144},
+  bgColor:     'black',
   keylink:     1,
   links:       [
     'https://pbs.twimg.com/media/Fcvzw3aWYAAvYAk?format=jpg&name=small',
