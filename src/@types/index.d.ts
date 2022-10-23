@@ -28,7 +28,8 @@ interface LocationItem extends VisualItem {
 }
 
 interface SpotItem extends LocationItem {
-  links:string[]
+  keylink:number|null   // リンクのうち地図表示で使うもの
+  links:string[]        // 画像リンク集
 }
 
 interface PyramidItem extends LocationItem {

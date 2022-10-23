@@ -1,12 +1,12 @@
 import {FC, useMemo} from 'react'
 import {Cartesian2, Cartesian3, Color} from 'cesium'
-import {PolylineCollection, Polyline, Entity, EntityDescription} from 'resium'
+import {PolylineCollection, Polyline, Entity, EntityDescription, BillboardGraphics} from 'resium'
 import {SpotInfoBox} from './SpotInfoBox'
 
 type Props = {
   spot:SpotItem
 }
-export const Spot:FC<Props> = ({spot, ...props}) => {
+export const Spot:FC<Props> = ({spot}) => {
   const getGround = (location:GeoLocation):Cartesian3 =>
     Cartesian3.fromDegrees(location.lon, location.lat, 0)
   const getMidair = (location:GeoLocation):Cartesian3 =>
@@ -31,9 +31,14 @@ export const Spot:FC<Props> = ({spot, ...props}) => {
         backgroundPadding: padding
       }}
     >
-    <EntityDescription>
-      <SpotInfoBox spot = {spot} />
-    </EntityDescription>
+      {spot.keylink !== null && <BillboardGraphics
+        image     = {spot.links[spot.keylink]}
+        rotation  = {0}
+        scale     = {0.1}
+      />}
+      <EntityDescription>
+        <SpotInfoBox spot = {spot} />
+      </EntityDescription>
     </Entity>
     <PolylineCollection>
       <Polyline

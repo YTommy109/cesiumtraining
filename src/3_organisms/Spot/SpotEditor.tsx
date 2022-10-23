@@ -1,4 +1,4 @@
-import {FC, Fragment} from 'react'
+import {FC, Fragment, ChangeEventHandler, useId} from 'react'
 import {LocationEntry} from '2_molecules/infobox/LocationEntry'
 import {LinkImageInput} from '2_molecules/infobox/LinkImageInput'
 import {useLocationItem} from 'controller/useVisualItem'
@@ -9,10 +9,13 @@ interface Props {
   spot:SpotItem
 }
 export const SpotEditor:FC<Props> = ({spot}) => {
+  const id = useId()
   const {changeLocation} = useLocationItem(CASHKEY)
-  const {pushLink} = useSpotItem()
+  const {pushLink, choseBillboard} = useSpotItem()
   const setLocation = (val:GeoLocation):void => changeLocation(spot.id, val)
   const addLink = (url:string):void => pushLink(spot.id, url)
+  const clickImage:ChangeEventHandler<HTMLInputElement> = (e) =>
+    choseBillboard(spot.id, parseInt(e.target.value))
 
   return <>
     <LocationEntry
@@ -27,10 +30,12 @@ export const SpotEditor:FC<Props> = ({spot}) => {
     </div>
     <br />
     <div>
-      {spot.links.map(it =>
+      {spot.links.map((it, idx) =>
         <Fragment key={it}>
-          <input type="radio" style={{display: 'none'}} />
-          <img src={it} style={{width: '80px', height: '60px'}} />
+          <input id={`${id}_${idx}`} type="radio" name="keylink" style={{display: 'none'}} value={idx} onChange={clickImage} />
+          <label htmlFor={`${id}_${idx}`}>
+            <img src={it} style={{width: '80px', height: '60px'}} />
+          </label>
         </Fragment>
       )}
     </div>
@@ -40,7 +45,6 @@ export const SpotEditor:FC<Props> = ({spot}) => {
       placeholder  = 'URL for the image.'
       addLink      = {addLink}
       />
-    <br />
     <br />
     <textarea
       defaultValue = {spot.description}
