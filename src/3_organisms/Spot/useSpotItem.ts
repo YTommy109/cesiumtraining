@@ -12,38 +12,25 @@ type ReturnSpotItem = {
 export const useSpotItem = ():ReturnSpotItem => {
   const quetyClient = useQueryClient()
 
-  const pushLink = (id:string, url:string):void => {
+  const propUpdate = (id:string, callback:(state:SpotItem) => SpotItem):void => {
     quetyClient.setQueryData<SpotItem[]>([CASHKEY], (state) => {
       if (state == null) return []
       return state.map((it) =>
         it.id !== id
           ? it
-          : {...it, links: pushArray(it.links, url)}
+          : callback(it)
       )
     })
   }
 
-  const choseBillboard = (id:string, index:number):void => {
-    quetyClient.setQueryData<SpotItem[]>([CASHKEY], (state) => {
-      if (state == null) return []
-      return state.map((it) =>
-        it.id !== id
-          ? it
-          : {...it, keylink: index}
-      )
-    })
-  }
+  const pushLink = (id:string, url:string):void =>
+    propUpdate(id, (state) => ({...state, links: pushArray(state.links, url)}))
 
-  const setBgColor = (id:string, color:string):void => {
-    quetyClient.setQueryData<SpotItem[]>([CASHKEY], (state) => {
-      if (state == null) return []
-      return state.map((it) =>
-        it.id !== id
-          ? it
-          : {...it, bgColor: color}
-      )
-    })
-  }
+  const choseBillboard = (id:string, index:number):void =>
+    propUpdate(id, (state) => ({...state, keylink: index}))
+
+  const setBgColor = (id:string, color:string):void =>
+    propUpdate(id, (state) => ({...state, bgColor: color}))
 
   return {pushLink, choseBillboard, setBgColor}
 }
