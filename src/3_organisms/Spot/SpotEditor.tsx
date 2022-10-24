@@ -1,4 +1,4 @@
-import {FC, Fragment, ChangeEventHandler, useId} from 'react'
+import {FC, ChangeEventHandler, useId} from 'react'
 import {LocationEntry} from '2_molecules/infobox/LocationEntry'
 import {LinkImageInput} from '2_molecules/infobox/LinkImageInput'
 import {useLocationItem} from 'controller/useVisualItem'
@@ -21,40 +21,44 @@ export const SpotEditor:FC<Props> = ({spot}) => {
 
   return <>
     <LocationEntry
-      location = {spot.location}
-      changeLocation = {setLocation}
+      location        = {spot.location}
+      changeLocation  = {setLocation}
     />
     <br />
-    <div style={{display: 'grid', gridTemplateColumns: '30px repeat(8, 20px)'}}>色:
+    <div className="color_picker">色:
       {COLORS.map(it =>
-      <Fragment key={it}>
-        <input id={`${id}_color_${it}`} type="radio" name="bgcolor" style={{display: 'none'}} value={it} onChange={clickBgColor} />
-        <label htmlFor={`${id}_color_${it}`} style={{backgroundColor: it, width: '20px'}}>
+      <span key={it}>
+        <input id={`${id}_color_${it}`} type="radio" name="bgcolor" value={it} onChange={clickBgColor} checked={it===spot.bgColor} />
+        <label htmlFor={`${id}_color_${it}`} style={{backgroundColor: it}}>
+          &nbsp;&nbsp;&nbsp;
         </label>
-      </Fragment>
+      </span>
       )}
     </div>
     <br />
-    <div>
+    <div className="image_picker">
       {spot.links.map((it, idx) =>
-        <Fragment key={it}>
-          <input id={`${id}_${idx}`} type="radio" name="keylink" style={{display: 'none'}} value={idx} onChange={clickImage} />
+        <span key={it}>
+          <input id={`${id}_${idx}`} type="radio" name="keylink" value={idx} onChange={clickImage} checked={idx===spot.keylink} />
           <label htmlFor={`${id}_${idx}`}>
-            <img src={it} style={{width: '80px', height: '60px'}} />
+            <img src={it} alt="画像" />
           </label>
-        </Fragment>
+        </span>
       )}
     </div>
     <br />
     <LinkImageInput
-      label        = "URL"
-      placeholder  = 'URL for the image.'
-      addLink      = {addLink}
+      label         = "URL:"
+      placeholder   = 'URL for the image.'
+      addLink       = {addLink}
       />
     <br />
+    <label htmlFor  ={`${id}_description`}>
+      情報:
+    </label>
     <textarea
+      id={`${id}_description`}
       defaultValue = {spot.description}
-      style = {{resize: 'vertical'}}
       rows = {20}
       cols = {56}
     />

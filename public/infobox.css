@@ -1,0 +1,66 @@
+textarea {
+  resize:                 vertical;
+}
+
+div.org_infobox {
+  height:                 600px;
+}
+
+.org_infobox input {
+  color:                gray;
+}
+
+.org_infobox img {
+  max-width:              100%;
+}
+
+.color_picker {
+  display:                grid;
+  grid-template-columns:  30px repeat(8, 20px);
+  grid-column-gap:        1px;
+}
+
+.color_picker span {
+  width:                  100%;
+}
+
+.color_picker input[type=radio] {
+  display:                none;
+  width:                  0;
+}
+
+.color_picker input[type=radio]+label {
+  border:                 thin solid black;
+  border-radius:          12px;
+}
+
+.color_picker input[type=radio]:checked+label {
+  border:                 medium solid gainsboro;
+}
+
+.image_picker {
+  display:                grid;
+  grid-template-columns:  repeat(5, 80px);
+  grid-column-gap:        2px;
+}
+
+.image_picker span {
+  padding:                3px;
+}
+
+.image_picker img {
+  max-width:              80px;
+  max-height:             60px;
+}
+
+.image_picker input[type=radio] {
+  display:                none;
+}
+
+.image_picker input[type=radio]+label {
+  border-bottom:          thin solid black;
+}
+
+.image_picker input[type=radio]:checked+label {
+  border-bottom:          medium solid gainsboro;
+}
