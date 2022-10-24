@@ -57,10 +57,10 @@ export const SpotEditor:FC<Props> = ({spot}) => {
       情報:
     </label>
     <textarea
-      id={`${id}_description`}
-      defaultValue = {spot.description}
-      rows = {20}
-      cols = {56}
+      id            = {`${id}_description`}
+      defaultValue  = {spot.description}
+      rows          = {20}
+      cols          = {56}
     />
   </>
 }

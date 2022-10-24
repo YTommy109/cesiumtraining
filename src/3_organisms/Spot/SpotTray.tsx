@@ -3,6 +3,7 @@ import {Spot} from '3_organisms/Spot/Spot'
 import {SpotList} from './SpotList'
 import {useVisualItem} from 'controller/useVisualItem'
 import {CASHKEY} from './useSpotItem'
+import {SpotMarker} from './SpotMarker'
 
 const init:SpotItem[] = [{
   id:          'B9A77CAA-4995-493B-B20E-9FA4AE5CFEC3',
@@ -37,6 +38,7 @@ export const SpotTray:FC = () => {
   const {data:spots} = useVisualItem<SpotItem>(CASHKEY, init)
 
   return <>
+    <SpotMarker />
     <SpotList
       spots = {spots}
     />

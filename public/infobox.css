@@ -1,9 +1,5 @@
-textarea {
+.org_infobox textarea {
   resize:                 vertical;
-}
-
-div.org_infobox {
-  height:                 600px;
 }
 
 .org_infobox input {

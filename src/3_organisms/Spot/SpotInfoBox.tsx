@@ -9,7 +9,7 @@ type Props = {
 export const SpotInfoBox:FC<Props> = ({spot}) => {
   const [mode, setMode] = useState<string>('info')
 
-  return <div className="org_infobox">
+  return <div className="org_infobox" style={{minHeight: '400px'}}>
     <link href="/infobox.css" rel="stylesheet"></link>
     <TabBar mode={mode} setMode={setMode} />
     {mode === 'info' &&

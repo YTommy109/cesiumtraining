@@ -33,7 +33,7 @@ export const LinkImageInput:FC<Props> = ({label, placeholder, disabled, addLink}
     <input
       id            = {id}
       type          = "url"
-      defaultValue  = {link}
+      value         = {link}
       onChange      = {(e) => setLink(e.target.value)}
       disabled      = {disabled}
       placeholder   = {placeholder}

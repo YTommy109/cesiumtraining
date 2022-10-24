@@ -62,6 +62,7 @@ export const ClickMarker:FC = () => {
       <Entity
         name            = "Click marker1"
         position        = {cartesian3}
+        onClick         = {() => console.log('clicked!')}
         >
         <EllipseGraphics
           height        = {0}
