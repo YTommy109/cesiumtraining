@@ -2,8 +2,9 @@ import {FC, useId, ChangeEventHandler} from 'react'
 
 const STL = {
   SPAN: {
+    width:               '100%',
     display:             'grid',
-    gridTemplateColumns: '40px 200px 60px',
+    gridTemplateColumns: '70px 340px',
     alignItems:          'center'
   },
   LABEL_DISABLE: {
@@ -42,11 +43,10 @@ export const RangeInput:FC<Props> = ({label, value, min = 0, max = 100, changeVa
       max           = {max}
       step          = {props.step}
       list          = {listId}
-      defaultValue  = {value}
+      value         = {value}
       onChange      = {handleChange}
       disabled      = {props.disabled}
     />
-    <span style={{textAlign: 'right'}}>{value}</span>
     <datalist id={listId}>
       <option value={min + (max - min) / 4}></option>
       <option value={min + (max - min) / 2}></option>

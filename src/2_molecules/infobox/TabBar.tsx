@@ -1,4 +1,5 @@
 import {ChangeEventHandler, FC} from 'react'
+import {FaTrash} from 'react-icons/fa'
 
 const STL = {
   HIDDEN: {
@@ -6,7 +7,7 @@ const STL = {
   },
   TAB_BAR: {
     display:             'grid',
-    gridTemplateColumns: '40px 40px',
+    gridTemplateColumns: '40px 40px 1fr 14px',
     borderBottom:        'thin solid dimgray'
   }
 }
@@ -27,6 +28,8 @@ export const TabBar:FC<Props> = ({mode, setMode}) => {
     <div style={STL.TAB_BAR}>
       <label style={styleTabItem(mode === 'info')} htmlFor="mode_info">情報</label>
       <label style={styleTabItem(mode === 'edit')} htmlFor="mode_edit">編集</label>
+      <br />
+      <FaTrash onClick={() => console.log()} />
     </div>
   </>
 }

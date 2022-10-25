@@ -7,9 +7,11 @@ export const CASHKEY = 'spot'
 
 type ReturnSpotItem = {
   create:(location:GeoLocation) => void
+  setTitle:(id:string, title:string) => void
   pushLink:(id:string, url:string) => void
   choseBillboard:(id:string, index:number) => void
   setBgColor:(id:string, color:string) => void
+  setLabelHeight:(id:string, height:number) => void
 }
 export const useSpotItem = ():ReturnSpotItem => {
   const quetyClient = useQueryClient()
@@ -24,7 +26,8 @@ export const useSpotItem = ():ReturnSpotItem => {
         location,
         links:       [],
         keylink:     null,
-        bgColor:     'black'
+        bgColor:     'black',
+        labelHeight: 100
       }]
     })
   }
@@ -39,6 +42,8 @@ export const useSpotItem = ():ReturnSpotItem => {
       )
     })
   }
+  const setTitle = (id:string, title:string):void =>
+    update(id, (state) => ({...state, title}))
 
   const pushLink = (id:string, url:string):void =>
     update(id, (state) => ({...state, links: pushArray(state.links, url)}))
@@ -49,5 +54,8 @@ export const useSpotItem = ():ReturnSpotItem => {
   const setBgColor = (id:string, color:string):void =>
     update(id, (state) => ({...state, bgColor: color}))
 
-  return {create, pushLink, choseBillboard, setBgColor}
+  const setLabelHeight = (id:string, height:number):void =>
+    update(id, (state) => ({...state, labelHeight: height}))
+
+  return {create, setTitle, pushLink, choseBillboard, setBgColor, setLabelHeight}
 }

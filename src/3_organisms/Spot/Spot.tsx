@@ -9,8 +9,8 @@ type Props = {
 export const Spot:FC<Props> = ({spot}) => {
   const getGround = (location:GeoLocation):Cartesian3 =>
     Cartesian3.fromDegrees(location.lon, location.lat, 0)
-  const getMidair = (location:GeoLocation):Cartesian3 =>
-    Cartesian3.fromDegrees(location.lon, location.lat, 1000)
+  const getMidair = (location:GeoLocation, labelHeight:number=1000):Cartesian3 =>
+    Cartesian3.fromDegrees(location.lon, location.lat, labelHeight)
   const padding   = useMemo(() => new Cartesian2(12, 12), [])
 
   return <>
@@ -20,16 +20,14 @@ export const Spot:FC<Props> = ({spot}) => {
         pixelSize: 6
       }}
     />
+    <PolylineCollection>
+      <Polyline
+        positions       = {[getGround(spot.location), getMidair(spot.location, spot.labelHeight)]}
+      />
+    </PolylineCollection>
     <Entity
       name        = {spot.title}
       position    = {getMidair(spot.location)}
-      label       = {{
-        text:              spot.title,
-        scale:             0.4,
-        backgroundColor:   Color.fromAlpha(Color.fromCssColorString(spot.bgColor), 0.5),
-        showBackground:    true,
-        backgroundPadding: padding
-      }}
     >
       {spot.keylink !== null && <BillboardGraphics
         image     = {spot.links[spot.keylink]}
@@ -40,10 +38,16 @@ export const Spot:FC<Props> = ({spot}) => {
         <SpotInfoBox spot = {spot} />
       </EntityDescription>
     </Entity>
-    <PolylineCollection>
-      <Polyline
-        positions       = {[getGround(spot.location), getMidair(spot.location)]}
-      />
-    </PolylineCollection>
+    <Entity
+      name        = {spot.title}
+      position    = {getMidair(spot.location, spot.labelHeight)}
+      label       = {{
+        text:              spot.title,
+        scale:             0.4,
+        backgroundColor:   Color.fromAlpha(Color.fromCssColorString(spot.bgColor), 0.5),
+        showBackground:    true,
+        backgroundPadding: padding
+      }}
+    />
   </>
 }

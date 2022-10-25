@@ -1,18 +1,11 @@
 import {FC} from 'react'
 import {RangeInput} from '2_molecules/infobox/RangeInput'
+import {LatLonInput} from '2_molecules/infobox/LatLonInput'
 
 const STL = {
-  FIELDSET: {
-    borderRadius: '8px',
-    borderColor:  'dimgray'
-  },
   UL: {
     listStyle: 'none',
     padding:   '0'
-  },
-  LI: {
-    display:             'grid',
-    gridTemplateColumns: '80px 220px 80px'
   }
 }
 
@@ -24,11 +17,12 @@ export const LocationEntry:FC<Props> = ({location, changeLocation}) => {
   const setLon    = (val:number):void => changeLocation({...location, lon: val})
   const setLat    = (val:number):void => changeLocation({...location, lat: val})
   const setHeight = (val:number):void => changeLocation({...location, height: val})
+  const setLatLon = (val:GeoLocation):void => changeLocation({...location, lon: val.lon, lat: val.lat})
 
-  return <fieldset style={STL.FIELDSET}>
+  return <fieldset>
     <legend>位置</legend>
     <ul style={STL.UL}>
-      <li style={STL.LI}>
+      <li>
         <RangeInput
           label       = "経度:"
           value       = {location.lon}
@@ -38,7 +32,7 @@ export const LocationEntry:FC<Props> = ({location, changeLocation}) => {
           step        = {0.001}
         />
       </li>
-      <li style={STL.LI}>
+      <li>
         <RangeInput
           label       = "緯度:"
           value       = {location.lat}
@@ -48,16 +42,22 @@ export const LocationEntry:FC<Props> = ({location, changeLocation}) => {
           step        = {0.001}
         />
       </li>
-      <li style={STL.LI}>
-        {<RangeInput
+      <li>
+        {location.height != null && <RangeInput
           label         = "標高:"
           changeValue   = {setHeight}
           value         = {location.height}
           min           = {0}
           max           = {10000}
           step          = {10}
-          disabled      = {!(location.height ?? true)}
         />}
+      </li>
+      <li>
+        <LatLonInput
+          label         = "緯度経度:"
+          value         = {location}
+          enter         = {setLatLon}
+      />
       </li>
     </ul>
   </fieldset>

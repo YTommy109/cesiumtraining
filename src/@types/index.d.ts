@@ -31,6 +31,7 @@ interface SpotItem extends LocationItem {
   links:string[]        // 画像リンク集
   keylink:number|null   // リンクのうち地図表示で使うもの
   bgColor:string        // ラベル背景色 (css カラー文字列)
+  labelHeight:number    // ラベルの高さ
 }
 
 interface PyramidItem extends LocationItem {
