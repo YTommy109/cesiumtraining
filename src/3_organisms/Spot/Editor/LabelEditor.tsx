@@ -9,13 +9,17 @@ interface Props {
 }
 export const LabelEditor:FC<Props> = ({spot}) => {
   const id = useId()
-  const {setTitle, setBgColor, setLabelHeight} = useSpotItem()
+  const {setTitle, setBgColor, setLabelHeight, setLabelScale} = useSpotItem()
   const clickBgColor:ChangeEventHandler<HTMLInputElement> = (e) =>
     setBgColor(spot.id, e.target.value)
 
   return <fieldset>
     <legend>ラベル</legend>
-    <div className="color_picker">色:
+    <label htmlFor={`${id}_title`}>
+      名前:
+    </label>
+    <input id={`${id}_title`} type="text" maxLength={100} value={spot.title} onChange={(e) => setTitle(spot.id, e.target.value)} />
+    <div className="color_picker"><span>色:</span>
       {COLORS.map(it =>
       <span key={it}>
         <input id={`${id}_color_${it}`} type="radio" name="bgcolor" value={it} onChange={clickBgColor} checked={it===spot.bgColor} />
@@ -25,17 +29,20 @@ export const LabelEditor:FC<Props> = ({spot}) => {
       </span>
       )}
     </div>
-    <br />
-    <label htmlFor={`${id}_title`}>
-      名前:
-    </label>
-    <input id={`${id}_title`} type="text" maxLength={100} value={spot.title} onChange={(e) => setTitle(spot.id, e.target.value)} />
     <RangeInput
-      label = "ラベル高さ:"
-      min   = {0}
-      max   = {10000}
-      value = {spot.labelHeight}
+      label       = "高さ:"
+      min         = {0}
+      max         = {10000}
+      value       = {spot.labelHeight}
       changeValue = {(height) => setLabelHeight(spot.id, height)}
+    />
+    <RangeInput
+      label       = "大きさ:"
+      min         = {0.1}
+      max         = {8}
+      step        = {0.1}
+      value       = {spot.labelScale}
+      changeValue = {(scale) => setLabelScale(spot.id, scale)}
     />
   </fieldset>
 }

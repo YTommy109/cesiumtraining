@@ -12,6 +12,7 @@ type ReturnSpotItem = {
   choseBillboard:(id:string, index:number) => void
   setBgColor:(id:string, color:string) => void
   setLabelHeight:(id:string, height:number) => void
+  setLabelScale:(id:string, height:number) => void
 }
 export const useSpotItem = ():ReturnSpotItem => {
   const quetyClient = useQueryClient()
@@ -27,7 +28,8 @@ export const useSpotItem = ():ReturnSpotItem => {
         links:       [],
         keylink:     null,
         bgColor:     'black',
-        labelHeight: 100
+        labelHeight: 100,
+        labelScale:  0.5
       }]
     })
   }
@@ -57,5 +59,8 @@ export const useSpotItem = ():ReturnSpotItem => {
   const setLabelHeight = (id:string, height:number):void =>
     update(id, (state) => ({...state, labelHeight: height}))
 
-  return {create, setTitle, pushLink, choseBillboard, setBgColor, setLabelHeight}
+  const setLabelScale = (id:string, scale:number):void =>
+    update(id, (state) => ({...state, labelScale: scale}))
+
+  return {create, setTitle, pushLink, choseBillboard, setBgColor, setLabelHeight, setLabelScale}
 }

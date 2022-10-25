@@ -11,7 +11,7 @@ const STL = {
   }
 }
 
-const LATLON_REGEXP = /(?<lat>[0-9\\.]+),\s*(?<lon>[0-9\\.]+)/
+const LATLON_REGEXP = /^(?<lat>[0-9\\.]+),\s*(?<lon>[0-9\\.]+)$/
 
 type Props = {
   label:string
@@ -40,8 +40,12 @@ export const LatLonInput:FC<Props> = ({label, value, enter, disabled=false, ...p
   }
 
   const handleKeyDown:KeyboardEventHandler<HTMLInputElement> = (e) => {
-    if (e.key === 'Enter') setLocation()
-    if (['Escape', 'Enter'].includes(e.key)) setEditable(false)
+    console.log(latlon)
+    if (e.key === 'Enter' && LATLON_REGEXP.test(latlon)) {
+      setLocation()
+      setEditable(false)
+    }
+    if (e.key === 'Escape') setEditable(false)
   }
 
   return <span style={STL.SPAN}>

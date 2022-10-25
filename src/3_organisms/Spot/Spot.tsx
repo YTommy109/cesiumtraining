@@ -43,7 +43,7 @@ export const Spot:FC<Props> = ({spot}) => {
       position    = {getMidair(spot.location, spot.labelHeight)}
       label       = {{
         text:              spot.title,
-        scale:             0.4,
+        scale:             spot.labelScale,
         backgroundColor:   Color.fromAlpha(Color.fromCssColorString(spot.bgColor), 0.5),
         showBackground:    true,
         backgroundPadding: padding

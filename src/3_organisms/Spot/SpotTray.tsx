@@ -12,6 +12,7 @@ const init:SpotItem[] = [{
   location:    {lon: 139.77386052796396, lat: 35.68312191668824},
   bgColor:     'black',
   labelHeight: 2000,
+  labelScale:  0.4,
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/FfkDbYWXoAAAcg7?format=jpg&name=small',
@@ -25,6 +26,7 @@ const init:SpotItem[] = [{
   location:    {lon: 139.65856919807263, lat: 35.664074212990144},
   bgColor:     'black',
   labelHeight: 2000,
+  labelScale:  0.4,
   keylink:     1,
   links:       [
     'https://pbs.twimg.com/media/Fcvzw3aWYAAvYAk?format=jpg&name=small',
