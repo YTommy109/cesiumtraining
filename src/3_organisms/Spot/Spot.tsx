@@ -15,14 +15,14 @@ export const Spot:FC<Props> = ({spot}) => {
 
   return <>
     <Entity
-      position  = {getGround(spot.location)}
-      point     = {{
+      position    = {getGround(spot.location)}
+      point       = {{
         pixelSize: 6
       }}
     />
     <PolylineCollection>
       <Polyline
-        positions       = {[getGround(spot.location), getMidair(spot.location, spot.labelHeight)]}
+        positions = {[getGround(spot.location), getMidair(spot.location, spot.labelHeight)]}
       />
     </PolylineCollection>
     <Entity

@@ -44,6 +44,40 @@
   border:                 medium solid gainsboro;
 }
 
+.prop_editor {
+  width:                  100%;
+  display:                grid;
+  grid-template-columns:  70px 340px;
+  align-items:            center;
+}
+
+.fit1fr60px {
+  width:                  100%;
+  display:                grid;
+  grid-template-columns:  1fr 60px;
+  grid-column-gap:        6px;
+}
+
+.fit1fr50px50px {
+  width:                  100%;
+  display:                grid;
+  grid-template-columns:  1fr 50px 50px;
+  grid-column-gap:        6px;
+}
+
+label.disabled {
+  color:                gray;
+}
+
+ul.vertical {
+  list-style:             none;
+  padding:                0;
+}
+
+.vertical li {
+  height:                 26px;
+}
+
 .image_picker {
   display:                grid;
   grid-template-columns:  repeat(5, 80px);

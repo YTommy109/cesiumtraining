@@ -1,15 +1,7 @@
 import {FC, useId, useState, ChangeEventHandler, KeyboardEventHandler, MouseEventHandler} from 'react'
-
-const STL = {
-  SPAN: {
-    display:             'grid',
-    gridTemplateColumns: '70px 1fr 10px 100px',
-    alignItems:          'center'
-  },
-  LABEL_DISABLE: {
-    color: 'gray'
-  }
-}
+import {Label} from '1_atoms/Label'
+import {PropertyEditor} from '4_templates/PropertyEditor'
+import {Fit1fr50px50px} from '4_templates/Fit1fr50px50px'
 
 const LATLON_REGEXP = /^(?<lat>[0-9\\.]+),\s*(?<lon>[0-9\\.]+)$/
 
@@ -48,47 +40,44 @@ export const LatLonInput:FC<Props> = ({label, value, enter, disabled=false, ...p
     if (e.key === 'Escape') setEditable(false)
   }
 
-  return <span style={STL.SPAN}>
-    {editable && <>
-      <label
-        style         = {disabled ? STL.LABEL_DISABLE : undefined}
-        htmlFor       = {id}
+  return <>
+    {editable &&
+      <PropertyEditor>
+        <Label htmlFor={id}>{label}</Label>
+        <Fit1fr50px50px>
+          <input
+            id            = {id}
+            type          = "text"
+            pattern       = {LATLON_REGEXP.toString()}
+            value         = {latlon}
+            maxLength     = {50}
+            placeholder   = "e.g. 35.6658, 139.6375"
+            onChange      = {handleChange}
+            onKeyDown     = {handleKeyDown}
+            disabled      = {disabled}
+            autoFocus     = {true}
+          />
+          <button
+            onClick       = {handleClick}
+            disabled      = {disabled || !LATLON_REGEXP.test(latlon)}
+          >
+            OK
+          </button>
+          <button
+            onClick       = {() => setEditable(false)}>
+            Cancel
+          </button>
+        </Fit1fr50px50px>
+      </PropertyEditor>}
+    {!editable &&
+      <PropertyEditor>
+        <span>{label}</span>
+        <span
+          style           = {{whiteSpace: 'nowrap'}}
+          onClick         = {() => setEditable(true)}
         >
-        {label}
-      </label>
-      <input
-        id            = {id}
-        type          = "text"
-        pattern       = {LATLON_REGEXP.toString()}
-        value         = {latlon}
-        maxLength     = {50}
-        placeholder   = "e.g. 35.6658, 139.6375"
-        onChange      = {handleChange}
-        onKeyDown     = {handleKeyDown}
-        disabled      = {disabled}
-        autoFocus     = {true}
-      />
-      &nbsp;
-      <span>
-        <button
-          onClick       = {handleClick}
-          disabled      = {disabled || !LATLON_REGEXP.test(latlon)}
-        >
-          OK
-        </button>
-        <button onClick = {() => setEditable(false)}>
-          Cancel
-        </button>
-      </span>
-    </>}
-    {!editable && <>
-      <span>{label}</span>
-      <span
-        style   = {{whiteSpace: 'nowrap'}}
-        onClick = {() => setEditable(true)}
-      >
-        {latlonView}
-      </span>
-    </>}
-  </span>
+          {latlonView}
+        </span>
+      </PropertyEditor>}
+  </>
 }

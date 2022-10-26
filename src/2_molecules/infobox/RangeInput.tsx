@@ -1,27 +1,14 @@
-import {FC, useId, ChangeEventHandler} from 'react'
-
-const STL = {
-  SPAN: {
-    width:               '100%',
-    display:             'grid',
-    gridTemplateColumns: '70px 340px',
-    alignItems:          'center'
-  },
-  LABEL_DISABLE: {
-    color: 'gray'
-  }
-}
+import {FC, useId, ComponentProps, ChangeEventHandler} from 'react'
+import {Label} from '1_atoms/Label'
+import {PropertyEditor} from '4_templates/PropertyEditor'
 
 type Props = {
-  label:string
-  value?:number
+  label?:string
   min?:number
   max?:number
-  step?:number
-  disabled?:boolean
   changeValue:(v:number) => void
-}
-export const RangeInput:FC<Props> = ({label, value, min = 0, max = 100, changeValue, ...props}) => {
+} & Omit<ComponentProps<'input'>, 'id'|'type'|'onChange'>
+export const RangeInput:FC<Props> = ({label, min=0, max=100, changeValue, ...props}) => {
   const id = useId()
   const listId = `list_${id}`
 
@@ -29,21 +16,17 @@ export const RangeInput:FC<Props> = ({label, value, min = 0, max = 100, changeVa
     changeValue(Number(e.target.value))
   }
 
-  return <span style={STL.SPAN}>
-    <label
-      style         = {props.disabled ? STL.LABEL_DISABLE : undefined}
-      htmlFor       = {id}
-      >
+  return <PropertyEditor>
+    {label != null && <Label htmlFor={id}>
       {label}
-    </label>
+    </Label>}
     <input
+      {...props}
       id            = {id}
       type          = "range"
       min           = {min}
       max           = {max}
-      step          = {props.step}
       list          = {listId}
-      value         = {value}
       onChange      = {handleChange}
       disabled      = {props.disabled}
     />
@@ -52,5 +35,5 @@ export const RangeInput:FC<Props> = ({label, value, min = 0, max = 100, changeVa
       <option value={min + (max - min) / 2}></option>
       <option value={min + (max - min) / 4 * 3}></option>
     </datalist>
-  </span>
+  </PropertyEditor>
 }

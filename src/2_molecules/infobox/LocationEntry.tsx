@@ -1,13 +1,12 @@
 import {FC} from 'react'
+import styled from 'styled-components'
 import {RangeInput} from '2_molecules/infobox/RangeInput'
 import {LatLonInput} from '2_molecules/infobox/LatLonInput'
 
-const STL = {
-  UL: {
-    listStyle: 'none',
-    padding:   '0'
-  }
-}
+const UlVertical = styled.ul`
+  listStyle:  none;
+  padding:    0;
+`
 
 type Props = {
   location:GeoLocation
@@ -21,25 +20,25 @@ export const LocationEntry:FC<Props> = ({location, changeLocation}) => {
 
   return <fieldset>
     <legend>位置</legend>
-    <ul style={STL.UL}>
+    <UlVertical className="vertical">
       <li>
         <RangeInput
-          label       = "経度:"
-          value       = {location.lon}
-          changeValue = {setLon}
-          min         = {-180}
-          max         = {180}
-          step        = {0.001}
+          label         = "経度:"
+          value         = {location.lon}
+          changeValue   = {setLon}
+          min           = {-180}
+          max           = {180}
+          step          = {0.001}
         />
       </li>
       <li>
         <RangeInput
-          label       = "緯度:"
-          value       = {location.lat}
-          changeValue = {setLat}
-          min         = {-90}
-          max         = {90}
-          step        = {0.001}
+          label         = "緯度:"
+          value         = {location.lat}
+          changeValue   = {setLat}
+          min           = {-90}
+          max           = {90}
+          step          = {0.001}
         />
       </li>
       <li>
@@ -59,6 +58,6 @@ export const LocationEntry:FC<Props> = ({location, changeLocation}) => {
           enter         = {setLatLon}
       />
       </li>
-    </ul>
+    </UlVertical>
   </fieldset>
 }

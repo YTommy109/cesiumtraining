@@ -1,17 +1,7 @@
 import {FC, useId, useState} from 'react'
-
-const STL = {
-  SPAN: {
-    width:               '100%',
-    display:             'grid',
-    gridTemplateColumns: '30px 1fr 40px',
-    gridColumnGap:       '12px',
-    alignItems:          'center'
-  },
-  LABEL_DISABLE: {
-    color: 'gray'
-  }
-}
+import {Label} from '1_atoms/Label'
+import {PropertyEditor} from '4_templates/PropertyEditor'
+import {Fit1fr60px} from '4_templates/Fit1fr60px'
 
 type Props = {
   label:string
@@ -23,27 +13,26 @@ export const LinkImageInput:FC<Props> = ({label, placeholder, disabled, addLink}
   const id = useId()
   const [link, setLink] = useState<string>('')
 
-  return <span style={STL.SPAN}>
-    <label
-      style         = {disabled ? STL.LABEL_DISABLE : undefined}
-      htmlFor       = {id}
-      >
+  return <PropertyEditor>
+    <Label htmlFor = {id}>
       {label}
-    </label>
-    <input
-      id            = {id}
-      type          = "url"
-      value         = {link}
-      onChange      = {(e) => setLink(e.target.value)}
-      disabled      = {disabled}
-      placeholder   = {placeholder}
-    />
-    <button
-      disabled      = {link.length < 1}
-      onClick       = {() => {
-        addLink(link)
-        setLink('')
-      }}
-    >Add</button>
-  </span>
+    </Label>
+    <Fit1fr60px>
+      <input
+        id            = {id}
+        type          = "url"
+        value         = {link}
+        onChange      = {(e) => setLink(e.target.value)}
+        disabled      = {disabled}
+        placeholder   = {placeholder}
+      />
+      <button
+        disabled      = {link.length < 1}
+        onClick       = {() => {
+          addLink(link)
+          setLink('')
+        }}
+      >Add</button>
+    </Fit1fr60px>
+  </PropertyEditor>
 }
