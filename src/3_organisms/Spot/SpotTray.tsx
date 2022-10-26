@@ -18,7 +18,8 @@ const init:SpotItem[] = [{
     'https://pbs.twimg.com/media/FfkDbYWXoAAAcg7?format=jpg&name=small',
     'https://pbs.twimg.com/media/FfFJ1bnX0AAhd_v?format=jpg&name=small',
     'https://pbs.twimg.com/media/FdUEpEcXoAAB8Ij?format=jpg&name=small'
-  ]
+  ],
+  imageScale: 0.2
 }, {
   id:          '8D73EEBB-DE25-4A7A-A596-0DD40D0DE49B',
   title:       'and Curry',
@@ -35,7 +36,8 @@ const init:SpotItem[] = [{
     'https://pbs.twimg.com/media/FPKIu18XEAAqXlb?format=jpg&name=small',
     'https://pbs.twimg.com/media/FOCrLatWYAsisz8?format=jpg&name=small',
     'https://pbs.twimg.com/media/FNZeYSYX0AIasA9?format=jpg&name=small'
-  ]
+  ],
+  imageScale: 0.2
 }]
 
 export const SpotTray:FC = () => {

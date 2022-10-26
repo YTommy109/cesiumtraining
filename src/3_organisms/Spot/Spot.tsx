@@ -32,7 +32,7 @@ export const Spot:FC<Props> = ({spot}) => {
       {spot.keylink !== null && <BillboardGraphics
         image     = {spot.links[spot.keylink]}
         rotation  = {0}
-        scale     = {0.1}
+        scale     = {spot.imageScale}
       />}
       <EntityDescription>
         <SpotInfoBox spot = {spot} />

@@ -1,5 +1,5 @@
 import {FC} from 'react'
-import {Cartesian3, HeightReference} from 'cesium'
+import {Cartesian3, HeightReference, ShadowMode} from 'cesium'
 import {Entity, EntityDescription} from 'resium'
 import {SolidInfoBox} from './SolidInfoBox'
 
@@ -16,7 +16,8 @@ export const SolidPyramid:FC<Props> = ({pyramid}) =>
       length:          pyramid.length,
       material:        pyramid.color,
       slices:          4,
-      heightReference: HeightReference.CLAMP_TO_GROUND
+      heightReference: HeightReference.CLAMP_TO_GROUND,
+      shadows:         ShadowMode.ENABLED
     }}
   >
     {pyramid.description &&

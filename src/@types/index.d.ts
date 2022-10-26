@@ -33,6 +33,7 @@ interface SpotItem extends LocationItem {
   bgColor:string        // ラベル背景色 (css カラー文字列)
   labelHeight:number    // ラベルの高さ
   labelScale:number     // ラベルの大きさ
+  imageScale:number     // 画像の大きさ
 }
 
 interface PyramidItem extends LocationItem {
