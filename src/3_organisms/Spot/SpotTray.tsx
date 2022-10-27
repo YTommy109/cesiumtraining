@@ -38,6 +38,19 @@ const init:SpotItem[] = [{
     'https://pbs.twimg.com/media/FNZeYSYX0AIasA9?format=jpg&name=small'
   ],
   imageScale: 0.2
+}, {
+  id:          '070C3493-FF81-43C0-B357-45E886BB4C54',
+  title:       '星のや東京',
+  description: '玄関で靴を脱ぎ、畳にあがるという日本の文化を象徴する日本旅館。自然素材を用いた空間には、季節の節目を伝える設えが出現します。各フロアには、もう1つのリビングとなるお茶の間ラウンジをご用意しています。\n\n https://www.youtube.com/watch?v=GVAewrjhF8g',
+  location:    {lon: 139.76497729140365, lat: 35.68787973873332},
+  bgColor:     'black',
+  labelHeight: 2000,
+  labelScale:  0.4,
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/Fcvzw3aWYAAvYAk?format=jpg&name=small'
+  ],
+  imageScale: 0.2
 }]
 
 export const SpotTray:FC = () => {

@@ -1,12 +1,13 @@
 import {FC} from 'react'
-import {SceneMode, Camera, Rectangle} from 'cesium'
-import {Viewer, Scene} from 'resium'
+import {SceneMode, Camera, Rectangle, ShadowMode} from 'cesium'
+import {Viewer, Scene, Sun} from 'resium'
 import {plateauTerrain} from '1_atoms/plateauTerrain'
 import {CameraMan} from '2_molecules/CameraMan'
 import {CameraBar} from '2_molecules/CameraBar'
 import {GeoJsonTray} from '3_organisms/GeoJsonTray'
 import {SpotTray} from '3_organisms/Spot'
 import {SolidTray} from '3_organisms/Solid'
+import {PlateauTray} from '3_organisms/Plateau/PlateauTray'
 
 Camera.DEFAULT_VIEW_FACTOR = 0
 // 琵琶湖
@@ -16,16 +17,22 @@ Camera.DEFAULT_VIEW_RECTANGLE = Rectangle.fromDegrees(139.2524418930718, 36.0257
 
 const CesiumPanel:FC = () =>
   <>
-    <Viewer full>
+    <Viewer
+      shadows         = {true}
+      terrainShadows  = {ShadowMode.ENABLED}
+      full
+    >
       <Scene
         mode            = {SceneMode.SCENE3D}
         terrainProvider = {plateauTerrain}
       />
       <CameraMan />
       <CameraBar />
+      <Sun />
       <GeoJsonTray />
       <SpotTray />
       <SolidTray />
+      <PlateauTray />
     </Viewer>
   </>
 

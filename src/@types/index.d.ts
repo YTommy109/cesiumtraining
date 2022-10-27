@@ -42,3 +42,23 @@ interface PyramidItem extends LocationItem {
   length:number
   color:Color
 }
+
+type CityInfo = {
+  code:string             // 標準地域コード
+  prefecture:string       // 都道府県
+  city:string             // 政令市･郡･支庁･振興局等
+  cityKana:string         // 政令市･郡･支庁･振興局等（ふりがな）
+  town:string             // 市区町村
+  townKana:string         // 市区町村（ふりがな）
+}
+
+type PlateauStream = {
+  id:string               // ID
+  cityCode:string         // 地域コード
+  dataType:string         // データタイプ
+  url:string              // URL
+  cityInfo:CityInfo       // 地域情報
+  texture:boolean         // テクスチャー
+  low_resolution:boolean  // 低解像度テクスチャー
+  show:boolean            // 表示/非表示
+}
