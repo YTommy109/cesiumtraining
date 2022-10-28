@@ -1,5 +1,5 @@
 import {FC, useMemo} from 'react'
-import {Cartesian2, Cartesian3, Color} from 'cesium'
+import {Cartesian2, Cartesian3, Color, HeightReference, VerticalOrigin} from 'cesium'
 import {PolylineCollection, Polyline, Entity, EntityDescription, BillboardGraphics} from 'resium'
 import {SpotInfoBox} from './SpotInfoBox'
 
@@ -7,41 +7,51 @@ type Props = {
   spot:SpotItem
 }
 export const Spot:FC<Props> = ({spot}) => {
-  const getGround = (location:GeoLocation):Cartesian3 =>
-    Cartesian3.fromDegrees(location.lon, location.lat, 0)
-  const getMidair = (location:GeoLocation, labelHeight:number=1000):Cartesian3 =>
-    Cartesian3.fromDegrees(location.lon, location.lat, labelHeight)
+  const pntGrand:Cartesian3 = useMemo(() => {
+    return Cartesian3.fromDegrees(spot.location.lon, spot.location.lat, 0)
+  }, [spot.location])
+
+  const pntLabel:Cartesian3 = useMemo(() => {
+    return Cartesian3.fromDegrees(spot.location.lon, spot.location.lat, spot.labelHeight)
+  }, [spot.location, spot.labelHeight])
+
+  const pntImage:Cartesian3 = useMemo(() => {
+    return Cartesian3.fromDegrees(spot.location.lon, spot.location.lat, spot.imageHeight)
+  }, [spot.location, spot.imageHeight])
+
   const padding   = useMemo(() => new Cartesian2(12, 12), [])
 
   return <>
     <Entity
-      position    = {getGround(spot.location)}
+      position    = {pntGrand}
       point       = {{
         pixelSize: 6
       }}
     />
     <PolylineCollection>
       <Polyline
-        positions = {[getGround(spot.location), getMidair(spot.location, spot.labelHeight)]}
+        positions = {[pntGrand, pntLabel]}
       />
     </PolylineCollection>
     <Entity
-      name        = {spot.title}
-      position    = {getMidair(spot.location)}
+      name              = {spot.title}
+      position          = {pntImage}
     >
       {spot.keylink !== null && <BillboardGraphics
-        image     = {spot.links[spot.keylink]}
-        rotation  = {0}
-        scale     = {spot.imageScale}
+        image           = {spot.links[spot.keylink]}
+        rotation        = {0}
+        scale           = {spot.imageScale}
+        heightReference = {HeightReference.RELATIVE_TO_GROUND}
+        verticalOrigin  = {VerticalOrigin.BOTTOM}
       />}
       <EntityDescription>
         <SpotInfoBox spot = {spot} />
       </EntityDescription>
     </Entity>
     <Entity
-      name        = {spot.title}
-      position    = {getMidair(spot.location, spot.labelHeight)}
-      label       = {{
+      name              = {spot.title}
+      position          = {pntLabel}
+      label             = {{
         text:              spot.title,
         scale:             spot.labelScale,
         backgroundColor:   Color.fromAlpha(Color.fromCssColorString(spot.bgColor), 0.5),

@@ -33,6 +33,7 @@ interface SpotItem extends LocationItem {
   bgColor:string        // ラベル背景色 (css カラー文字列)
   labelHeight:number    // ラベルの高さ
   labelScale:number     // ラベルの大きさ
+  imageHeight:number    // 画像位置の高さ
   imageScale:number     // 画像の大きさ
 }
 

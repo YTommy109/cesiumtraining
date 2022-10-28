@@ -19,7 +19,7 @@ const CesiumPanel:FC = () =>
   <>
     <Viewer
       shadows         = {true}
-      terrainShadows  = {ShadowMode.ENABLED}
+      terrainShadows  = {ShadowMode.RECEIVE_ONLY}
       full
     >
       <Scene

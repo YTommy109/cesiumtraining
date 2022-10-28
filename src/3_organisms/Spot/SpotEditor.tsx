@@ -12,7 +12,7 @@ interface Props {
 export const SpotEditor:FC<Props> = ({spot}) => {
   const id = useId()
   const {changeLocation} = useLocationItem(CASHKEY)
-  const {pushLink, choseBillboard, setImageScale} = useSpotItem()
+  const {pushLink, choseBillboard, setImageHeight, setImageScale} = useSpotItem()
   const setLocation = (val:GeoLocation):void => changeLocation(spot.id, val)
   const addLink = (url:string):void => pushLink(spot.id, url)
 
@@ -44,7 +44,15 @@ export const SpotEditor:FC<Props> = ({spot}) => {
         addLink       = {addLink}
         />
       <RangeInput
-        label         = '画像サイズ'
+        label         = '高さ:'
+        min           = {0}
+        max           = {10000}
+        value         = {spot.imageHeight}
+        step          = {10}
+        changeValue   = {(val:number):void => setImageHeight(spot.id, val)}
+      />
+      <RangeInput
+        label         = '大きさ:'
         min           = {0.05}
         max           = {1}
         value         = {spot.imageScale}
