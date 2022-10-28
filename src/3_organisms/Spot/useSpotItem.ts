@@ -32,6 +32,7 @@ export const useSpotItem = ():ReturnSpotItem => {
         bgColor:     'black',
         labelHeight: 100,
         labelScale:  0.5,
+        imageHeight: 10,
         imageScale:  0.2
       }]
     })

@@ -1,5 +1,5 @@
 import {FC, useMemo} from 'react'
-import {Cartesian2, Cartesian3, Color, HeightReference, VerticalOrigin} from 'cesium'
+import {Cartesian2, Cartesian3, Color, HeightReference, VerticalOrigin, DistanceDisplayCondition, NearFarScalar} from 'cesium'
 import {PolylineCollection, Polyline, Entity, EntityDescription, BillboardGraphics} from 'resium'
 import {SpotInfoBox} from './SpotInfoBox'
 
@@ -43,9 +43,13 @@ export const Spot:FC<Props> = ({spot}) => {
         scale           = {spot.imageScale}
         heightReference = {HeightReference.RELATIVE_TO_GROUND}
         verticalOrigin  = {VerticalOrigin.BOTTOM}
+        distanceDisplayCondition
+                        = {new DistanceDisplayCondition(10, 5000)}
+        scaleByDistance = {new NearFarScalar(20, 6.0, 5000, 0.1)}
       />}
       <EntityDescription>
-        <SpotInfoBox spot = {spot} />
+        <SpotInfoBox
+          spot          = {spot} />
       </EntityDescription>
     </Entity>
     <Entity

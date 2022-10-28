@@ -16,7 +16,7 @@ export const SpotInfoBox:FC<Props> = ({spot}) => {
       <ReactMarkdown
         components={{img: ({node, ...props}) => <img {...props}/>}}
       >
-        {`${spot.description}`}
+        {`# ${spot.title}\n\n${spot.description}`}
       </ReactMarkdown>
     }
     {mode === 'edit' && <SpotEditor spot={spot}/>}

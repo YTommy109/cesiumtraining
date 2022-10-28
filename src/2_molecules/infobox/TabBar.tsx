@@ -1,5 +1,5 @@
 import {ChangeEventHandler, FC} from 'react'
-import {FaTrash} from 'react-icons/fa'
+import {FaPlane, FaTrash} from 'react-icons/fa'
 
 const STL = {
   HIDDEN: {
@@ -7,7 +7,9 @@ const STL = {
   },
   TAB_BAR: {
     display:             'grid',
-    gridTemplateColumns: '40px 40px 1fr 14px',
+    gridTemplateColumns: '20px 40px 40px 1fr 14px',
+    alignItems:          'center',
+    gridColumnGap:       '6px',
     borderBottom:        'thin solid dimgray'
   }
 }
@@ -26,6 +28,7 @@ export const TabBar:FC<Props> = ({mode, setMode}) => {
     <input style={STL.HIDDEN} id="mode_info" name="mode" type="radio" value="info" onChange={handleChangeMode} checked={mode === 'info'} />
     <input style={STL.HIDDEN} id="mode_edit" name="mode" type="radio" value="edit" onChange={handleChangeMode} checked={mode === 'edit'}/>
     <div style={STL.TAB_BAR}>
+      <FaPlane onClick={() => console.log()} />
       <label style={styleTabItem(mode === 'info')} htmlFor="mode_info">情報</label>
       <label style={styleTabItem(mode === 'edit')} htmlFor="mode_edit">編集</label>
       <br />

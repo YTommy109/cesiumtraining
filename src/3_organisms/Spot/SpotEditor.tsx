@@ -1,10 +1,8 @@
-import {FC, ChangeEventHandler, useId} from 'react'
+import {FC, useId} from 'react'
 import {LocationEntry} from '2_molecules/infobox/LocationEntry'
-import {LinkImageInput} from '2_molecules/infobox/LinkImageInput'
-import {RangeInput} from '2_molecules/infobox/RangeInput'
-import {LabelEditor} from './Editor'
+import {LabelEditor, ImageEditor} from './Editor'
 import {useLocationItem} from 'controller/useVisualItem'
-import {CASHKEY, useSpotItem} from './useSpotItem'
+import {CASHKEY} from './useSpotItem'
 
 interface Props {
   spot:SpotItem
@@ -12,12 +10,7 @@ interface Props {
 export const SpotEditor:FC<Props> = ({spot}) => {
   const id = useId()
   const {changeLocation} = useLocationItem(CASHKEY)
-  const {pushLink, choseBillboard, setImageHeight, setImageScale} = useSpotItem()
   const setLocation = (val:GeoLocation):void => changeLocation(spot.id, val)
-  const addLink = (url:string):void => pushLink(spot.id, url)
-
-  const clickImage:ChangeEventHandler<HTMLInputElement> = (e) =>
-    choseBillboard(spot.id, parseInt(e.target.value))
 
   return <>
     <LocationEntry
@@ -25,41 +18,8 @@ export const SpotEditor:FC<Props> = ({spot}) => {
       changeLocation  = {setLocation}
     />
     <LabelEditor spot={spot} />
-    <fieldset>
-      <legend>画像</legend>
-      <div className="image_picker">
-        {spot.links.map((it, idx) =>
-          <span key={it}>
-            <input id={`${id}_${idx}`} type="radio" name="keylink" value={idx} onChange={clickImage} checked={idx===spot.keylink} />
-            <label htmlFor={`${id}_${idx}`}>
-              <img src={it} alt="画像" />
-            </label>
-          </span>
-        )}
-      </div>
-      <br />
-      <LinkImageInput
-        label         = "URL:"
-        placeholder   = 'URL for the image.'
-        addLink       = {addLink}
-        />
-      <RangeInput
-        label         = '高さ:'
-        min           = {0}
-        max           = {10000}
-        value         = {spot.imageHeight}
-        step          = {10}
-        changeValue   = {(val:number):void => setImageHeight(spot.id, val)}
-      />
-      <RangeInput
-        label         = '大きさ:'
-        min           = {0.05}
-        max           = {1}
-        value         = {spot.imageScale}
-        step          = {0.02}
-        changeValue   = {(val:number):void => setImageScale(spot.id, val)}
-      />
-    </fieldset>
+    <ImageEditor spot={spot} />
+
     <fieldset>
       <legend>情報</legend>
       <textarea
