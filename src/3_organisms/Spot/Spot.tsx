@@ -4,9 +4,10 @@ import {PolylineCollection, Polyline, Entity, EntityDescription, BillboardGraphi
 import {SpotInfoBox} from './SpotInfoBox'
 
 type Props = {
+  cashkey:DataPack
   spot:SpotItem
 }
-export const Spot:FC<Props> = ({spot}) => {
+export const Spot:FC<Props> = ({cashkey, spot}) => {
   const pntGrand:Cartesian3 = useMemo(() => {
     return Cartesian3.fromDegrees(spot.location.lon, spot.location.lat, 0)
   }, [spot.location])
@@ -34,6 +35,7 @@ export const Spot:FC<Props> = ({spot}) => {
       />
     </PolylineCollection>
     <Entity
+      id                = {spot.id}
       name              = {spot.title}
       position          = {pntImage}
     >
@@ -49,7 +51,9 @@ export const Spot:FC<Props> = ({spot}) => {
       />}
       <EntityDescription>
         <SpotInfoBox
-          spot          = {spot} />
+          cashkey       = {cashkey}
+          spot          = {spot}
+        />
       </EntityDescription>
     </Entity>
     <Entity

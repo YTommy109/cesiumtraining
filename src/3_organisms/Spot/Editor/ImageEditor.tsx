@@ -4,11 +4,12 @@ import {RangeInput} from '2_molecules/infobox/RangeInput'
 import {useSpotItem} from '../useSpotItem'
 
 interface Props {
+  cashkey:DataPack
   spot:SpotItem
 }
-export const ImageEditor:FC<Props> = ({spot}) => {
+export const ImageEditor:FC<Props> = ({cashkey, spot}) => {
   const id = useId()
-  const {pushLink, choseBillboard, setImageHeight, setImageScale} = useSpotItem()
+  const {pushLink, choseBillboard, setImageHeight, setImageScale} = useSpotItem(cashkey)
   const addLink = (url:string):void => pushLink(spot.id, url)
 
   const clickImage:ChangeEventHandler<HTMLInputElement> = (e) =>

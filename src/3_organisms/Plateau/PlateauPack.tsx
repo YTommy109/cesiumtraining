@@ -3,7 +3,7 @@ import {usePlateau} from './usePlateau'
 import {PlateauList} from './PlateauList'
 import {PlateauTile} from './PlateauTile'
 
-export const PlateauTray:FC = () => {
+export const PlateauPack:FC = () => {
   const {plateau} = usePlateau()
 
   return <>

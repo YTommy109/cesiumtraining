@@ -3,8 +3,6 @@ import {v4 as uuidv4} from 'uuid'
 
 const pushArray = <T=string>(org:T[], link:T):T[] => [...org, link]
 
-export const CASHKEY = 'spot'
-
 type ReturnSpotItem = {
   create:(location:GeoLocation) => void
   setTitle:(id:string, title:string) => void
@@ -16,11 +14,11 @@ type ReturnSpotItem = {
   setImageHeight:(id:string, height:number) => void
   setImageScale:(id:string, scale:number) => void
 }
-export const useSpotItem = ():ReturnSpotItem => {
+export const useSpotItem = (cashkey:DataPack):ReturnSpotItem => {
   const quetyClient = useQueryClient()
 
   const create = (location:GeoLocation):void => {
-    quetyClient.setQueryData<SpotItem[]>([CASHKEY], (state) => {
+    quetyClient.setQueryData<SpotItem[]>([cashkey], (state) => {
       if (state == null) return []
       return [...state, {
         id:          uuidv4(),
@@ -39,7 +37,7 @@ export const useSpotItem = ():ReturnSpotItem => {
   }
 
   const update = (id:string, callback:(state:SpotItem) => SpotItem):void => {
-    quetyClient.setQueryData<SpotItem[]>([CASHKEY], (state) => {
+    quetyClient.setQueryData<SpotItem[]>([cashkey], (state) => {
       if (state == null) return []
       return state.map((it) =>
         it.id !== id

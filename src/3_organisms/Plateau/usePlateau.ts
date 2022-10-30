@@ -47,16 +47,23 @@ const getPlateau = async ():Promise<PlateauStream[]> => {
       : it.CITYCODE
   }
 
-  return data.map(it => ({
-    id:             uuidv4(),
-    cityCode:       it.CITYCODE,
-    dataType:       it.TYPE,
-    url:            it.URL,
-    cityInfo:       cityInfo[getCode(it)],
-    texture:        it.URL.includes('/texture/'),
-    low_resolution: it.URL.includes('/low_resolution/'),
-    show:           false
-  }))
+  return data.map(it => {
+    const info:CityInfo = cityInfo[getCode(it)]
+    const texture:boolean = it.URL.includes('/texture/')
+    const lowResolution:boolean = it.URL.includes('/low_resolution/')
+
+    return {
+      id:       uuidv4(),
+      title:    `${info.prefecture}${info.city}${info.town}${texture ? '_テク' : ''}${lowResolution ? '_ロー' : ''}`,
+      cityCode: it.CITYCODE,
+      dataType: it.TYPE,
+      url:      it.URL,
+      cityInfo: info,
+      texture,
+      lowResolution,
+      show:     false
+    }
+  })
 }
 
 type ReturnPlateau = {

@@ -40,7 +40,7 @@ export const DATA_CURRY:SpotItem[] = [{
 }, {
   id:          '070C3493-FF81-43C0-B357-45E886BB4C54',
   title:       'プチシャニ',
-  description: '',
+  description: '![カレー1](https://pbs.twimg.com/media/FgIGfpFXoAEXGKT?format=jpg&name=small)\n\nとても美味しい南インドカレー屋さん。絶妙ななスパイスの調合で、マサラチャイまで美味しい。',
   location:    {lon: 139.75243705542388, lat: 35.650785359423615},
   bgColor:     'black',
   labelHeight: 2000,
@@ -60,7 +60,7 @@ export const DATA_CURRY:SpotItem[] = [{
 }, {
   id:          'ECDC1324-A710-4FF7-B2CA-EDDA60A415F9',
   title:       'クリティカルホット',
-  description: '',
+  description: '![カレー1](https://pbs.twimg.com/media/FU9WERvXoAA6nKq?format=jpg&name=small)',
   location:    {lon: 139.3930653977504, lat: 35.58677263190765},
   bgColor:     'black',
   labelHeight: 2000,
@@ -76,13 +76,14 @@ export const DATA_CURRY:SpotItem[] = [{
 }, {
   id:          'FDE690F6-A618-4E61-975B-F797DD28CF00',
   title:       'ヒマラヤンワルツ',
-  description: '',
+  description: '![カレー1](https://pbs.twimg.com/media/FLeT2VAXsAQyyFo?format=jpg&name=small)\n\nネパール在住経験のあるご夫婦がやってらっしゃる、本格スパイスカレー屋さん。地元丹波篠山の季節の食材を使った濃厚な味わいと、ゴロっとした大きい具材が転がっているのが特徴で、食感も楽しめる。\n\n![カレー2](https://pbs.twimg.com/media/FgSZmDKWYAAFVfK?format=jpg&name=small)\n\nキーマカレーは、肉の食感が残るようにお店で丁寧に粗挽きしてらっしゃって、めちゃ美味しい。',
   location:    {lon: 135.1380761112312, lat: 35.09803131867289},
   bgColor:     'black',
   labelHeight: 2000,
   labelScale:  0.4,
-  keylink:     2,
+  keylink:     1,
   links:       [
+    'https://pbs.twimg.com/media/FgSZmDKWYAAFVfK?format=jpg&name=small',
     'https://pbs.twimg.com/media/FVnZyQ4WYAA8qoL?format=jpg&name=small',
     'https://pbs.twimg.com/media/FUYb_XQXEAACgys?format=jpg&name=small',
     'https://pbs.twimg.com/media/FZiB1aqWAAA4Exk?format=jpg&name=small',
@@ -219,6 +220,7 @@ export const DATA_CURRY:SpotItem[] = [{
   labelScale:  0.4,
   keylink:     0,
   links:       [
+    'https://pbs.twimg.com/media/FgXjRhjXkAAPjgK?format=jpg&name=small',
     'https://pbs.twimg.com/media/FdOtTWjWIAADUwn?format=jpg&name=small',
     'https://pbs.twimg.com/media/FWAgpNrX0AAgzVg?format=jpg&name=small',
     'https://pbs.twimg.com/media/FTgpnY9XoAEM53l?format=jpg&name=small',
@@ -400,7 +402,7 @@ export const DATA_CURRY:SpotItem[] = [{
   id:          '6b8e1faa-801a-4edf-ab67-4d7df8ddc114',
   title:       '般°若',
   description: '',
-  location:    {lon: 139.67545329450257, lat: 35.83656680578686},
+  location:    {lon: 139.66879531156678, lat: 35.66319149816798},
   bgColor:     'black',
   labelHeight: 2000,
   labelScale:  0.4,
@@ -582,6 +584,20 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/FM0I29CWYAQ7DTS?format=jpg&name=small'
+  ],
+  imageHeight: 10,
+  imageScale:  0.2
+}, {
+  id:          'dcd0b67a-dd58-4159-9658-9480e44c6e8c',
+  title:       'ポニピリカ',
+  description: '抜群に美味しいスープカレーのお店。\n\n![カレー](https://pbs.twimg.com/media/Fgcs0SrXoAEBSAz?format=jpg&name=small)',
+  location:    {lon: 139.6694924710838, lat: 35.662691883235254},
+  bgColor:     'black',
+  labelHeight: 2000,
+  labelScale:  0.4,
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/Fgcs0SrXoAEBSAz?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2

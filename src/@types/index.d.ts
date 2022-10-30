@@ -1,3 +1,5 @@
+type DataPack = 'plateau'|'curry'|'hotel'|''
+
 type GeoRotation = {
   heading:number
   pitch:number
@@ -28,13 +30,24 @@ interface LocationItem extends VisualItem {
 }
 
 interface SpotItem extends LocationItem {
-  links:string[]        // 画像リンク集
-  keylink:number|null   // リンクのうち地図表示で使うもの
-  bgColor:string        // ラベル背景色 (css カラー文字列)
-  labelHeight:number    // ラベルの高さ
-  labelScale:number     // ラベルの大きさ
-  imageHeight:number    // 画像位置の高さ
-  imageScale:number     // 画像の大きさ
+  links:string[]          // 画像リンク集
+  keylink:number|null     // リンクのうち地図表示で使うもの
+  bgColor:string          // ラベル背景色 (css カラー文字列)
+  labelHeight:number      // ラベルの高さ
+  labelScale:number       // ラベルの大きさ
+  imageHeight:number      // 画像位置の高さ
+  imageScale:number       // 画像の大きさ
+}
+
+interface PlateauStream extends VisualItem {
+  id:string               // ID
+  cityCode:string         // 地域コード
+  dataType:string         // データタイプ
+  url:string              // URL
+  cityInfo:CityInfo       // 地域情報
+  texture:boolean         // テクスチャー
+  lowResolution:boolean   // 低解像度テクスチャー
+  show:boolean            // 表示/非表示
 }
 
 interface PyramidItem extends LocationItem {
@@ -51,15 +64,4 @@ type CityInfo = {
   cityKana:string         // 政令市･郡･支庁･振興局等（ふりがな）
   town:string             // 市区町村
   townKana:string         // 市区町村（ふりがな）
-}
-
-type PlateauStream = {
-  id:string               // ID
-  cityCode:string         // 地域コード
-  dataType:string         // データタイプ
-  url:string              // URL
-  cityInfo:CityInfo       // 地域情報
-  texture:boolean         // テクスチャー
-  low_resolution:boolean  // 低解像度テクスチャー
-  show:boolean            // 表示/非表示
 }
