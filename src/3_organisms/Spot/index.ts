@@ -1,1 +1,1 @@
-export * from './SpotTray'
+export * from './SpotPack'

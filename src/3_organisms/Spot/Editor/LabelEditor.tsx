@@ -13,12 +13,13 @@ const UlVertical = styled.ul`
 `
 
 interface Props {
+  cashkey:DataPack
   spot:SpotItem
 }
-export const LabelEditor:FC<Props> = ({spot}) => {
+export const LabelEditor:FC<Props> = ({cashkey, spot}) => {
   const id = useId()
   const titleId = `${id}_title`
-  const {setTitle, setBgColor, setLabelHeight, setLabelScale} = useSpotItem()
+  const {setTitle, setBgColor, setLabelHeight, setLabelScale} = useSpotItem(cashkey)
   const clickBgColor:ChangeEventHandler<HTMLInputElement> = (e) =>
     setBgColor(spot.id, e.target.value)
 

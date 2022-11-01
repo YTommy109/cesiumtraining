@@ -35,7 +35,6 @@ const Table = styled.table`
       left:           115px;
     }
   }
-}
 `
 
 type Props = {

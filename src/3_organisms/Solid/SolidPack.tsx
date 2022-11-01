@@ -25,7 +25,7 @@ const init:PyramidItem[] = [{
   color:        Color.fromAlpha(Color.SKYBLUE, 0.6)
 }]
 
-export const SolidTray:FC = () => {
+export const SolidPack:FC = () => {
   const {data:solids} = useVisualItem<PyramidItem>(CASHKEY, init)
 
   return <>

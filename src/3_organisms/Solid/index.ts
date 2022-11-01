@@ -1,1 +1,1 @@
-export * from './SolidTray'
+export * from './SolidPack'

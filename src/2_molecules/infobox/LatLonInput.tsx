@@ -2,6 +2,7 @@ import {FC, useId, useState, ChangeEventHandler, KeyboardEventHandler, MouseEven
 import {Label} from '1_atoms/Label'
 import {PropertyEditor} from '4_templates/PropertyEditor'
 import {Fit1fr50px50px} from '4_templates/Fit1fr50px50px'
+import {FaPen} from 'react-icons/fa'
 
 const LATLON_REGEXP = /^(?<lat>[0-9\\.]+),\s*(?<lon>[0-9\\.]+)$/
 
@@ -77,6 +78,8 @@ export const LatLonInput:FC<Props> = ({label, value, enter, disabled=false, ...p
           onClick         = {() => setEditable(true)}
         >
           {latlonView}
+          &nbsp;
+          <FaPen />
         </span>
       </PropertyEditor>}
   </>

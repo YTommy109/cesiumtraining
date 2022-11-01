@@ -5,11 +5,14 @@ import {useSpotItem} from './useSpotItem'
 /**
  * クリックマーカー
  */
-export const SpotMarker:FC = () => {
+type Props = {
+  cashkey:DataPack
+}
+export const SpotMarker:FC<Props> = ({cashkey}) => {
   const {camera, scene, globe} = useCesium()
   const [cartesian3, setCartesian3] = useState<Cartesian3|null>(null)
   const [timeoutID, setTimeoutID] = useState<ReturnType<typeof setTimeout> | null>(null)
-  const {create} = useSpotItem()
+  const {create} = useSpotItem(cashkey)
 
   const size = (camera.getMagnitude() - 6371655) / 20
 
