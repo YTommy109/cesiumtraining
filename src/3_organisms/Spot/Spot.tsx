@@ -1,4 +1,4 @@
-import {FC, useMemo} from 'react'
+import {FC, useMemo, useState} from 'react'
 import {Cartesian2, Cartesian3, Color, HeightReference, VerticalOrigin, DistanceDisplayCondition, NearFarScalar} from 'cesium'
 import {PolylineCollection, Polyline, Entity, EntityDescription, BillboardGraphics} from 'resium'
 import {SpotInfoBox} from './SpotInfoBox'
@@ -8,6 +8,8 @@ type Props = {
   spot:SpotItem
 }
 export const Spot:FC<Props> = ({cashkey, spot}) => {
+  const [focus, setFocus] = useState<boolean>(false)
+
   const pntGrand:Cartesian3 = useMemo(() => {
     return Cartesian3.fromDegrees(spot.location.lon, spot.location.lat, 0)
   }, [spot.location])
@@ -38,16 +40,18 @@ export const Spot:FC<Props> = ({cashkey, spot}) => {
       id                = {spot.id}
       name              = {spot.title}
       position          = {pntImage}
+      onMouseEnter      = {() => setFocus(true)}
+      onMouseLeave      = {() => setFocus(false)}
     >
       {spot.keylink !== null && <BillboardGraphics
         image           = {spot.links[spot.keylink]}
         rotation        = {0}
-        scale           = {spot.imageScale}
+        scale           = {focus ? spot.imageScale * 3 : spot.imageScale}
         heightReference = {HeightReference.RELATIVE_TO_GROUND}
         verticalOrigin  = {VerticalOrigin.BOTTOM}
         distanceDisplayCondition
                         = {new DistanceDisplayCondition(10, 5000)}
-        scaleByDistance = {new NearFarScalar(20, 6.0, 5000, 0.1)}
+        scaleByDistance = {new NearFarScalar(20, 3.0, 5000, 0.1)}
       />}
       <EntityDescription>
         <SpotInfoBox

@@ -1,8 +1,6 @@
 import {FC, MouseEventHandler, ChangeEventHandler, useState, useCallback} from 'react'
 import styled from 'styled-components'
-import {ListBox} from '1_atoms/ListBox'
-import {ListItem} from '1_atoms/ListItem'
-import {LeftTopStyle} from '4_templates/AbsoluteStyle'
+import {DataListPalet, DataListBox, DataListItem} from '1_atoms/DataList'
 import {Fit1fr20px} from '4_templates/Fit1fr20px'
 import {usePlateauUtil} from './usePlateauUtil'
 import {FaFilter, FaMountain} from 'react-icons/fa'
@@ -18,33 +16,27 @@ const DATA_TYPE:Record<string, string> = {
   takashio: '高潮',
   naisui:   'naisui'
 }
-const ListPalet = styled(LeftTopStyle)`
-  top:                      120px;
-  width:                    200px;
-  border-radius:            8px;
-  background-color:         navy;
-  padding:                  8px;
-  opacity:                  .7;
-  color:                    gainsboro;
-
-  summary {
-    opacity:                .9;
-  }
-`
 
 const TagBar = styled.div`
-  white-space:                nowrap;
-  overflow-x:                 scroll;
-  padding:                    3px;
+  white-space:            nowrap;
+  overflow-x:             scroll;
+  padding:                3px;
 `
 const TagButton = styled.button`
-  font-size:                  x-small;
+  font-size:              x-small;
 `
 
 const Item = styled.span`
-  display:                    grid;
-  grid-template-columns:      80px 120px;
-  font-size:                  small;
+  display:                grid;
+  grid-template-columns:  80px 120px;
+  background-color:       inherit;
+  border-radius:          inherit;
+
+  span {
+    overflow:             hidden;
+    white-space:          nowrap;
+    text-overflow:        ellipsis;
+  }
 `
 
 type Props = {
@@ -61,48 +53,45 @@ export const PlateauList:FC<Props> = ({plateau}) => {
   const handleChangeFilter:ChangeEventHandler<HTMLInputElement> = useCallback(
     (e) => setKeyword(e.target.value), [])
 
-  return <ListPalet>
-    <details open>
-      <summary>
-        <FaMountain /> PLATEAU ({plateau.length})
-      </summary>
-      <TagBar>
+  return <DataListPalet
+    title = {<><FaMountain /> PLATEAU ({plateau.length})</>}
+  >
+    <TagBar>
+      <TagButton
+        onClick   = {() => setTag('')}
+      >
+        All
+      </TagButton>
+      {Object.entries(DATA_TYPE).map(([key, it]) =>
         <TagButton
-          onClick   = {() => setTag('')}
+          key     = {key}
+          value   = {key}
+          onClick = {handleTagClick}
         >
-          All
+          {it}
         </TagButton>
-        {Object.entries(DATA_TYPE).map(([key, it]) =>
-          <TagButton
-            key     = {key}
-            value   = {key}
-            onClick = {handleTagClick}
+      )}
+    </TagBar>
+    <Fit1fr20px>
+      <input type="text" onChange={handleChangeFilter} />
+      <FaFilter />
+    </Fit1fr20px>
+    <DataListBox>
+      {plateau
+        .filter(it => tag === '' ? true : tag === it.dataType)
+        .filter(it => keyword === '' ? true : it.title.includes(keyword))
+        .map(it =>
+          <DataListItem key={it.id}
+            name        = "plateau"
+            value       = {it.id}
+            selectItem  = {(v) => selectItem(v)}
           >
-            {it}
-          </TagButton>
+            <Item>
+              <span>{DATA_TYPE[it.dataType]}</span>
+              <span>{it.title}</span>
+            </Item>
+          </DataListItem>
         )}
-      </TagBar>
-      <Fit1fr20px>
-        <input type="text" onChange={handleChangeFilter} />
-        <FaFilter />
-      </Fit1fr20px>
-      <ListBox>
-        {plateau
-          .filter(it => tag === '' ? true : tag === it.dataType)
-          .filter(it => keyword === '' ? true : it.title.includes(keyword))
-          .map(it =>
-            <ListItem key={it.id}
-              name = "plateau"
-              value = {it.id}
-              selectItem = {(v) => selectItem(v)}
-            >
-              <Item>
-                <span>{DATA_TYPE[it.dataType]}</span>
-                <span>{it.title}</span>
-              </Item>
-            </ListItem>
-          )}
-      </ListBox>
-    </details>
-  </ListPalet>
+    </DataListBox>
+  </DataListPalet>
 }

@@ -1,47 +1,35 @@
 import {FC, ReactNode, useCallback} from 'react'
 import styled from 'styled-components'
 import {useCesium} from 'resium'
-import {ListBox} from '1_atoms/ListBox'
-import {ListItem} from '1_atoms/ListItem'
-import {LeftTopStyle} from '4_templates/AbsoluteStyle'
+import {DataListPalet, DataListBox, DataListItem} from '1_atoms/DataList'
 
-const ListPalet = styled(LeftTopStyle)`
-  top:                      120px;
-  border-radius:            8px;
-  background-color:       darkblue;
-  padding:                  8px; 
-  opacity:                  .7;
-  color:                  gainsboro;
-  font-size:                small;
+const Span = styled.span`
+  display:  inline-block;
+  width:    100%;
 `
 
 type Props = {
   header:ReactNode
   spots:SpotItem[]
 }
-export const SpotList:FC<Props> = ({header, spots, ...props}) => {
+export const SpotList:FC<Props> = ({header, spots}) => {
   const {viewer} = useCesium()
   const selectItem = useCallback((id:string) => {
     viewer.flyTo(viewer.entities.getById(id))
   }, [viewer])
 
-  return <ListPalet>
-    <details open>
-      <summary>
-        {header}
-      </summary>
-      <ListBox>
-        {spots.map(it =>
-          <ListItem
-            key         = {it.id}
-            name        = "curry"
-            value       = {it.id}
-            selectItem  = {selectItem}
-          >
-            <span>{it.title}</span>
-          </ListItem>
-        )}
-      </ListBox>
-    </details>
-  </ListPalet>
+  return <DataListPalet title={header}>
+    <DataListBox>
+      {spots.map(it =>
+        <DataListItem
+          key         = {it.id}
+          name        = "curry"
+          value       = {it.id}
+          selectItem  = {selectItem}
+        >
+          <Span>{it.title}</Span>
+        </DataListItem>
+      )}
+    </DataListBox>
+  </DataListPalet>
 }

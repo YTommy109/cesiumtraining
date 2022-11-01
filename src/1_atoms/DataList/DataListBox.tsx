@@ -13,7 +13,7 @@ const OL = styled.ol`
 type Props = {
   children:ReactNode
 }
-export const ListBox:FC<Props> = ({children}) =>
+export const DataListBox:FC<Props> = ({children}) =>
   <OL>
     {children}
   </OL>
