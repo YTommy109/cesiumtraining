@@ -4,7 +4,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '![wacca](https://pbs.twimg.com/media/FfFJ1bnX0AAhd_v?format=jpg&name=small)\n\nめちゃ美味しい',
   location:    {lon: 139.77386052796396, lat: 35.68312191668824},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -22,7 +22,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '![and Curry 1](https://pbs.twimg.com/media/Fcvzw3aWYAAvYAk?format=jpg&name=small)\n\nめちゃ美味しい\n\nターメリックミルクも落ち着く味わい\n\n![and Curry 2](https://pbs.twimg.com/media/FSiACdhXsAAbZGM?format=jpg&name=small)',
   location:    {lon: 139.65856919807263, lat: 35.664074212990144},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     1,
   links:       [
@@ -43,7 +43,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '![カレー1](https://pbs.twimg.com/media/FgIGfpFXoAEXGKT?format=jpg&name=small)\n\nとても美味しい南インドカレー屋さん。絶妙ななスパイスの調合で、マサラチャイまで美味しい。',
   location:    {lon: 139.75243705542388, lat: 35.650785359423615},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -63,7 +63,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '![カレー1](https://pbs.twimg.com/media/FU9WERvXoAA6nKq?format=jpg&name=small)',
   location:    {lon: 139.3930653977504, lat: 35.58677263190765},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -79,7 +79,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '![カレー1](https://pbs.twimg.com/media/FLeT2VAXsAQyyFo?format=jpg&name=small)\n\nネパール在住経験のあるご夫婦がやってらっしゃる、本格スパイスカレー屋さん。地元丹波篠山の季節の食材を使った濃厚な味わいと、ゴロっとした大きい具材が転がっているのが特徴で、食感も楽しめる。\n\n![カレー2](https://pbs.twimg.com/media/FgSZmDKWYAAFVfK?format=jpg&name=small)\n\nキーマカレーは、肉の食感が残るようにお店で丁寧に粗挽きしてらっしゃって、めちゃ美味しい。',
   location:    {lon: 135.1380761112312, lat: 35.09803131867289},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     1,
   links:       [
@@ -101,7 +101,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.69822189590113, lat: 35.69667812876968},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -123,7 +123,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.66599069590026, lat: 35.66511591007103},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -139,7 +139,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 135.44761734006298, lat: 34.92380330528131},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -155,7 +155,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 135.50662119958182, lat: 34.70760651639344},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -169,7 +169,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.66856134193216, lat: 35.663590697437954},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -186,7 +186,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.66634188240832, lat: 35.66493182777607},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -200,7 +200,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.69865656687753, lat: 35.704908215390965},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -216,7 +216,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.69327758240797, lat: 35.65610445838015},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -238,7 +238,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.7024585689172, lat: 35.701678881125815},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -255,7 +255,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.45073281124039, lat: 35.49986637459727},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -271,7 +271,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.6694246842601, lat: 35.66289728209556},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -285,7 +285,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.64844752577207, lat: 35.70957646770888},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -299,7 +299,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 141.34860035376533, lat: 43.07707320360107},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -313,7 +313,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 141.34924118445312, lat: 43.07132042854252},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -327,7 +327,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.6825324842607, lat: 35.684297826703656},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -346,7 +346,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.69657596116662, lat: 35.692736570173274},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -361,7 +361,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.67279608240833, lat: 35.66827758771439},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -376,7 +376,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.90285298241116, lat: 35.78492642473293},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -390,7 +390,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 135.23627872657426, lat: 35.07044310502344},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -404,7 +404,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.66879531156678, lat: 35.66319149816798},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -420,7 +420,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 135.5031030284174, lat: 34.684417205470815},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -434,7 +434,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.68548648426065, lat: 35.68487559641879},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -448,7 +448,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.69677358425994, lat: 35.65728194531521},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -464,7 +464,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.14377155541453, lat: 35.2474145040827},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -478,7 +478,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.6771016265884, lat: 35.679509874043106},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -493,7 +493,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.6645223824093, lat: 35.704905323880055},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -507,7 +507,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.6602310247363, lat: 35.66388633034487},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -521,7 +521,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.66604891309612, lat: 35.66502264482388},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -536,7 +536,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.05809240309839, lat: 37.916043222066264},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -550,7 +550,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.7698287247369, lat: 35.69416072758817},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -564,7 +564,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 135.277178713076, lat: 34.80680533044404},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -579,7 +579,7 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '',
   location:    {lon: 139.66698999590014, lat: 35.65865364566663},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
@@ -593,11 +593,39 @@ export const DATA_CURRY:SpotItem[] = [{
   description: '抜群に美味しいスープカレーのお店。\n\n![カレー](https://pbs.twimg.com/media/Fgcs0SrXoAEBSAz?format=jpg&name=small)',
   location:    {lon: 139.6694924710838, lat: 35.662691883235254},
   bgColor:     'black',
-  labelHeight: 2000,
+  labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/Fgcs0SrXoAEBSAz?format=jpg&name=small'
+  ],
+  imageHeight: 10,
+  imageScale:  0.2
+}, {
+  id:          '8333deab-77f4-4404-938c-0b50c17f2b81',
+  title:       'BAGBAG',
+  description: 'スープカレーの本場。\n\n![カレー](https://pbs.twimg.com/media/Fgh2ZSsXgAAaZGt?format=jpg&name=small)\n\n[BAGBAG](https://bag-bag.jp/shop/minami1jou/)',
+  location:    {lon: 141.33444902678045, lat: 43.057012351432824},
+  bgColor:     'black',
+  labelHeight: 1000,
+  labelScale:  0.4,
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/Fgh2ZSsXgAAaZGt?format=jpg&name=small'
+  ],
+  imageHeight: 10,
+  imageScale:  0.2
+}, {
+  id:          '22049eb5-c5e3-4d18-bace-d57b22e83618',
+  title:       'Buzz curry',
+  description: 'トマトソースのスープカリー。ほろほろチキンとゴロゴロ野菜が美味しい。\n\n![カレー](https://pbs.twimg.com/media/FgnAFwgXoAAbz40?format=jpg&name=small)\n\n[Buzz curry](https://tabelog.com/hokkaido/A0101/A010102/1008492/)',
+  location:    {lon: 141.34137391514068, lat: 43.06131295809066},
+  bgColor:     'black',
+  labelHeight: 1000,
+  labelScale:  0.4,
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FgnAFwgXoAAbz40?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2

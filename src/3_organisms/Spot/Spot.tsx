@@ -1,6 +1,6 @@
 import {FC, useMemo, useState} from 'react'
 import {Cartesian2, Cartesian3, Color, HeightReference, VerticalOrigin, DistanceDisplayCondition, NearFarScalar} from 'cesium'
-import {PolylineCollection, Polyline, Entity, EntityDescription, BillboardGraphics} from 'resium'
+import {Entity, EntityDescription, BillboardGraphics} from 'resium'
 import {SpotInfoBox} from './SpotInfoBox'
 
 type Props = {
@@ -26,18 +26,6 @@ export const Spot:FC<Props> = ({cashkey, spot}) => {
 
   return <>
     <Entity
-      position    = {pntGrand}
-      point       = {{
-        pixelSize: 6
-      }}
-    />
-    <PolylineCollection>
-      <Polyline
-        positions = {[pntGrand, pntLabel]}
-      />
-    </PolylineCollection>
-    <Entity
-      id                = {spot.id}
       name              = {spot.title}
       position          = {pntImage}
       onMouseEnter      = {() => setFocus(true)}
@@ -52,6 +40,7 @@ export const Spot:FC<Props> = ({cashkey, spot}) => {
         distanceDisplayCondition
                         = {new DistanceDisplayCondition(10, 5000)}
         scaleByDistance = {new NearFarScalar(20, 3.0, 5000, 0.1)}
+        eyeOffset       = {new Cartesian3(100.0, 0.0, 0.0)}
       />}
       <EntityDescription>
         <SpotInfoBox
@@ -61,6 +50,7 @@ export const Spot:FC<Props> = ({cashkey, spot}) => {
       </EntityDescription>
     </Entity>
     <Entity
+      id                = {spot.id}
       name              = {spot.title}
       position          = {pntLabel}
       label             = {{
@@ -70,6 +60,22 @@ export const Spot:FC<Props> = ({cashkey, spot}) => {
         showBackground:    true,
         backgroundPadding: padding
       }}
-    />
+      point       = {{
+        pixelSize:       6,
+        color:           Color.fromAlpha(Color.fromCssColorString(spot.bgColor), 0.5),
+        heightReference: HeightReference.CLAMP_TO_GROUND
+      }}
+      polyline    = {{
+        positions: [pntGrand, pntLabel],
+        material:  Color.fromAlpha(Color.fromCssColorString(spot.bgColor), 0.5)
+      }}
+    >
+      <EntityDescription>
+        <SpotInfoBox
+          cashkey       = {cashkey}
+          spot          = {spot}
+        />
+      </EntityDescription>
+    </Entity>
   </>
 }
