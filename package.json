@@ -13,7 +13,7 @@
   "dependencies": {
     "@tanstack/react-query": "^4.12.0",
     "@vanilla-extract/css": "^1.9.1",
-    "cesium": "^1.98.1",
+    "cesium": "^1.99.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
