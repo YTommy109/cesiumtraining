@@ -15,6 +15,7 @@ const Details = styled.details`
 
   summary {
     opacity:          .9;
+    white-space:      nowrap;
   }
 `
 

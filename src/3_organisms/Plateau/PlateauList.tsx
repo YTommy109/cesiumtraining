@@ -4,6 +4,7 @@ import {DataListPalet, DataListBox, DataListItem} from '1_atoms/DataList'
 import {Fit1fr20px} from '4_templates/Fit1fr20px'
 import {usePlateauUtil} from './usePlateauUtil'
 import {FaFilter, FaMountain} from 'react-icons/fa'
+import {ModeChooser} from './ModeChooser'
 
 const DATA_TYPE:Record<string, string> = {
   bldg:     '建築物',
@@ -39,6 +40,11 @@ const Item = styled.span`
   }
 `
 
+const Div = styled.div`
+  display:                grid;
+  grid-template-columns:  1fr 1fr 1fr 1fr;
+`
+
 type Props = {
   plateau:PlateauStream[]
 }
@@ -46,6 +52,7 @@ export const PlateauList:FC<Props> = ({plateau}) => {
   const [tag, setTag] = useState<string>('')
   const [keyword, setKeyword] = useState<string>('')
   const {selectItem} = usePlateauUtil()
+  const [choiseMode, setChoiseMode] = useState<ChoiseMode>('single')
 
   const handleTagClick:MouseEventHandler<HTMLButtonElement> = useCallback(
     (e) => setTag(e.currentTarget.value), [])
@@ -53,8 +60,13 @@ export const PlateauList:FC<Props> = ({plateau}) => {
   const handleChangeFilter:ChangeEventHandler<HTMLInputElement> = useCallback(
     (e) => setKeyword(e.target.value), [])
 
+  const TitleBar:FC = () =>
+    <Div>
+      <FaMountain /> PLATEAU ({plateau.length}) <span>&nbsp;</span><ModeChooser value={choiseMode} changeMode={setChoiseMode} />
+    </Div>
+
   return <DataListPalet
-    title = {<><FaMountain /> PLATEAU ({plateau.length})</>}
+    title = {<TitleBar />}
   >
     <TagBar>
       <TagButton
