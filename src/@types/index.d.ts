@@ -1,5 +1,5 @@
 type DataPack   = 'plateau'|'curry'|'hotel'|''
-type ChoiseMode = 'single'|'multiple'
+type PickMode = 'single'|'multiple'
 
 type GeoRotation = {
   heading:number

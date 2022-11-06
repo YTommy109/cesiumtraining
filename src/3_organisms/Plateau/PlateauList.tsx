@@ -51,8 +51,8 @@ type Props = {
 export const PlateauList:FC<Props> = ({plateau}) => {
   const [tag, setTag] = useState<string>('')
   const [keyword, setKeyword] = useState<string>('')
-  const {selectItem} = usePlateauUtil()
-  const [choiseMode, setChoiseMode] = useState<ChoiseMode>('single')
+  const {pickItem, togleItem} = usePlateauUtil()
+  const [pickMode, setPickMode] = useState<PickMode>('single')
 
   const handleTagClick:MouseEventHandler<HTMLButtonElement> = useCallback(
     (e) => setTag(e.currentTarget.value), [])
@@ -62,7 +62,7 @@ export const PlateauList:FC<Props> = ({plateau}) => {
 
   const TitleBar:FC = () =>
     <Div>
-      <FaMountain /> PLATEAU ({plateau.length}) <span>&nbsp;</span><ModeChooser value={choiseMode} changeMode={setChoiseMode} />
+      <FaMountain /> PLATEAU ({plateau.length}) <span>&nbsp;</span><ModeChooser value={pickMode} changeMode={setPickMode} />
     </Div>
 
   return <DataListPalet
@@ -94,9 +94,11 @@ export const PlateauList:FC<Props> = ({plateau}) => {
         .filter(it => keyword === '' ? true : it.title.includes(keyword))
         .map(it =>
           <DataListItem key={it.id}
-            name        = "plateau"
-            value       = {it.id}
-            selectItem  = {(v) => selectItem(v)}
+            name      = "plateau"
+            value     = {it.id}
+            checked   = {it.show}
+            pickMode  = {pickMode}
+            pickItem  = {(v) => pickMode === 'single' ? pickItem(v) : togleItem(v)}
           >
             <Item>
               <span>{DATA_TYPE[it.dataType]}</span>

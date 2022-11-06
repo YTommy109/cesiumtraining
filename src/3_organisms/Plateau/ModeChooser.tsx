@@ -22,14 +22,14 @@ const Input = styled.input.attrs({
 `
 
 type Props = {
-  value:ChoiseMode
-  changeMode:(v:ChoiseMode) => void
+  value:PickMode
+  changeMode:(v:PickMode) => void
 }
 export const ModeChooser:FC<Props> = ({value, changeMode}) => {
   const id = useId()
 
   const handleChange:ChangeEventHandler<HTMLInputElement> = (e) => {
-    changeMode(e.target.value as ChoiseMode)
+    changeMode(e.target.value as PickMode)
   }
 
   return <RadioButtonTray>

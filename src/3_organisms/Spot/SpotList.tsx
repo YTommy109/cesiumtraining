@@ -25,7 +25,7 @@ export const SpotList:FC<Props> = ({header, spots}) => {
           key         = {it.id}
           name        = "curry"
           value       = {it.id}
-          selectItem  = {selectItem}
+          pickItem  = {selectItem}
         >
           <Span>{it.title}</Span>
         </DataListItem>

@@ -2,22 +2,35 @@ import {useQueryClient} from '@tanstack/react-query'
 import {CASHKEY} from './usePlateau'
 
 type ReturnPlateauItem = {
-  selectItem:(id:string) => void
+  pickItem:(id:string) => void
+  togleItem:(id:string) => void
 }
 export const usePlateauUtil = ():ReturnPlateauItem => {
   const quetyClient = useQueryClient()
 
-  const selectItem = (id:string):void => {
+  const pickItem = (id:string):void => {
     quetyClient.setQueryData<PlateauStream[]>([CASHKEY], (state) => {
       if (state == null) return []
 
       return state.map((it) =>
-        it.id !== id
-          ? {...it, show: false}
-          : {...it, show: true}
+        it.id === id
+          ? {...it, show: true}
+          : it.show ? {...it, show: false} : it
       )
     })
   }
 
-  return {selectItem}
+  const togleItem = (id:string):void => {
+    quetyClient.setQueryData<PlateauStream[]>([CASHKEY], (state) => {
+      if (state == null) return []
+
+      return state.map((it) =>
+        it.id === id
+          ? {...it, show: !it.show}
+          : it
+      )
+    })
+  }
+
+  return {pickItem, togleItem}
 }
