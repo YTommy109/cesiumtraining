@@ -8,18 +8,18 @@ const Li = styled.li`
     display:                none;
   }
   input[type=radio]:checked + label {
+    font-weight:            bold;
     background-color:       lightskyblue;
     color:                  midnightblue;
     border-radius:          0 6px 6px 0;
   }
   label {
     width:                  100%;
-
-    span {
-      overflow:             hidden;
-      white-space:          nowrap;
-      text-overflow:        ellipsis;
-    }
+    font-size:              small;
+    white-space:            nowrap;
+  }
+  label:hover {
+    font-weight:            bold;
   }
 `
 
@@ -29,7 +29,7 @@ type Props = {
   selectItem:(value:string) => void
   children:ReactNode
 }
-export const ListItem:FC<Props> = ({name, value, selectItem, children}) => {
+export const DataListItem:FC<Props> = ({name, value, selectItem, children}) => {
   const id = useId()
 
   const handleSelect:ChangeEventHandler<HTMLInputElement> = useCallback(
