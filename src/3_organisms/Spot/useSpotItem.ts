@@ -1,5 +1,6 @@
-import {useQueryClient} from '@tanstack/react-query'
+import {useCallback} from 'react'
 import {v4 as uuidv4} from 'uuid'
+import {useQueryClient} from '@tanstack/react-query'
 
 const pushArray = <T=string>(org:T[], link:T):T[] => [...org, link]
 
@@ -13,6 +14,7 @@ type ReturnSpotItem = {
   setLabelScale:(id:string, scale:number) => void
   setImageHeight:(id:string, height:number) => void
   setImageScale:(id:string, scale:number) => void
+  pickItem:(id:string) => void
 }
 export const useSpotItem = (cashkey:DataPack):ReturnSpotItem => {
   const quetyClient = useQueryClient()
@@ -31,12 +33,16 @@ export const useSpotItem = (cashkey:DataPack):ReturnSpotItem => {
         labelHeight: 100,
         labelScale:  0.5,
         imageHeight: 10,
-        imageScale:  0.2
+        imageScale:  0.2,
+        screenState: {
+          show:     true,
+          selected: false
+        }
       }]
     })
   }
 
-  const update = (id:string, callback:(state:SpotItem) => SpotItem):void => {
+  const update = useCallback((id:string, callback:(state:SpotItem) => SpotItem):void => {
     quetyClient.setQueryData<SpotItem[]>([cashkey], (state) => {
       if (state == null) return []
       return state.map((it) =>
@@ -45,30 +51,51 @@ export const useSpotItem = (cashkey:DataPack):ReturnSpotItem => {
           : callback(it)
       )
     })
-  }
-  const setTitle = (id:string, title:string):void =>
+  }, [cashkey, quetyClient])
+
+  const setTitle = useCallback((id:string, title:string):void =>
     update(id, (state) => ({...state, title}))
+  , [update])
 
-  const pushLink = (id:string, url:string):void =>
+  const pushLink = useCallback((id:string, url:string):void =>
     update(id, (state) => ({...state, links: pushArray(state.links, url)}))
+  , [update])
 
-  const choseBillboard = (id:string, index:number):void =>
+  const choseBillboard = useCallback((id:string, index:number):void =>
     update(id, (state) => ({...state, keylink: index}))
+  , [update])
 
-  const setBgColor = (id:string, color:string):void =>
+  const setBgColor = useCallback((id:string, color:string):void =>
     update(id, (state) => ({...state, bgColor: color}))
+  , [update])
 
-  const setLabelHeight = (id:string, height:number):void =>
+  const setLabelHeight = useCallback((id:string, height:number):void =>
     update(id, (state) => ({...state, labelHeight: height}))
+  , [update])
 
-  const setLabelScale = (id:string, scale:number):void =>
+  const setLabelScale = useCallback((id:string, scale:number):void =>
     update(id, (state) => ({...state, labelScale: scale}))
+  , [update])
 
-  const setImageHeight = (id:string, height:number):void =>
+  const setImageHeight = useCallback((id:string, height:number):void =>
     update(id, (state) => ({...state, imageHeight: height}))
+  , [update])
 
-  const setImageScale = (id:string, scale:number):void =>
+  const setImageScale = useCallback((id:string, scale:number):void =>
     update(id, (state) => ({...state, imageScale: scale}))
+  , [update])
 
-  return {create, setTitle, pushLink, choseBillboard, setBgColor, setLabelHeight, setLabelScale, setImageHeight, setImageScale}
+  const pickItem = useCallback((id:string):void => {
+    quetyClient.setQueryData<SpotItem[]>([cashkey], (state) => {
+      if (state == null) return []
+      return state.map((it) =>
+        it.id === id
+          ? {...it, screenState: {...it.screenState, selected: true}}
+          : (it.screenState.show ? {...it, screenState: {...it.screenState, selected: false}} : it)
+      )
+    })
+  }
+  , [quetyClient, cashkey])
+
+  return {create, setTitle, pushLink, choseBillboard, setBgColor, setLabelHeight, setLabelScale, setImageHeight, setImageScale, pickItem}
 }

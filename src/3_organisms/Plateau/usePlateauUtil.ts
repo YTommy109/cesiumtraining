@@ -14,8 +14,8 @@ export const usePlateauUtil = ():ReturnPlateauItem => {
 
       return state.map((it) =>
         it.id === id
-          ? {...it, show: true}
-          : it.show ? {...it, show: false} : it
+          ? {...it, screenState: {...it.screenState, show: true}}
+          : it.screenState.show ? {...it, screenState: {...it.screenState, show: false}} : it
       )
     })
   }
@@ -26,7 +26,7 @@ export const usePlateauUtil = ():ReturnPlateauItem => {
 
       return state.map((it) =>
         it.id === id
-          ? {...it, show: !it.show}
+          ? {...it, screenState: {...it.screenState, show: !it.screenState.show}}
           : it
       )
     })

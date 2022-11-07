@@ -53,15 +53,18 @@ const getPlateau = async ():Promise<PlateauStream[]> => {
     const lowResolution:boolean = it.URL.includes('/low_resolution/')
 
     return {
-      id:       uuidv4(),
-      title:    `${info.prefecture}${info.city}${info.town}${texture ? '_テク' : ''}${lowResolution ? '_ロー' : ''}`,
-      cityCode: it.CITYCODE,
-      dataType: it.TYPE,
-      url:      it.URL,
-      cityInfo: info,
+      id:          uuidv4(),
+      title:       `${info.prefecture}${info.city}${info.town}${texture ? '_テク' : ''}${lowResolution ? '_ロー' : ''}`,
+      cityCode:    it.CITYCODE,
+      dataType:    it.TYPE,
+      url:         it.URL,
+      cityInfo:    info,
       texture,
       lowResolution,
-      show:     false
+      screenState: {
+        show:     false,
+        selected: false
+      }
     }
   })
 }

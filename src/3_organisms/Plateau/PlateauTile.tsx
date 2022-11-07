@@ -19,7 +19,7 @@ export const PlateauTile:FC<Props> = ({plateau}) => {
   }, [])
 
   return  <>
-    {plateau.filter(it => it.show).map(it =>
+    {plateau.filter(it => it.screenState.show).map(it =>
       <Resium3DTileset
         key     = {it.id}
         url     = {it.url}

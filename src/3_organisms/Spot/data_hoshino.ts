@@ -1,4 +1,22 @@
+const INIT_SPOT:SpotItem = {
+  id:          '',
+  title:       '',
+  location:    {lon: 139.77386052796396, lat: 35.68312191668824},
+  bgColor:     'black',
+  labelHeight: 1000,
+  labelScale:  0.4,
+  keylink:     0,
+  links:       [],
+  imageHeight: 10,
+  imageScale:  0.2,
+  screenState: {
+    show:     true,
+    selected: false
+  }
+}
+
 export const DATA_HOSHINO:SpotItem[] = [{
+  ...INIT_SPOT,
   id:          '39873ca2-7668-4972-b29d-53b49ba952af',
   title:       '星のや軽井沢',
   description: '谷の集落に滞在する\n\n![外観](/data/星野リゾート/星のや/星のや軽井沢.jpg)',
@@ -13,6 +31,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '9d80f1fa-e0c6-48e3-908d-d769bb6f29e8',
   title:       '星のや東京',
   description: '世界都市東京によみがえる、塔の日本旅館\n\n![外観](/data/星野リゾート/星のや/星のや東京.jpg)',
@@ -27,6 +46,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '2883abb9-fc3e-4a08-a46a-bdc1df94fa79',
   title:       '星のや富士',
   description: '明日が分からない、丘陵のグランピング\n\n![外観](/data/星野リゾート/星のや/星のや富士.jpg)',
@@ -41,6 +61,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '6312ccf4-74d7-4693-adc7-faf77cdde045',
   title:       '星のや京都',
   description: '嵐峡の地に建つ、水辺の私邸\n\n![外観](/data/星野リゾート/星のや/星のや京都.jpg)',
@@ -55,6 +76,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '18a74da2-42d4-47f6-a6b7-dc1cc6e42b0f',
   title:       '星のや沖縄',
   description: 'グスクの居館で、海とともに暮らす\n\n![外観](/data/星野リゾート/星のや/星のや沖縄.jpg)',
@@ -69,6 +91,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '5903f5fd-a20f-42c9-8129-e4bf9538f921',
   title:       '星のや竹富島',
   description: 'ウツグミの島に楽土あり\n\n![外観](/data/星野リゾート/星のや/星のや竹富島.jpg)',
@@ -83,6 +106,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          'b2e14cf0-b721-4bf1-8b5d-9f686c1e1da1',
   title:       '星のやバリ',
   description: '古来の精神が息づく、聖なる川に向かう集落\n\n![外観](/data/星野リゾート/星のや/星のやバリ.jpg)',
@@ -97,6 +121,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '6036a211-1ad0-4a0e-af55-8e3cb4929a6c',
   title:       '星のやグーグァン',
   description: '温泉渓谷の楼閣で、最上のまどろみを知る\n\n![外観](/data/星野リゾート/星のや/星のやグーグァン.jpg)',
@@ -111,6 +136,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          'd0905ac0-9fdc-4ee6-901b-5274cb7124e1',
   title:       '界 ポロト',
   description: 'ポロト湖の懐にひたる、とんがり湯小屋の宿\n\n![外観](/data/星野リゾート/堺/堺%20ポロト.jpg)',
@@ -125,6 +151,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          'f09f7277-97c5-4cd5-ad63-f236a318f4e4',
   title:       '界 津軽',
   description: '津軽の四季と伝統文化に浸る\n\n![外観](/data/星野リゾート/堺/堺%20津軽.jpg)',
@@ -139,6 +166,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '17b32ea9-e7c9-497d-8544-f08a91941140',
   title:       '界 川治',
   description: '里山の知恵比べ、味比べ\n\n![外観](/data/星野リゾート/堺/堺%20川治.jpg)',
@@ -153,6 +181,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          'e87e48b7-a9c9-4c4e-998a-bc46916d1211',
   title:       '界 鬼怒川',
   description: 'とちぎ民藝が光る木漏れ日の湯宿\n\n![外観](/data/星野リゾート/堺/堺%20鬼怒川.jpg)',
@@ -167,6 +196,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          'ba21a244-68b0-4cf7-948a-6652e2f6c208',
   title:       '界 日光',
   description: '中禅寺湖の神秘にため息\n\n![外観](/data/星野リゾート/堺/堺%20日光.jpg)',
@@ -181,6 +211,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '4133d332-c930-4b0f-9a51-cdd979a89d5c',
   title:       '界 箱根',
   description: '寄木細工のように変幻自在\n\n![外観](/data/星野リゾート/堺/堺%20箱根.jpg)',
@@ -195,6 +226,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '1b497caf-648f-495c-abe3-248c89b7a3e7',
   title:       '界 仙石原',
   description: '内なる表現欲と出会う アトリエ温泉旅館\n\n![外観](/data/星野リゾート/堺/堺%20仙石原.jpg)',
@@ -209,6 +241,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '46d3597c-4e3c-4111-a112-dc1d103e72c7',
   title:       '界 熱海',
   description: '再開業を目指し、改築中です\n\n![外観](/data/星野リゾート/堺/堺%20熱海.jpg)',
@@ -223,6 +256,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          'b8afa518-342a-4c60-830e-02fb83bc6b3c',
   title:       '界 アンジン',
   description: 'マリンアンティークな空間で船旅気分\n\n![外観](/data/星野リゾート/堺/堺%20アンジン.jpg)',
@@ -237,6 +271,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '58447aba-c245-4152-883b-d1d20d250098',
   title:       '界 伊東',
   description: '温泉づくし花暦の宿\n\n![外観](/data/星野リゾート/堺/堺%20伊東.jpg)',
@@ -251,6 +286,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          'c4ad3ff5-8900-4e76-9d79-0fe51259369a',
   title:       '界 遠州',
   description: '湖畔に佇む宿ならではの解放感\n\n![外観](/data/星野リゾート/堺/堺%20伊東.jpg)',
@@ -265,6 +301,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '4a5a20da-efb0-48ee-bbaa-029c6ff0500e',
   title:       '界 アルプス',
   description: '信州の贅沢な田舎を体感する温泉宿\n\n![外観](/data/星野リゾート/堺/堺%20アルプス.jpg)',
@@ -279,6 +316,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          'dea4b9c7-975f-4c74-94fd-9d90f856d472',
   title:       '界 松本',
   description: '音響抜群のロビーでコンサート\n\n![外観](/data/星野リゾート/堺/堺%20松本.jpg)',
@@ -293,6 +331,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '225a27f9-27eb-4f8a-9173-e24aa940707f',
   title:       '界 加賀',
   description: '新しい感性が息づく加賀伝統の温泉宿\n\n![外観](/data/星野リゾート/堺/堺%20加賀.jpg)',
@@ -307,6 +346,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '84699b80-db99-41e1-a05a-352c3c948fa8',
   title:       '界 玉造',
   description: 'いにしえの湯と出雲文化を遊ぶ宿\n\n![外観](/data/星野リゾート/堺/堺%20玉造.jpg)',
@@ -321,6 +361,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '361e991e-bb8e-4b6a-8f97-6b860668559d',
   title:       '界 出雲',
   description: '灯台と水平線を望むお詣り支度の宿\n\n![外観](/data/星野リゾート/堺/堺%20出雲.jpg)',
@@ -335,6 +376,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          'fcc1a143-c3bb-4171-815a-287b3de0adf7',
   title:       '界 長門',
   description: '藩主を癒した温泉街で新しい雅を体験する\n\n![外観](/data/星野リゾート/堺/堺%20長門.jpg)',
@@ -349,6 +391,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '4a50df3e-d1b8-4dcf-a6cb-68bddf9e8b08',
   title:       '界 別府',
   description: 'ドラマティック温泉街に逗留する\n\n![外観](/data/星野リゾート/堺/堺%20別府.jpg)',
@@ -363,6 +406,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          'd32c19a2-0f53-4f06-b7a9-cb07742c4417',
   title:       '界 由布院',
   description: '四季折々の棚田を感じる湯宿\n\n![外観](/data/星野リゾート/堺/堺%20湯布院.jpg)',
@@ -377,6 +421,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          'd7cb9bf4-813c-486b-a507-3d9fe0a78497',
   title:       '界 阿蘇',
   description: '火の国、水の国がもたらす神仙境\n\n![外観](/data/星野リゾート/堺/堺%20阿蘇.jpg)',
@@ -391,6 +436,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          'e51a83ba-cafc-470a-817d-57031d2bd2f8',
   title:       '界 雲仙',
   description: '地獄パワーにふれる、異国情緒の宿\n\n![外観](/data/星野リゾート/堺/堺%20雲仙.jpg)',
@@ -405,6 +451,7 @@ export const DATA_HOSHINO:SpotItem[] = [{
   imageHeight: 10,
   imageScale:  0.2
 }, {
+  ...INIT_SPOT,
   id:          '9a1aa880-911e-418c-95da-8eb5b4489edc',
   title:       '界 霧島',
   description: '桜島をはるかに見渡し、湯浴み小屋でうるおう宿\n\n![外観](/data/星野リゾート/堺/堺%20霧島.jpg)',

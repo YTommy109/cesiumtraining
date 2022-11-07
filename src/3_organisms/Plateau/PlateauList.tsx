@@ -96,7 +96,7 @@ export const PlateauList:FC<Props> = ({plateau}) => {
           <DataListItem key={it.id}
             name      = "plateau"
             value     = {it.id}
-            checked   = {it.show}
+            checked   = {it.screenState.show}
             pickMode  = {pickMode}
             pickItem  = {(v) => pickMode === 'single' ? pickItem(v) : togleItem(v)}
           >

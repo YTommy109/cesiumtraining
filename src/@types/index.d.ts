@@ -16,14 +16,14 @@ type GeoLocation = {
 type ScreenState = {
   show:boolean          // 表示状態
   selected:boolean      // 選択候補状態 (リスト上で選択)
-  active:boolean        // 選択状態 (地図上で選択)
-  focuse:boolean        // 焦点状態 (*予約)
+  active?:boolean        // 選択状態 (地図上で選択)
+  focuse?:boolean        // 焦点状態 (*予約)
 }
 interface VisualItem {
   id:string
   title:string
   description?:string
-  screenState?:ScreenState
+  screenState:ScreenState
 }
 
 interface LocationItem extends VisualItem {
@@ -48,7 +48,6 @@ interface PlateauStream extends VisualItem {
   cityInfo:CityInfo       // 地域情報
   texture:boolean         // テクスチャー
   lowResolution:boolean   // 低解像度テクスチャー
-  show:boolean            // 表示/非表示
 }
 
 interface PyramidItem extends LocationItem {

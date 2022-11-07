@@ -34,6 +34,7 @@ export const SpotPack:FC<Props> = ({cashkey}) => {
     />
     <SpotList
       header    = {TITLEMAP[cashkey]}
+      cashkey   = {cashkey}
       spots     = {spots}
     />
     {spots.map((it) =>
