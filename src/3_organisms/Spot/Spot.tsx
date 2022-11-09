@@ -53,6 +53,7 @@ export const Spot:FC<Props> = ({cashkey, spot}) => {
       id                = {spot.id}
       name              = {spot.title}
       position          = {pntLabel}
+      selected          = {spot.screenState.selected}
       label             = {{
         text:              spot.title,
         scale:             spot.labelScale,
@@ -61,7 +62,7 @@ export const Spot:FC<Props> = ({cashkey, spot}) => {
         backgroundPadding: padding
       }}
       point       = {{
-        pixelSize:       6,
+        pixelSize:       10,
         color:           Color.fromAlpha(Color.fromCssColorString(spot.bgColor), 0.5),
         heightReference: HeightReference.CLAMP_TO_GROUND
       }}

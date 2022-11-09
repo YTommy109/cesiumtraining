@@ -7,6 +7,7 @@ const pushArray = <T=string>(org:T[], link:T):T[] => [...org, link]
 type ReturnSpotItem = {
   create:(location:GeoLocation) => void
   setTitle:(id:string, title:string) => void
+  setDescription:(id:string, text:string) => void
   pushLink:(id:string, url:string) => void
   choseBillboard:(id:string, index:number) => void
   setBgColor:(id:string, color:string) => void
@@ -85,6 +86,10 @@ export const useSpotItem = (cashkey:DataPack):ReturnSpotItem => {
     update(id, (state) => ({...state, imageScale: scale}))
   , [update])
 
+  const setDescription = useCallback((id:string, text:string):void =>
+    update(id, (state) => ({...state, description: text}))
+  , [update])
+
   const pickItem = useCallback((id:string):void => {
     quetyClient.setQueryData<SpotItem[]>([cashkey], (state) => {
       if (state == null) return []
@@ -97,5 +102,5 @@ export const useSpotItem = (cashkey:DataPack):ReturnSpotItem => {
   }
   , [quetyClient, cashkey])
 
-  return {create, setTitle, pushLink, choseBillboard, setBgColor, setLabelHeight, setLabelScale, setImageHeight, setImageScale, pickItem}
+  return {create, setTitle, setDescription, pushLink, choseBillboard, setBgColor, setLabelHeight, setLabelScale, setImageHeight, setImageScale, pickItem}
 }
