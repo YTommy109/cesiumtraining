@@ -1,5 +1,8 @@
+
 .org_infobox {
   max-width:              460px;
+  background-color:     black;
+  opacity:                0.8;
 }
 
 .org_infobox fieldset {

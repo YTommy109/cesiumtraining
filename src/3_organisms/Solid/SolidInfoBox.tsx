@@ -3,19 +3,15 @@ import {TabBar} from '2_molecules/infobox/TabBar'
 import {SolidEditor} from './SolidEditor'
 import ReactMarkdown from 'react-markdown'
 
-const STL = {
-  BOX: {
-    height: '800px'
-  }
-}
-
 type Props = {
+  cashkey:DataPack
   pyramid:PyramidItem
 }
-export const SolidInfoBox:FC<Props> = ({pyramid}) => {
+export const SolidInfoBox:FC<Props> = ({cashkey, pyramid}) => {
   const [mode, setMode] = useState<string>('info')
 
-  return <div style={STL.BOX}>
+  return <div className="org_infobox" style={{minHeight: '480px'}}>
+    <link href="/infobox.css" rel="stylesheet" />
     <TabBar mode={mode} setMode={setMode} />
     {mode === 'info' &&
       <ReactMarkdown>
@@ -23,6 +19,9 @@ export const SolidInfoBox:FC<Props> = ({pyramid}) => {
       </ReactMarkdown>
 
     }
-    {mode === 'edit' && <SolidEditor pyramid = {pyramid} />}
+    {mode === 'edit' && <SolidEditor
+      cashkey = {cashkey}
+      pyramid = {pyramid}
+    />}
   </div>
 }

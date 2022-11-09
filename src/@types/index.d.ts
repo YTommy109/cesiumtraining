@@ -1,4 +1,4 @@
-type DataPack   = 'plateau'|'curry'|'hotel'|''
+type DataPack   = 'plateau'|'curry'|'hotel'|'pyramid'|''
 type PickMode = 'single'|'multiple'
 
 type LonLat = {

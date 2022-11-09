@@ -16,8 +16,8 @@ export const SpotInfoBox:FC<Props> = ({cashkey, spot}) => {
     viewer.flyTo(viewer.entities.getById(spot.id))
   }, [viewer, spot.id])
 
-  return <div className="org_infobox" style={{minHeight: '400px'}}>
-    <link href="/infobox.css" rel="stylesheet"></link>
+  return <div className="org_infobox" style={{minHeight: '480px'}}>
+    <link href="/infobox.css" rel="stylesheet" />
     <TabBar mode={mode} setMode={setMode} flyTo={flyTo} />
     {mode === 'info' &&
       <ReactMarkdown

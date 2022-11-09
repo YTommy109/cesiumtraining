@@ -4,9 +4,10 @@ import {Entity, EntityDescription} from 'resium'
 import {SolidInfoBox} from './SolidInfoBox'
 
 type Props = {
+  cashkey:DataPack
   pyramid:PyramidItem
 }
-export const SolidPyramid:FC<Props> = ({pyramid}) =>
+export const SolidPyramid:FC<Props> = ({cashkey, pyramid}) =>
   <Entity
     name        = {pyramid.title}
     position    = {Cartesian3.fromDegrees(pyramid.location.lon, pyramid.location.lat)}
@@ -23,6 +24,7 @@ export const SolidPyramid:FC<Props> = ({pyramid}) =>
     {pyramid.description &&
       <EntityDescription>
         <SolidInfoBox
+          cashkey         = {cashkey}
           pyramid         = {pyramid}
           />
       </EntityDescription>

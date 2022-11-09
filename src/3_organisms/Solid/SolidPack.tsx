@@ -3,7 +3,7 @@ import {Color} from 'cesium'
 import {SolidPyramid} from '3_organisms/Solid/SolidPyramid'
 import {useVisualItem} from 'controller/useVisualItem'
 
-const CASHKEY = 'pyramid'
+const CASHKEY:DataPack = 'pyramid'
 
 const INIT_SOLID:PyramidItem = {
   id:          '',
@@ -48,6 +48,7 @@ export const SolidPack:FC = () => {
     {solids.map(it =>
       <SolidPyramid
         key     = {it.id}
+        cashkey = {CASHKEY}
         pyramid = {it}
       />
     )}
