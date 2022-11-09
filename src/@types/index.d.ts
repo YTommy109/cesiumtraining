@@ -5,6 +5,12 @@ type LonLat = {
   lon:number
   lat:number
 }
+type AreaBox = {
+  west:number
+  east:number
+  north:number
+  south:number
+}
 
 type GeoRotation = {
   heading:number

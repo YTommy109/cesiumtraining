@@ -10,9 +10,10 @@ const UlVertical = styled.ul`
 
 type Props = {
   location:GeoLocation
+  area:AreaBox
   changeLocation:(location:GeoLocation) => void
 }
-export const LocationEntry:FC<Props> = ({location, changeLocation}) => {
+export const LocationEntry:FC<Props> = ({location, area, changeLocation}) => {
   const setLon    = (val:number):void => changeLocation({...location, lon: val})
   const setLat    = (val:number):void => changeLocation({...location, lat: val})
   const setHeight = (val:number):void => changeLocation({...location, height: val})
@@ -26,9 +27,9 @@ export const LocationEntry:FC<Props> = ({location, changeLocation}) => {
           label         = "経度:"
           value         = {location.lon}
           changeValue   = {setLon}
-          min           = {-180}
-          max           = {180}
-          step          = {0.001}
+          min           = {area.west}
+          max           = {area.east}
+          step          = {0.0001}
         />
       </li>
       <li>
@@ -36,9 +37,9 @@ export const LocationEntry:FC<Props> = ({location, changeLocation}) => {
           label         = "緯度:"
           value         = {location.lat}
           changeValue   = {setLat}
-          min           = {-90}
-          max           = {90}
-          step          = {0.001}
+          min           = {area.south}
+          max           = {area.north}
+          step          = {0.0001}
         />
       </li>
       <li>
