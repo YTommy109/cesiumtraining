@@ -3,7 +3,7 @@ import {useQuery, useQueryClient} from '@tanstack/react-query'
 type ReturnVisualItem<T> = {
   data:T[]
 }
-export const useVisualItem = <T extends VisualItem = VisualItem>(cashkey:string, initialData?:T[]):ReturnVisualItem<T> => {
+export const useVisualItem = <T extends LocationItem = LocationItem>(cashkey:string, initialData?:T[]):ReturnVisualItem<T> => {
   const {data} = useQuery<T[], Error>(
     [cashkey],
     {enabled: false, initialData}
@@ -23,7 +23,7 @@ export const useVisualItemUtil = (cashkey:string):ReturnDataItemUtil => {
   const quetyClient = useQueryClient()
 
   const select = (id:string):void => {
-    quetyClient.setQueryData<Array<Required<VisualItem>>>([cashkey], (state) => {
+    quetyClient.setQueryData<Array<Required<LocationItem>>>([cashkey], (state) => {
       if (state == null) return []
       return state.map((it) =>
         it.id !== id
@@ -34,7 +34,7 @@ export const useVisualItemUtil = (cashkey:string):ReturnDataItemUtil => {
   }
 
   const deselect = (id:string):void => {
-    quetyClient.setQueryData<Array<Required<VisualItem>>>([cashkey], (state) => {
+    quetyClient.setQueryData<Array<Required<LocationItem>>>([cashkey], (state) => {
       if (state == null) return []
       return state.map((it) =>
         it.id !== id
@@ -45,24 +45,4 @@ export const useVisualItemUtil = (cashkey:string):ReturnDataItemUtil => {
   }
 
   return {select, deselect}
-}
-
-type ReturnLocationItem = {
-  changeLocation:(id:string, location:GeoLocation) => void
-}
-export const useLocationItem = (cashkey:string):ReturnLocationItem => {
-  const quetyClient = useQueryClient()
-
-  const changeLocation = (id:string, location:GeoLocation):void => {
-    quetyClient.setQueryData<LocationItem[]>([cashkey], (state) => {
-      if (state == null) return []
-      return state.map((it) =>
-        it.id !== id
-          ? it
-          : {...it, location}
-      )
-    })
-  }
-
-  return {changeLocation}
 }

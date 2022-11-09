@@ -1,7 +1,7 @@
 import {ChangeEventHandler, FC, useId} from 'react'
 import {LocationEntry} from '2_molecules/infobox/LocationEntry'
 import {LabelEditor, ImageEditor} from './Editor'
-import {useLocationItem} from 'controller/useVisualItem'
+import {useLocationItemUtil} from 'controller/useLocationItem'
 import {useSpotItem} from './useSpotItem'
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 }
 export const SpotEditor:FC<Props> = ({cashkey, spot}) => {
   const id = useId()
-  const {changeLocation} = useLocationItem(cashkey)
+  const {changeLocation} = useLocationItemUtil(cashkey)
   const setLocation = (val:GeoLocation):void => changeLocation(spot.id, val)
   const {setDescription} = useSpotItem(cashkey)
   const handler:ChangeEventHandler<HTMLTextAreaElement> = (e) => setDescription(spot.id, e.target.value)

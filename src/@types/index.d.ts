@@ -1,6 +1,11 @@
 type DataPack   = 'plateau'|'curry'|'hotel'|''
 type PickMode = 'single'|'multiple'
 
+type LonLat = {
+  lon:number
+  lat:number
+}
+
 type GeoRotation = {
   heading:number
   pitch:number
@@ -19,15 +24,16 @@ type ScreenState = {
   active?:boolean        // 選択状態 (地図上で選択)
   focuse?:boolean        // 焦点状態 (*予約)
 }
-interface VisualItem {
+interface LocationItem {
   id:string
   title:string
   description?:string
   screenState:ScreenState
 }
 
-interface LocationItem extends VisualItem {
+interface LocationItem extends LocationItem {
   location:GeoLocation
+  terrainHeight?:number
 }
 
 interface SpotItem extends LocationItem {
@@ -40,7 +46,7 @@ interface SpotItem extends LocationItem {
   imageScale:number       // 画像の大きさ
 }
 
-interface PlateauStream extends VisualItem {
+interface PlateauStream extends LocationItem {
   id:string               // ID
   cityCode:string         // 地域コード
   dataType:string         // データタイプ

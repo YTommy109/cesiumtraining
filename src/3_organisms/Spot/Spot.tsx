@@ -11,8 +11,8 @@ export const Spot:FC<Props> = ({cashkey, spot}) => {
   const [focus, setFocus] = useState<boolean>(false)
 
   const pntGrand:Cartesian3 = useMemo(() => {
-    return Cartesian3.fromDegrees(spot.location.lon, spot.location.lat, 0)
-  }, [spot.location])
+    return Cartesian3.fromDegrees(spot.location.lon, spot.location.lat, spot.terrainHeight)
+  }, [spot.location, spot.terrainHeight])
 
   const pntLabel:Cartesian3 = useMemo(() => {
     return Cartesian3.fromDegrees(spot.location.lon, spot.location.lat, spot.labelHeight)
