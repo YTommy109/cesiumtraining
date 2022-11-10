@@ -170,8 +170,8 @@ export const DATA_CURRY:SpotItem[] = [{
 }, {
   ...INIT_SPOT,
   id:          'DDBF3EB3-9472-4216-85ED-F79E8105FF2D',
-  title:       'Rato Moto',
-  description: '',
+  title:       'Rato Mato',
+  description: 'ネパール窯料理のお店。\n\n![ビリヤニ](https://pbs.twimg.com/media/FdzL6NMXgAEjH18?format=jpg&name=small)\n\n[Rato Mato](https://tabelog.com/tokyo/A1304/A130404/13263740/)',
   location:    {lon: 139.69865656687753, lat: 35.704908215390965},
   keylink:     0,
   links:       [
@@ -281,7 +281,7 @@ export const DATA_CURRY:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '6c56a270-f4b3-4dd8-9e82-93e143535a44',
   title:       'バンコクスパイス',
-  description: '',
+  description: '上品な味わいのタイ料理のお店。\n\n![タイカレー](https://pbs.twimg.com/media/FbTUxBrXwAEqX3u?format=jpg&name=small)\n\n[バンコクスパイス](https://bangkokspice.owst.jp)',
   location:    {lon: 139.69657596116662, lat: 35.692736570173274},
   keylink:     0,
   links:       [

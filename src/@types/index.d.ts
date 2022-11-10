@@ -68,7 +68,7 @@ interface SolidItem extends LocationItem {
   length:number         // 建物長さ (高さ)
   color:Color
 }
-interface SolidItem extends SolidItem {
+interface CylinderItem extends SolidItem {
   slice:number
   topRadius:number
   bottomRadius:number

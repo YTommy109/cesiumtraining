@@ -4,17 +4,16 @@ import {LocationEntry} from '2_molecules/infobox/LocationEntry'
 import {RangeInput} from '2_molecules/infobox/RangeInput'
 import {useLocationItemUtil} from 'controller/useLocationItem'
 import {getCameraBox} from 'controller/util'
-import {useSolidItem} from './useSolidItem'
-import {useCylinderItem} from './useCylinderItem'
+import {useSolidItem, useCylinderItem} from './useSolidItem'
 import {BiPyramid, BiCylinder, BiCube} from 'react-icons/bi'
 
 const CASHKEY = 'pyramid'
 
 type Props = {
   cashkey:DataPack
-  item:SolidItem
+  item:CylinderItem
 }
-export const SolidEditor:FC<Props> = ({cashkey, item: pyramid}) => {
+export const CylinderEditor:FC<Props> = ({cashkey, item: pyramid}) => {
   const {changeLocation} = useLocationItemUtil(CASHKEY)
   const {camera} = useCesium()
   const {setLength} = useSolidItem(cashkey)
@@ -61,5 +60,6 @@ export const SolidEditor:FC<Props> = ({cashkey, item: pyramid}) => {
       changeValue   = {(val:number):void => {
         setLength(pyramid.id, val)
       }}
-    />  </>
+    />
+  </>
 }
