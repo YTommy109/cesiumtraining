@@ -5,17 +5,20 @@ import {RangeInput} from '2_molecules/infobox/RangeInput'
 import {useLocationItemUtil} from 'controller/useLocationItem'
 import {getCameraBox} from 'controller/util'
 import {useSolidItem} from './useSolidItem'
+import {useCylinderItem} from './useCylinderItem'
+import {BiPyramid, BiCylinder, BiCube} from 'react-icons/bi'
 
 const CASHKEY = 'pyramid'
 
 type Props = {
   cashkey:DataPack
-  pyramid:PyramidItem
+  item:SolidItem
 }
-export const SolidEditor:FC<Props> = ({cashkey, pyramid}) => {
+export const SolidEditor:FC<Props> = ({cashkey, item: pyramid}) => {
   const {changeLocation} = useLocationItemUtil(CASHKEY)
   const {camera} = useCesium()
-  const {setTopRadius, setBottomRadius, setLength} = useSolidItem(cashkey)
+  const {setLength} = useSolidItem(cashkey)
+  const {setTopRadius, setBottomRadius} = useCylinderItem(cashkey)
 
   const setLocation = (val:GeoLocation):void => changeLocation(pyramid.id, val)
   const area:AreaBox = getCameraBox(camera)
@@ -26,6 +29,9 @@ export const SolidEditor:FC<Props> = ({cashkey, pyramid}) => {
       changeLocation  = {setLocation}
       area            = {area}
     />
+    <BiPyramid />
+    <BiCylinder />
+    <BiCube />
     <RangeInput
       label         = '上面サイズ:'
       min           = {0}

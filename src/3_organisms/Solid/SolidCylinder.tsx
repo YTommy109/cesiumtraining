@@ -5,27 +5,27 @@ import {SolidInfoBox} from './SolidInfoBox'
 
 type Props = {
   cashkey:DataPack
-  pyramid:PyramidItem
+  item:SolidItem
 }
-export const SolidPyramid:FC<Props> = ({cashkey, pyramid}) =>
+export const SolidCylinder:FC<Props> = ({cashkey, item}) =>
   <Entity
-    name        = {pyramid.title}
-    position    = {Cartesian3.fromDegrees(pyramid.location.lon, pyramid.location.lat)}
+    name        = {item.title}
+    position    = {Cartesian3.fromDegrees(item.location.lon, item.location.lat)}
     cylinder    = {{
-      topRadius:       pyramid.topRadius,
-      bottomRadius:    pyramid.bottomRadius,
-      length:          pyramid.length,
-      material:        pyramid.color,
-      slices:          4,
+      topRadius:       item.topRadius,
+      bottomRadius:    item.bottomRadius,
+      length:          item.length,
+      material:        item.color,
+      slices:          item.slice,
       heightReference: HeightReference.CLAMP_TO_GROUND,
       shadows:         ShadowMode.ENABLED
     }}
   >
-    {pyramid.description &&
+    {item.description &&
       <EntityDescription>
         <SolidInfoBox
           cashkey         = {cashkey}
-          pyramid         = {pyramid}
+          pyramid         = {item}
           />
       </EntityDescription>
     }

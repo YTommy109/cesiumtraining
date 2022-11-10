@@ -1,5 +1,6 @@
 type DataPack   = 'plateau'|'curry'|'hotel'|'pyramid'|''
-type PickMode = 'single'|'multiple'
+type PickMode   = 'single'|'multiple'
+type SolidType  = 'pyramid'|'cylinder'|'box'
 
 type LonLat = {
   lon:number
@@ -62,11 +63,20 @@ interface PlateauStream extends LocationItem {
   lowResolution:boolean   // 低解像度テクスチャー
 }
 
-interface PyramidItem extends LocationItem {
+interface SolidItem extends LocationItem {
+  type:SolidType
+  length:number         // 建物長さ (高さ)
+  color:Color
+}
+interface SolidItem extends SolidItem {
+  slice:number
   topRadius:number
   bottomRadius:number
-  length:number
-  color:Color
+}
+
+interface BoxItem extends SolidItem {
+  width:number
+  depth:number
 }
 
 type CityInfo = {

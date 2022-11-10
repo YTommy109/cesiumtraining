@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown'
 
 type Props = {
   cashkey:DataPack
-  pyramid:PyramidItem
+  pyramid:SolidItem
 }
 export const SolidInfoBox:FC<Props> = ({cashkey, pyramid}) => {
   const [mode, setMode] = useState<string>('info')
@@ -21,7 +21,7 @@ export const SolidInfoBox:FC<Props> = ({cashkey, pyramid}) => {
     }
     {mode === 'edit' && <SolidEditor
       cashkey = {cashkey}
-      pyramid = {pyramid}
+      item = {pyramid}
     />}
   </div>
 }

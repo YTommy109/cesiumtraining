@@ -497,4 +497,14 @@ export const DATA_CURRY:SpotItem[] = [{
   links:       [
     'https://pbs.twimg.com/media/Fg7mZgkWAAAzkXP?format=jpg&name=small'
   ]
+}, {
+  ...INIT_SPOT,
+  id:          'a0165a85-48ca-4ff4-824d-355f6d21fb36',
+  title:       'スープカレー GARAKU',
+  description: '札幌では行列のできる人気店。\n\n![ジンギスカンと五種のキノコのスープカレー](https://pbs.twimg.com/media/FhLesG_WAAAZGs7?format=jpg&name=small)\n\n[SOUP CURRY GARAKU](http://s-garaku.com/shop-garaku/)',
+  location:    {lon: 139.66647645389693, lat: 35.70978262478124},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FhLesG_WAAAZGs7?format=jpg&name=small'
+  ]
 }]

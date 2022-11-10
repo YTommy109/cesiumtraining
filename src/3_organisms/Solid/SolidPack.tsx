@@ -1,11 +1,11 @@
 import {FC} from 'react'
 import {Color} from 'cesium'
-import {SolidPyramid} from '3_organisms/Solid/SolidPyramid'
+import {SolidCylinder} from '3_organisms/Solid/SolidCylinder'
 import {useVisualItem} from 'controller/useVisualItem'
 
 const CASHKEY:DataPack = 'pyramid'
 
-const INIT_SOLID:PyramidItem = {
+const INIT_SOLID:SolidItem = {
   id:          '',
   title:       '',
   location:    {lon: 139.77386052796396, lat: 35.68312191668824},
@@ -13,13 +13,15 @@ const INIT_SOLID:PyramidItem = {
     show:     true,
     selected: false
   },
+  type:         'pyramid',
+  slice:        4,
   topRadius:    0,
   bottomRadius: 0,
   length:       0,
   color:        Color.fromAlpha(Color.DARKRED, 0.6)
 }
 
-const init:PyramidItem[] = [{
+const init:SolidItem[] = [{
   ...INIT_SOLID,
   id:           'BB60367D-68D9-4438-9CC5-875AEAFE98FD',
   title:        '東京タワー',
@@ -42,14 +44,14 @@ const init:PyramidItem[] = [{
 }]
 
 export const SolidPack:FC = () => {
-  const {data:solids} = useVisualItem<PyramidItem>(CASHKEY, init)
+  const {data:solids} = useVisualItem<SolidItem>(CASHKEY, init)
 
   return <>
     {solids.map(it =>
-      <SolidPyramid
+      <SolidCylinder
         key     = {it.id}
         cashkey = {CASHKEY}
-        pyramid = {it}
+        item = {it}
       />
     )}
   </>
