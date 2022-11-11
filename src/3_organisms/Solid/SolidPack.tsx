@@ -50,6 +50,7 @@ const init:Array<CylinderItem|BoxItem> = [{
   location:    {lon: 135.51347320757205, lat: 34.646282994111054},
   width:       100,
   depth:       280,
+  heading:     45,
   length:      634,
   color:       Color.fromAlpha(Color.SKYBLUE, 0.6)
 }]

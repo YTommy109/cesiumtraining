@@ -17,7 +17,7 @@ export const BoxEditor:FC<Props> = ({cashkey, item}) => {
   const {changeLocation} = useLocationItemUtil(CASHKEY)
   const {camera} = useCesium()
   const {setLength} = useSolidItem(cashkey)
-  const {setWidth, setDepth} = useBoxItem(cashkey)
+  const {setWidth, setDepth, setHeading} = useBoxItem(cashkey)
 
   const setLocation = (val:GeoLocation):void => changeLocation(item.id, val)
   const area:AreaBox = getCameraBox(camera)
@@ -60,5 +60,16 @@ export const BoxEditor:FC<Props> = ({cashkey, item}) => {
       changeValue   = {(val:number):void => {
         setLength(item.id, val)
       }}
-    />  </>
+    />
+    <RangeInput
+      label         = '向き:'
+      min           = {-180}
+      max           = {180}
+      value         = {item.heading}
+      step          = {1}
+      changeValue   = {(val:number):void => {
+        setHeading(item.id, val)
+      }}
+    />
+  </>
 }

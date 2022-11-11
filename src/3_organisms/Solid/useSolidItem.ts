@@ -53,8 +53,9 @@ export const useCylinderItem = (cashkey:DataPack):ReturnCylinderItem => {
 }
 
 type ReturnBoxItem = {
-  setWidth:(id:string, radius:number) => void
-  setDepth:(id:string, radius:number) => void
+  setWidth:(id:string, width:number) => void
+  setDepth:(id:string, depth:number) => void
+  setHeading:(id:string, heading:number) => void
 }
 export const useBoxItem = (cashkey:DataPack):ReturnBoxItem => {
   const quetyClient = useQueryClient()
@@ -70,12 +71,16 @@ export const useBoxItem = (cashkey:DataPack):ReturnBoxItem => {
   }, [cashkey, quetyClient])
 
   const setWidth = useCallback((id:string, width:number):void =>
-    update(id, (state) => ({...state, length: width}))
+    update(id, (state) => ({...state, width}))
   , [update])
 
   const setDepth = useCallback((id:string, depth:number):void =>
-    update(id, (state) => ({...state, length: depth}))
+    update(id, (state) => ({...state, depth}))
   , [update])
 
-  return {setWidth, setDepth}
+  const setHeading = useCallback((id:string, heading:number):void =>
+    update(id, (state) => ({...state, heading}))
+  , [update])
+
+  return {setWidth, setDepth, setHeading}
 }

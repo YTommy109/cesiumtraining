@@ -1,5 +1,5 @@
-import {FC} from 'react'
-import {Cartesian3, HeightReference, ShadowMode} from 'cesium'
+import {FC, useMemo} from 'react'
+import {Cartesian3, HeightReference, ShadowMode, Transforms, ConstantProperty, HeadingPitchRoll, Math} from 'cesium'
 import {Entity, EntityDescription} from 'resium'
 import {SolidCylinderInfoBox, SolidBoxInfoBox} from './SolidInfoBox'
 
@@ -61,12 +61,21 @@ type BoxProps = {
   item:BoxItem
 }
 export const SolidBox:FC<BoxProps> = ({cashkey, item}) => {
+  const position    = useMemo(() => Cartesian3.fromDegrees(item.location.lon, item.location.lat), [item.location])
+  const orientation = useMemo(() => new ConstantProperty(
+    Transforms.headingPitchRollQuaternion(
+      position,
+      new HeadingPitchRoll(Math.toRadians(item.heading), 0, 0))
+  ), [position, item.heading])
+  const dimensions = useMemo(() => new Cartesian3(item.width, item.depth, item.length), [item.width, item.depth, item.length])
+
   return <>
     <Entity
       name        = {item.title}
-      position    = {Cartesian3.fromDegrees(item.location.lon, item.location.lat)}
+      position    = {position}
+      orientation = {orientation}
       box         = {{
-        dimensions:      new Cartesian3(item.width, item.depth, item.length),
+        dimensions,
         material:        item.color,
         heightReference: HeightReference.CLAMP_TO_GROUND,
         shadows:         ShadowMode.ENABLED

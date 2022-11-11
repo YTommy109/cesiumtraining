@@ -75,8 +75,9 @@ interface CylinderItem extends SolidItem {
 }
 
 interface BoxItem extends SolidItem {
-  width:number
-  depth:number
+  width:number          // 幅
+  depth:number          // 奥行き
+  heading:number        // 進行方向
 }
 
 type CityInfo = {

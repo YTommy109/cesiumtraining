@@ -161,7 +161,7 @@ export const DATA_CURRY:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '4C6271CB-007E-4E35-854B-5BFF348262C2',
   title:       '狛犬珈琲',
-  description: '',
+  description: '珈琲のお店なのに、抜群のスパイスカレーを出してくれる。\n\n![カレー](https://pbs.twimg.com/media/FeHWrXTWAAIAumQ?format=jpg&name=small)\n\n[狛犬珈琲](https://komainu-coffee.com/)',
   location:    {lon: 139.66634188240832, lat: 35.66493182777607},
   keylink:     0,
   links:       [
@@ -313,7 +313,7 @@ export const DATA_CURRY:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '2530db74-61d7-4996-98d7-51b04853ad40',
   title:       'ルーとこめ',
-  description: '',
+  description: '月に一度しか営業してないレア度マックスのスパイスカレー屋さん。\n\n![カレー](https://pbs.twimg.com/media/FYZ7pSmWAAAPQe0?format=jpg&name=small)',
   location:    {lon: 135.23627872657426, lat: 35.07044310502344},
   keylink:     0,
   links:       [
@@ -323,9 +323,9 @@ export const DATA_CURRY:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '6b8e1faa-801a-4edf-ab67-4d7df8ddc114',
   title:       '般°若',
-  description: '',
+  description: 'カレー好きの松尾さんがプロデュースしたスパイスカレー屋さん。\n\n![カツカレー](https://pbs.twimg.com/media/FPtv63_WQAAZpWY?format=jpg&name=small)\n\n[般°若](http://www.pannya.jp)',
   location:    {lon: 139.66879531156678, lat: 35.66319149816798},
-  keylink:     0,
+  keylink:     3,
   links:       [
     'https://pbs.twimg.com/media/FVvxa9jXoAAmXJ6?format=jpg&name=small',
     'https://pbs.twimg.com/media/FRLhcueXwAcy1MJ?format=jpg&name=small',
