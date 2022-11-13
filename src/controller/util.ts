@@ -1,9 +1,8 @@
-import {Cartographic, sampleTerrainMostDetailed, Math, Camera} from 'cesium'
-import {plateauTerrain} from '1_atoms/plateauTerrain'
+import {Cartographic, sampleTerrainMostDetailed, Math, Camera, TerrainProvider} from 'cesium'
 
-export const calcTerrainHeights = async <T extends LocationItem = LocationItem>(locationItems:T[]):Promise<T[]> => {
+export const calcTerrainHeights = async <T extends LocationItem = LocationItem>(terrainProvider:TerrainProvider, locationItems:T[]):Promise<T[]> => {
   const positions:Cartographic[] = locationItems.map(it => Cartographic.fromDegrees(it.location.lon, it.location.lat))
-  const ret:Cartographic[] = await sampleTerrainMostDetailed(plateauTerrain, positions)
+  const ret:Cartographic[] = await sampleTerrainMostDetailed(terrainProvider, positions)
   return locationItems.map((it, idx) => ({...it, terrainHeight: ret[idx].height}))
 }
 
