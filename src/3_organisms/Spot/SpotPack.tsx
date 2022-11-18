@@ -1,7 +1,8 @@
-import {FC, ReactNode} from 'react'
+import {FC, ReactNode, useCallback} from 'react'
+import {Camera, useCesium} from 'resium'
 import {Spot} from '3_organisms/Spot/Spot'
-import {SpotList} from './SpotList'
 import {useLocationItem} from 'controller/useLocationItem'
+import {SpotList} from './SpotList'
 import {SpotMarker} from './SpotMarker'
 import {DATA_CURRY} from './data_curry'
 import {DATA_HOSHINO} from './data_hoshino'
@@ -12,6 +13,7 @@ const DATAMAP:Record<DataPack, SpotItem[]> = {
   curry:   DATA_CURRY,
   hotel:   DATA_HOSHINO,
   plateau: [],
+  pyramid: [],
   '':      []
 }
 
@@ -20,15 +22,26 @@ type Props = {
 }
 export const SpotPack:FC<Props> = ({cashkey}) => {
   const {data:spots} = useLocationItem<SpotItem>(cashkey, DATAMAP[cashkey])
+  const {viewer} = useCesium()
 
   const TITLEMAP:Record<DataPack, ReactNode> = {
     curry:   <><MdOutlineFoodBank />カレー屋さん ({spots.length})</>,
     hotel:   <><FaHotel />星野リゾート ({spots.length})</>,
     plateau: null,
+    pyramid: null,
     '':      null
   }
 
+  const changeHeading = useCallback(() => {
+    console.log('width2: ' + viewer.container.clientWidth)
+    console.log('height2: ' + viewer.container.clientHeight)
+  }, [viewer.container])
+
   return <>
+    <Camera
+      percentageChanged = {0.1}
+      onChange          = {changeHeading}
+    />
     <SpotMarker
       cashkey   = {cashkey}
     />
