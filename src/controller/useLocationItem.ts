@@ -1,3 +1,4 @@
+import {useCesium} from 'resium'
 import {useQuery, useQueryClient} from '@tanstack/react-query'
 import {calcTerrainHeights} from './util'
 
@@ -5,8 +6,9 @@ type ReturnLocationItem<T> = {
   data:T[]
 }
 export const useLocationItem = <T extends LocationItem = LocationItem>(cashkey:string, initialData?:T[]):ReturnLocationItem<T> => {
+  const {globe} = useCesium()
   const {data} = useQuery<T[], Error>([cashkey], async ():Promise<T[]> => {
-    return await calcTerrainHeights(initialData ?? [])
+    return await calcTerrainHeights(globe.terrainProvider, initialData ?? [])
   }, {staleTime: Infinity, enabled: true})
 
   return {data: data ?? []}

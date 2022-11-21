@@ -31,14 +31,14 @@ type ScreenState = {
   active?:boolean        // 選択状態 (地図上で選択)
   focuse?:boolean        // 焦点状態 (*予約)
 }
-interface LocationItem {
+interface VisualItem {
   id:string
   title:string
   description?:string
   screenState:ScreenState
 }
 
-interface LocationItem extends LocationItem {
+interface LocationItem extends VisualItem {
   location:GeoLocation
   terrainHeight?:number
 }
@@ -53,7 +53,7 @@ interface SpotItem extends LocationItem {
   imageScale:number       // 画像の大きさ
 }
 
-interface PlateauStream extends LocationItem {
+interface PlateauStream extends VisualItem {
   id:string               // ID
   cityCode:string         // 地域コード
   dataType:string         // データタイプ
@@ -68,15 +68,16 @@ interface SolidItem extends LocationItem {
   length:number         // 建物長さ (高さ)
   color:Color
 }
-interface SolidItem extends SolidItem {
+interface CylinderItem extends SolidItem {
   slice:number
   topRadius:number
   bottomRadius:number
 }
 
 interface BoxItem extends SolidItem {
-  width:number
-  depth:number
+  width:number          // 幅
+  depth:number          // 奥行き
+  heading:number        // 進行方向
 }
 
 type CityInfo = {

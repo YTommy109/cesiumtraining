@@ -1,11 +1,11 @@
 import {FC} from 'react'
 import {Color} from 'cesium'
-import {SolidCylinder} from '3_organisms/Solid/SolidCylinder'
+import {Solid} from '3_organisms/Solid/Solid'
 import {useVisualItem} from 'controller/useVisualItem'
 
 const CASHKEY:DataPack = 'pyramid'
 
-const INIT_SOLID:SolidItem = {
+const INIT_SOLID:CylinderItem|BoxItem = {
   id:          '',
   title:       '',
   location:    {lon: 139.77386052796396, lat: 35.68312191668824},
@@ -21,7 +21,7 @@ const INIT_SOLID:SolidItem = {
   color:        Color.fromAlpha(Color.DARKRED, 0.6)
 }
 
-const init:SolidItem[] = [{
+const init:Array<CylinderItem|BoxItem> = [{
   ...INIT_SOLID,
   id:           'BB60367D-68D9-4438-9CC5-875AEAFE98FD',
   title:        '東京タワー',
@@ -39,8 +39,20 @@ const init:SolidItem[] = [{
   location:     {lon: 139.8107587972221, lat: 35.71026611766915},
   topRadius:    50,
   bottomRadius: 200,
-  length:       634,
+  length:       300,
   color:        Color.fromAlpha(Color.SKYBLUE, 0.6)
+}, {
+  ...INIT_SOLID,
+  id:          '76dd6e8b-c476-48f6-a20f-5e9ace79ad7f',
+  title:       'あべのハルカス',
+  description: '# 日本で三番目に高い建物。\n\n![あべのハルカス](https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Abeno_Harukas_Osaka_Japan01-r.jpg/800px-Abeno_Harukas_Osaka_Japan01-r.jpg)',
+  type:        'box',
+  location:    {lon: 135.51347320757205, lat: 34.646282994111054},
+  width:       100,
+  depth:       280,
+  heading:     45,
+  length:      634,
+  color:       Color.fromAlpha(Color.SKYBLUE, 0.6)
 }]
 
 export const SolidPack:FC = () => {
@@ -48,10 +60,10 @@ export const SolidPack:FC = () => {
 
   return <>
     {solids.map(it =>
-      <SolidCylinder
+      <Solid
         key     = {it.id}
         cashkey = {CASHKEY}
-        item = {it}
+        item    = {it}
       />
     )}
   </>

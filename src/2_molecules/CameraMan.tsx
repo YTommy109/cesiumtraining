@@ -9,7 +9,7 @@ export const CameraMan:FC = () => {
 
   const changeHeading = useCallback(() => {
     setHeading(Math.toDegrees(camera.heading))
-  }, [])
+  }, [camera.heading])
 
   return <>
     <Camera

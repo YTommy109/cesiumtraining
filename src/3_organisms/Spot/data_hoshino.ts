@@ -17,16 +17,34 @@ const INIT_SPOT:SpotItem = {
 
 export const DATA_HOSHINO:SpotItem[] = [{
   ...INIT_SPOT,
+  id:          '76a7e3fd-a376-42b1-a153-b5035e3a1070',
+  title:       '星のやロッジニセコ',
+  description: '2026年秋開業予定\n\n![外観](https://pbs.twimg.com/media/Fe_4vLHUcAEZ72c?format=jpg&name=small)',
+  location:    {lat: 42.86176327718125, lon: 140.69827276937798},
+  bgColor:     'black',
+  labelHeight: 1000,
+  labelScale:  0.4,
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/Fe_4vLHUcAEZ72c?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Fe_4vPUUYAIKXQk?format=jpg&name=small'
+  ],
+  imageHeight: 10,
+  imageScale:  0.2
+}, {
+  ...INIT_SPOT,
   id:          '39873ca2-7668-4972-b29d-53b49ba952af',
   title:       '星のや軽井沢',
-  description: '谷の集落に滞在する\n\n![外観](/data/星野リゾート/星のや/星のや軽井沢.jpg)',
+  description: '谷の集落に滞在する\n\n![外観](https://pbs.twimg.com/media/Ffj97FpVUAAVmem?format=jpg&name=small)',
   location:    {lat: 36.358415624289954, lon: 138.59088761126088},
   bgColor:     'black',
   labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
-    '/data/星野リゾート/星のや/星のや軽井沢.jpg'
+    'https://pbs.twimg.com/media/Ffj97FpVUAAVmem?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Ffj97FjVEAIYJc9?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FdyozXXUUAEJrYC?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2
@@ -34,14 +52,17 @@ export const DATA_HOSHINO:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '9d80f1fa-e0c6-48e3-908d-d769bb6f29e8',
   title:       '星のや東京',
-  description: '世界都市東京によみがえる、塔の日本旅館\n\n![外観](/data/星野リゾート/星のや/星のや東京.jpg)',
+  description: '世界都市東京によみがえる、塔の日本旅館\n\n![外観](https://pbs.twimg.com/media/FfZoqcEVIAAvI8L?format=jpg&name=small)\n\n![料理](https://pbs.twimg.com/media/FfZorV9XwAAMpuM?format=jpg&name=small)',
   location:    {lat: 35.68794071715263, lon: 139.76506848426078},
   bgColor:     'black',
   labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
-    '/data/星野リゾート/星のや/星のや東京.jpg'
+    'https://pbs.twimg.com/media/FfZoqcEVIAAvI8L?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FfZoqf-VsAAB40R?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FfZoqneVIAIrfm0?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FfZorV9XwAAMpuM?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2
@@ -49,14 +70,14 @@ export const DATA_HOSHINO:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '2883abb9-fc3e-4a08-a46a-bdc1df94fa79',
   title:       '星のや富士',
-  description: '明日が分からない、丘陵のグランピング\n\n![外観](/data/星野リゾート/星のや/星のや富士.jpg)',
+  description: '明日が分からない、丘陵のグランピング\n\n![外観](https://pbs.twimg.com/media/FgjBR8QacAIs90z?format=jpg&name=small)',
   location:    {lat: 35.52709796963663, lon: 138.7478929977489},
   bgColor:     'black',
   labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
-    '/data/星野リゾート/星のや/星のや富士.jpg'
+    'https://pbs.twimg.com/media/FgjBR8QacAIs90z?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2
@@ -79,14 +100,14 @@ export const DATA_HOSHINO:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '18a74da2-42d4-47f6-a6b7-dc1cc6e42b0f',
   title:       '星のや沖縄',
-  description: 'グスクの居館で、海とともに暮らす\n\n![外観](/data/星野リゾート/星のや/星のや沖縄.jpg)',
+  description: 'グスクの居館で、海とともに暮らす\n\n![外観](https://pbs.twimg.com/media/FedH1S1aYAE_uDJ?format=jpg&name=small)',
   location:    {lat: 26.418577710363717, lon: 127.7145060975641},
   bgColor:     'black',
   labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
-    '/data/星野リゾート/星のや/星のや沖縄.jpg'
+    'https://pbs.twimg.com/media/FedH1S1aYAE_uDJ?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2
@@ -109,14 +130,14 @@ export const DATA_HOSHINO:SpotItem[] = [{
   ...INIT_SPOT,
   id:          'b2e14cf0-b721-4bf1-8b5d-9f686c1e1da1',
   title:       '星のやバリ',
-  description: '古来の精神が息づく、聖なる川に向かう集落\n\n![外観](/data/星野リゾート/星のや/星のやバリ.jpg)',
+  description: '古来の精神が息づく、聖なる川に向かう集落\n\n![外観](https://pbs.twimg.com/media/Ffa69BQUUAAkCWN?format=jpg&name=small)',
   location:    {lat: -8.47633320291562, lon: 115.30232679559012},
   bgColor:     'black',
   labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
-    '/data/星野リゾート/星のや/星のやバリ.jpg'
+    'https://pbs.twimg.com/media/Ffa69BQUUAAkCWN?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2
@@ -124,14 +145,14 @@ export const DATA_HOSHINO:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '6036a211-1ad0-4a0e-af55-8e3cb4929a6c',
   title:       '星のやグーグァン',
-  description: '温泉渓谷の楼閣で、最上のまどろみを知る\n\n![外観](/data/星野リゾート/星のや/星のやグーグァン.jpg)',
+  description: '温泉渓谷の楼閣で、最上のまどろみを知る\n\n![外観](https://pbs.twimg.com/media/Ffa68_naAAEtB2Q?format=jpg&name=small)',
   location:    {lat: 24.205649980158547, lon: 121.01054384170823},
   bgColor:     'black',
   labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
-    '/data/星野リゾート/星のや/星のやグーグァン.jpg'
+    'https://pbs.twimg.com/media/Ffa68_naAAEtB2Q?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2
@@ -161,7 +182,8 @@ export const DATA_HOSHINO:SpotItem[] = [{
   labelScale:  0.4,
   keylink:     0,
   links:       [
-    '/data/星野リゾート/堺/堺%20津軽.jpg'
+    '/data/星野リゾート/堺/堺%20津軽.jpg',
+    'https://pbs.twimg.com/media/FfgErPJVUAEvJbr?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2
@@ -169,14 +191,16 @@ export const DATA_HOSHINO:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '17b32ea9-e7c9-497d-8544-f08a91941140',
   title:       '界 川治',
-  description: '里山の知恵比べ、味比べ\n\n![外観](/data/星野リゾート/堺/堺%20川治.jpg)',
+  description: '里山の知恵比べ、味比べ\n\n![外観](https://pbs.twimg.com/media/Ff4iM5yVUAAoLUs?format=jpg&name=small)',
   location:    {lat: 36.89652046225144, lon: 139.7107815247658},
   bgColor:     'black',
   labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
-    '/data/星野リゾート/堺/堺%20川治.jpg'
+    'https://pbs.twimg.com/media/Ff4iM5yVUAAoLUs?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Ff4iMo1aEAAyqQJ?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Ff4iMuyaUAAbIPJ?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2
@@ -184,14 +208,15 @@ export const DATA_HOSHINO:SpotItem[] = [{
   ...INIT_SPOT,
   id:          'e87e48b7-a9c9-4c4e-998a-bc46916d1211',
   title:       '界 鬼怒川',
-  description: 'とちぎ民藝が光る木漏れ日の湯宿\n\n![外観](/data/星野リゾート/堺/堺%20鬼怒川.jpg)',
+  description: 'とちぎ民藝が光る木漏れ日の湯宿\n\n![外観](https://pbs.twimg.com/media/FexuXezaEAAmL6V?format=jpg&name=small)',
   location:    {lat: 36.82862374649061, lon: 139.7162253707961},
   bgColor:     'black',
   labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
-    '/data/星野リゾート/堺/堺%20鬼怒川.jpg'
+    'https://pbs.twimg.com/media/FexuXezaEAAmL6V?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FexuXeRagAAZZUt?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2
@@ -199,14 +224,16 @@ export const DATA_HOSHINO:SpotItem[] = [{
   ...INIT_SPOT,
   id:          'ba21a244-68b0-4cf7-948a-6652e2f6c208',
   title:       '界 日光',
-  description: '中禅寺湖の神秘にため息\n\n![外観](/data/星野リゾート/堺/堺%20日光.jpg)',
+  description: '中禅寺湖の神秘にため息\n\n![外観](https://pbs.twimg.com/media/Feb1qevUoAAH3W1?format=jpg&name=small)',
   location:    {lat: 36.743221263531446, lon: 139.49770346733123},
   bgColor:     'black',
   labelHeight: 1000,
   labelScale:  0.4,
   keylink:     null,
   links:       [
-    '/data/星野リゾート/堺/堺%20日光.jpg'
+    'https://pbs.twimg.com/media/Feb1qevUoAAH3W1?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Feb1qXdaUAARgxM?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Feb1qZTUYAAZqFz?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2
@@ -289,14 +316,15 @@ export const DATA_HOSHINO:SpotItem[] = [{
   ...INIT_SPOT,
   id:          'c4ad3ff5-8900-4e76-9d79-0fe51259369a',
   title:       '界 遠州',
-  description: '湖畔に佇む宿ならではの解放感\n\n![外観](/data/星野リゾート/堺/堺%20伊東.jpg)',
+  description: '湖畔に佇む宿ならではの解放感\n\n![外観](/data/星野リゾート/堺/堺%20伊東.jpg)\n\n![料理](https://pbs.twimg.com/media/FeskrwLUoAEVcPS?format=jpg&name=small)',
   location:    {lat: 34.76239758657763, lon: 137.6205067265671},
   bgColor:     'black',
   labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
-    '/data/星野リゾート/堺/堺%20伊東.jpg'
+    '/data/星野リゾート/堺/堺%20伊東.jpg',
+    'https://pbs.twimg.com/media/FeskrwLUoAEVcPS?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2
@@ -304,14 +332,17 @@ export const DATA_HOSHINO:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '4a5a20da-efb0-48ee-bbaa-029c6ff0500e',
   title:       '界 アルプス',
-  description: '信州の贅沢な田舎を体感する温泉宿\n\n![外観](/data/星野リゾート/堺/堺%20アルプス.jpg)',
+  description: '信州の贅沢な田舎を体感する温泉宿\n\n![外観](https://pbs.twimg.com/media/FfG9x_DVQAASCgj?format=jpg&name=small)',
   location:    {lat: 36.531850544642516, lon: 137.80754952475695},
   bgColor:     'black',
   labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
-    '/data/星野リゾート/堺/堺%20アルプス.jpg'
+    'https://pbs.twimg.com/media/FfG9x_DVQAASCgj?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FfG9x9DaAAA8Pn5?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FfG9x9macAE7O_V?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FfG9yAEVUAAb693?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2
@@ -364,14 +395,14 @@ export const DATA_HOSHINO:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '361e991e-bb8e-4b6a-8f97-6b860668559d',
   title:       '界 出雲',
-  description: '灯台と水平線を望むお詣り支度の宿\n\n![外観](/data/星野リゾート/堺/堺%20出雲.jpg)',
+  description: '灯台と水平線を望むお詣り支度の宿\n\n![外観](https://pbs.twimg.com/media/FfGUoiTUcAA6Jwd?format=jpg&name=small)',
   location:    {lat: 35.43359328036556, lon: 132.63111275767048},
   bgColor:     'black',
   labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
-    '/data/星野リゾート/堺/堺%20出雲.jpg'
+    'https://pbs.twimg.com/media/FfGUoiTUcAA6Jwd?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2
@@ -439,14 +470,17 @@ export const DATA_HOSHINO:SpotItem[] = [{
   ...INIT_SPOT,
   id:          'e51a83ba-cafc-470a-817d-57031d2bd2f8',
   title:       '界 雲仙',
-  description: '地獄パワーにふれる、異国情緒の宿\n\n![外観](/data/星野リゾート/堺/堺%20雲仙.jpg)',
+  description: '地獄パワーにふれる、異国情緒の宿\n\n![外観](https://pbs.twimg.com/media/FfLePQ7VsAE6Q61?format=jpg&name=small)\n\n![部屋](https://pbs.twimg.com/media/FfLePb9UoAQHgo8?format=jpg&name=small)',
   location:    {lat: 32.741775627805026, lon: 130.26152716858584},
   bgColor:     'black',
   labelHeight: 1000,
   labelScale:  0.4,
   keylink:     0,
   links:       [
-    '/data/星野リゾート/堺/堺 雲仙.jpg'
+    'https://pbs.twimg.com/media/FfLePQ7VsAE6Q61?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FfLePb9UoAQHgo8?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FfLePbHVQAAQYu2?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FfLePTbVUAEZLHT?format=jpg&name=small'
   ],
   imageHeight: 10,
   imageScale:  0.2
