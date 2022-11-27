@@ -15,7 +15,6 @@ type ReturnSpotItem = {
   setLabelScale:(id:string, scale:number) => void
   setImageHeight:(id:string, height:number) => void
   setImageScale:(id:string, scale:number) => void
-  pickItem:(id:string) => void
 }
 export const useSpotItem = (cashkey:DataPack):ReturnSpotItem => {
   const quetyClient = useQueryClient()
@@ -90,17 +89,5 @@ export const useSpotItem = (cashkey:DataPack):ReturnSpotItem => {
     update(id, (state) => ({...state, description: text}))
   , [update])
 
-  const pickItem = useCallback((id:string):void => {
-    quetyClient.setQueryData<SpotItem[]>([cashkey], (state) => {
-      if (state == null) return []
-      return state.map((it) =>
-        it.id === id
-          ? {...it, screenState: {...it.screenState, selected: true}}
-          : (it.screenState.show ? {...it, screenState: {...it.screenState, selected: false}} : it)
-      )
-    })
-  }
-  , [quetyClient, cashkey])
-
-  return {create, setTitle, setDescription, pushLink, choseBillboard, setBgColor, setLabelHeight, setLabelScale, setImageHeight, setImageScale, pickItem}
+  return {create, setTitle, setDescription, pushLink, choseBillboard, setBgColor, setLabelHeight, setLabelScale, setImageHeight, setImageScale}
 }
