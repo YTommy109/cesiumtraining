@@ -502,6 +502,16 @@ export const DATA_CURRY:SpotItem[] = [{
   ]
 }, {
   ...INIT_SPOT,
+  id:          '01fc4937-cafc-47a1-be76-a18fcbb8be79',
+  title:       'チャオサイゴンパリバール',
+  description: 'アジアン屋台料理のお店。\n\n![グリーンカレー](https://pbs.twimg.com/media/FfzgNZdWYAc4Ofp?format=jpg&name=small)\n\n[チャオサイゴンパリバール](https://tabelog.com/tokyo/A1318/A131808/13270955/)',
+  location:    {lon: 139.65841495826558, lat: 35.673006125159354},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FfzgNZdWYAc4Ofp?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
   id:          '8333deab-77f4-4404-938c-0b50c17f2b81',
   title:       'BAGBAG',
   description: 'スープカレーの本場。\n\n![カレー](https://pbs.twimg.com/media/Fgh2ZSsXgAAaZGt?format=jpg&name=small)\n\n[BAGBAG](https://bag-bag.jp/shop/minami1jou/)',
