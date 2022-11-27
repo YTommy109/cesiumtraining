@@ -51,7 +51,7 @@ type Props = {
 export const PlateauList:FC<Props> = ({plateau}) => {
   const [tag, setTag] = useState<string>('')
   const [keyword, setKeyword] = useState<string>('')
-  const {pickItem, togleItem} = usePlateauUtil()
+  const {pickItem, toggleItem} = usePlateauUtil()
   const [pickMode, setPickMode] = useState<PickMode>('single')
 
   const handleTagClick:MouseEventHandler<HTMLButtonElement> = useCallback(
@@ -98,7 +98,7 @@ export const PlateauList:FC<Props> = ({plateau}) => {
             value     = {it.id}
             checked   = {it.screenState.show}
             pickMode  = {pickMode}
-            pickItem  = {(v) => pickMode === 'single' ? pickItem(v) : togleItem(v)}
+            pickItem  = {(v) => pickMode === 'single' ? pickItem(v) : toggleItem(v)}
           >
             <Item>
               <span>{DATA_TYPE[it.dataType]}</span>

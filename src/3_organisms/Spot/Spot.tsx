@@ -2,6 +2,7 @@ import {FC, useMemo, useState} from 'react'
 import {Cartesian2, Cartesian3, Color, HeightReference, VerticalOrigin, DistanceDisplayCondition, NearFarScalar} from 'cesium'
 import {Entity, EntityDescription, BillboardGraphics} from 'resium'
 import {SpotInfoBox} from './SpotInfoBox'
+import {useVisualItemUtil} from 'controller/useVisualItem'
 
 type Props = {
   cashkey:DataPack
@@ -9,6 +10,7 @@ type Props = {
 }
 export const Spot:FC<Props> = ({cashkey, spot}) => {
   const [focus, setFocus] = useState<boolean>(false)
+  const {pickOne} = useVisualItemUtil(cashkey)
 
   const pntGrand:Cartesian3 = useMemo(() => {
     return Cartesian3.fromDegrees(spot.location.lon, spot.location.lat, spot.terrainHeight)
@@ -30,6 +32,7 @@ export const Spot:FC<Props> = ({cashkey, spot}) => {
       position          = {pntImage}
       onMouseEnter      = {() => setFocus(true)}
       onMouseLeave      = {() => setFocus(false)}
+      onClick           = {() => pickOne(spot.id)}
     >
       {spot.keylink !== null && <BillboardGraphics
         image           = {spot.links[spot.keylink]}
@@ -56,7 +59,7 @@ export const Spot:FC<Props> = ({cashkey, spot}) => {
       selected          = {spot.screenState.selected}
       label             = {{
         text:              spot.title,
-        scale:             spot.labelScale,
+        scale:             spot.screenState.selected ? spot.labelScale * 1.5 : spot.labelScale,
         backgroundColor:   Color.fromAlpha(Color.fromCssColorString(spot.bgColor), 0.5),
         showBackground:    true,
         backgroundPadding: padding
@@ -64,11 +67,14 @@ export const Spot:FC<Props> = ({cashkey, spot}) => {
       point       = {{
         pixelSize:       10,
         color:           Color.fromAlpha(Color.fromCssColorString(spot.bgColor), 0.5),
-        heightReference: HeightReference.CLAMP_TO_GROUND
+        heightReference: HeightReference.CLAMP_TO_GROUND,
+        outlineColor:    Color.WHITE,
+        outlineWidth:    spot.screenState.selected ? 2 : 0
       }}
       polyline    = {{
         positions: [pntGrand, pntLabel],
-        material:  Color.fromAlpha(Color.fromCssColorString(spot.bgColor), 0.5)
+        material:  Color.fromAlpha(Color.fromCssColorString(spot.bgColor), 0.5),
+        width:     spot.screenState.selected ? 3 : 1
       }}
     >
       <EntityDescription>
