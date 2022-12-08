@@ -29,7 +29,8 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/FOxqs1bXIAAaH6p?format=jpg&name=small',
     'https://pbs.twimg.com/media/FL7-EhnXMAIzGys?format=jpg&name=small',
     'https://pbs.twimg.com/media/Fi8rtvpXgAA-iN0?format=jpg&name=small',
-    'https://pbs.twimg.com/media/Fj6gK6AXoAA3KaA?format=jpg&name=small'
+    'https://pbs.twimg.com/media/Fj6gK6AXoAA3KaA?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FkoZDKgXoAEV91P?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -94,7 +95,8 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/FNJz8rkX0AEBo_I?format=jpg&name=small',
     'https://pbs.twimg.com/media/FMlVXI0XoAITZsP?format=jpg&name=small',
     'https://pbs.twimg.com/media/FLeT2VAXsAQyyFo?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FkO3eQ6XoAERJGc?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FkO3eQ6XoAERJGc?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FkuMWm_WAAUuZaS?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -502,7 +504,7 @@ export const DATA_CURRY:SpotItem[] = [{
   ]
 }, {
   ...INIT_SPOT,
-  id:          '01fc4937-cafc-47a1-be76-a18fcbb8be79',
+  id:          'b2bd3a04-fd3f-4938-bc91-910312083628',
   title:       'チャオサイゴンパリバール',
   description: 'アジアン屋台料理のお店。\n\n![グリーンカレー](https://pbs.twimg.com/media/FfzgNZdWYAc4Ofp?format=jpg&name=small)\n\n[チャオサイゴンパリバール](https://tabelog.com/tokyo/A1318/A131808/13270955/)',
   location:    {lon: 139.65841495826558, lat: 35.673006125159354},
@@ -631,5 +633,15 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/FkEWQxTXoAA2Vzv?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'ca3f9962-fe00-41da-a72a-c88f5d65f257',
+  title:       'スパイスカレーまるせ',
+  description: '古民家を改造したスパイスカレー屋さん。美味しいだけでなく、駅近で便利!!\n\n![三種盛り](https://pbs.twimg.com/media/Fky6HZ0WQAEsUcR?format=jpg&name=small)\n\n[スパイスカレーまるせ](https://www.currymaruse.com/)',
+  location:    {lon: 135.496886755402, lat: 34.71190876820046},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/Fky6HZ0WQAEsUcR?format=jpg&name=small'
   ]
 }]
