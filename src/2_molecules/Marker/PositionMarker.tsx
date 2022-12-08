@@ -1,19 +1,31 @@
 import {FC, useState} from 'react'
-import {Cartesian2, Cartesian3, Cartographic, ScreenSpaceEventType, Color, HeightReference, Ray} from 'cesium'
-import {ScreenSpaceEventHandler, ScreenSpaceEvent, Entity, useCesium} from 'resium'
+import {Cartesian2, Cartesian3, Cartographic, ScreenSpaceEventType, Color, HeightReference, Ray, Math} from 'cesium'
+import {ScreenSpaceEventHandler, ScreenSpaceEvent, Entity, useCesium, CesiumMovementEvent} from 'resium'
+import {useSpotItem} from '3_organisms/Spot/useSpotItem'
+import {useVisualItemUtil} from 'controller/useVisualItem'
 
 /**
  * ポジションマーカー
  */
-export const PositionMarker:FC = () => {
+type Props = {
+  cashkey:DataPack
+}
+export const PositionMarker:FC<Props> = ({cashkey}) => {
   const {camera, scene, globe} = useCesium()
   const [grand, setGrand] = useState<Cartesian3|null>(null)
+  const {create} = useSpotItem(cashkey)
+  const {pickLastItem} = useVisualItemUtil(cashkey)
 
   const size = (camera.getMagnitude() - 6371655) / 50
 
   const getMidair = (pos:Cartesian3):Cartesian3 => {
     const temp = Cartographic.fromCartesian(pos)
     return Cartesian3.fromRadians(temp.longitude, temp.latitude, temp.height + (camera.getMagnitude() - 6371655) / 10)
+  }
+
+  const locationFromCartesian3 = (pos:Cartesian3):GeoLocation => {
+    const cg:Cartographic = Cartographic.fromCartesian(pos)
+    return {lon: Math.toDegrees(cg.longitude), lat: Math.toDegrees(cg.latitude)}
   }
 
   const handleMove = (e:{position:Cartesian2}|{startPosition:Cartesian2, endPosition:Cartesian2}):void => {
@@ -29,6 +41,13 @@ export const PositionMarker:FC = () => {
     }
   }
 
+  const handleClick = (e:CesiumMovementEvent):void => {
+    if (grand) {
+      create(locationFromCartesian3(grand))
+      pickLastItem()
+    }
+  }
+
   return <>
     <ScreenSpaceEventHandler>
       <ScreenSpaceEvent
@@ -40,7 +59,7 @@ export const PositionMarker:FC = () => {
       <Entity
         name            = "Marker"
         position        = {grand}
-        onClick         = {() => console.log('clicked!')}
+        onClick         = {handleClick}
         ellipse         = {{
           semiMajorAxis:   size,
           semiMinorAxis:   size,

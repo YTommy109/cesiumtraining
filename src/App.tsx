@@ -4,7 +4,7 @@ import {Viewer, Scene, Sun} from 'resium'
 import {plateauTerrain} from '1_atoms/plateauTerrain'
 import {CameraMan} from '2_molecules/CameraMan'
 import {CameraBar} from '2_molecules/CameraBar'
-import {PositionMarker} from '2_molecules/ClickMarker/PositionMarker'
+import {PositionMarker} from '2_molecules/Marker'
 import {GeoJsonTray} from '3_organisms/GeoJsonTray'
 import {SpotPack} from '3_organisms/Spot'
 import {SolidPack} from '3_organisms/Solid'
@@ -41,7 +41,7 @@ const CesiumPanel:FC = () => {
       <CameraBar />
       <Sun />
       <EditModeTray />
-      <PositionMarker />
+      <PositionMarker cashkey={pack} />
       <DataPackTray setPack={handleClick}/>
       {/* <GeoJsonTray /> */}
       {pack === 'curry' && <SpotPack cashkey="curry" />}
