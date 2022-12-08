@@ -3,7 +3,6 @@ import {Camera, useCesium} from 'resium'
 import {Spot} from '3_organisms/Spot/Spot'
 import {useLocationItem} from 'controller/useLocationItem'
 import {SpotList} from './SpotList'
-import {SpotMarker} from './SpotMarker'
 import {DATA_CURRY} from './data_curry'
 import {DATA_HOSHINO} from './data_hoshino'
 import {FaHotel} from 'react-icons/fa'
@@ -41,9 +40,6 @@ export const SpotPack:FC<Props> = ({cashkey}) => {
     <Camera
       percentageChanged = {0.1}
       onChange          = {changeHeading}
-    />
-    <SpotMarker
-      cashkey   = {cashkey}
     />
     <SpotList
       header    = {TITLEMAP[cashkey]}

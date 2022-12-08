@@ -23,6 +23,7 @@ type ReturnDataItemUtil = {
   deselect:(id:string) => void
   toggle:(id:string) => void
   pickOne:(id:string) => void
+  pickLastItem:() => void
 }
 export const useVisualItemUtil = (cashkey:string):ReturnDataItemUtil => {
   const quetyClient = useQueryClient()
@@ -74,5 +75,17 @@ export const useVisualItemUtil = (cashkey:string):ReturnDataItemUtil => {
   }
   , [quetyClient, cashkey])
 
-  return {noselect, select, deselect, toggle, pickOne}
+  const pickLastItem = useCallback(():void => {
+    quetyClient.setQueryData<VisualItem[]>([cashkey], (state) => {
+      if (state == null) return []
+      return state.map((it, idx) =>
+        idx === state.length - 1
+          ? {...it, screenState: toSelect(it.screenState)}
+          : (it.screenState.show ? {...it, screenState: toDeselect(it.screenState)} : it)
+      )
+    })
+  }
+  , [quetyClient, cashkey])
+
+  return {noselect, select, deselect, toggle, pickOne, pickLastItem}
 }

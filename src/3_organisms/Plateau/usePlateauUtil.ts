@@ -3,7 +3,7 @@ import {CASHKEY} from './usePlateau'
 
 type ReturnPlateauItem = {
   pickItem:(id:string) => void
-  togleItem:(id:string) => void
+  toggleItem:(id:string) => void
 }
 export const usePlateauUtil = ():ReturnPlateauItem => {
   const quetyClient = useQueryClient()
@@ -20,7 +20,7 @@ export const usePlateauUtil = ():ReturnPlateauItem => {
     })
   }
 
-  const togleItem = (id:string):void => {
+  const toggleItem = (id:string):void => {
     quetyClient.setQueryData<PlateauStream[]>([CASHKEY], (state) => {
       if (state == null) return []
 
@@ -32,5 +32,5 @@ export const usePlateauUtil = ():ReturnPlateauItem => {
     })
   }
 
-  return {pickItem, togleItem}
+  return {pickItem, toggleItem}
 }
