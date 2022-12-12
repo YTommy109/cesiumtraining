@@ -21,7 +21,7 @@
     "resium": "^1.15.1",
     "styled-components": "^5.3.6",
     "uuid": "^9.0.0",
-    "vite-plugin-svgr": "^2.2.2"
+    "vite-plugin-svgr": "^2.4.0"
   },
   "devDependencies": {
     "@tanstack/react-query-devtools": "^4.12.0",
