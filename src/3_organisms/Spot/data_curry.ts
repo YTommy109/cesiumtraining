@@ -19,7 +19,7 @@ export const DATA_CURRY:SpotItem[] = [{
   ...INIT_SPOT,
   id:          'B9A77CAA-4995-493B-B20E-9FA4AE5CFEC3',
   title:       'wacca',
-  description: '![wacca](https://pbs.twimg.com/media/FfFJ1bnX0AAhd_v?format=jpg&name=small)\n\nめちゃ美味しい',
+  description: '創作スパイスカレー部門グランプリに選ばれたこともある、出汁カレーの名店!!\n\n![wacca](https://pbs.twimg.com/media/FfFJ1bnX0AAhd_v?format=jpg&name=small)\n\nめちゃ美味しい\n\n[wacca](https://twitter.com/sekime_wacca)',
   location:    {lon: 139.77386052796396, lat: 35.68312191668824},
   keylink:     0,
   links:       [
@@ -27,7 +27,10 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/FfFJ1bnX0AAhd_v?format=jpg&name=small',
     'https://pbs.twimg.com/media/FdUEpEcXoAAB8Ij?format=jpg&name=small',
     'https://pbs.twimg.com/media/FOxqs1bXIAAaH6p?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FL7-EhnXMAIzGys?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FL7-EhnXMAIzGys?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Fi8rtvpXgAA-iN0?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Fj6gK6AXoAA3KaA?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FkoZDKgXoAEV91P?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -44,7 +47,8 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/FOCrLatWYAsisz8?format=jpg&name=small',
     'https://pbs.twimg.com/media/FNZeYSYX0AIasA9?format=jpg&name=small',
     'https://pbs.twimg.com/media/FLSSv_TX0BgxTVS?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FKpQB9magAAQWIk?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FKpQB9magAAQWIk?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FkeUHc_WAAAF0kD?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -90,7 +94,9 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/FRkMgevWUAAmgtl?format=jpg&name=small',
     'https://pbs.twimg.com/media/FNJz8rkX0AEBo_I?format=jpg&name=small',
     'https://pbs.twimg.com/media/FMlVXI0XoAITZsP?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FLeT2VAXsAQyyFo?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FLeT2VAXsAQyyFo?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FkO3eQ6XoAERJGc?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FkuMWm_WAAUuZaS?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -120,7 +126,8 @@ export const DATA_CURRY:SpotItem[] = [{
   links:       [
     'https://pbs.twimg.com/media/Ff9zSYLWQAAfKHU?format=jpg&name=small',
     'https://pbs.twimg.com/media/Fd4Hn7ZWIAEdqwK?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FWJ8tedXkAAMdCM?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FWJ8tedXkAAMdCM?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FiTC79nXEAAWTzk?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -169,9 +176,19 @@ export const DATA_CURRY:SpotItem[] = [{
   ]
 }, {
   ...INIT_SPOT,
+  id:          '77c866e8-d656-4c80-ba03-72120f1b1315',
+  title:       '犬拳堂',
+  description: '100倍激辛のメニューがあったりするお店。最近、リニューアルオープンしたっぽい。\n\n![カレー](https://pbs.twimg.com/media/FcMMFOgWYAEZdxN?format=jpg&name=small)\n\n[犬拳堂](https://twitter.com/inukendou/)',
+  location:    {lon: 139.66711776923717, lat: 35.66448679514488},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FcMMFOgWYAEZdxN?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
   id:          'DDBF3EB3-9472-4216-85ED-F79E8105FF2D',
   title:       'Rato Mato',
-  description: 'ネパール窯料理のお店。\n\n![ビリヤニ](https://pbs.twimg.com/media/FdzL6NMXgAEjH18?format=jpg&name=small)\n\n[Rato Mato](https://tabelog.com/tokyo/A1304/A130404/13263740/)',
+  description: 'ネパール窯料理のお店。\n\n![ビリヤニ](https://pbs.twimg.com/media/FdzL6NMXgAEjH18?format=jpg&name=small)\n\nパイ生地のようなもので包まれたビリヤニ。\n\n[Rato Mato](https://tabelog.com/tokyo/A1304/A130404/13263740/)',
   location:    {lon: 139.69865656687753, lat: 35.704908215390965},
   keylink:     0,
   links:       [
@@ -183,9 +200,9 @@ export const DATA_CURRY:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '8B0E6DE7-7B07-44DF-833B-8834D71C4150',
   title:       'カリカリスパイス',
-  description: '',
+  description: '渋谷神泉の創作スパイスカレー屋さん。ランチは週替わりでいつも美味しい。\n\n![あいがけカレー](https://pbs.twimg.com/media/FgXjRhjXkAAPjgK?format=jpg&name=small)\n\n[カリカリスパイス](https://www.instagram.com/karikari.spice/)',
   location:    {lon: 139.69327758240797, lat: 35.65610445838015},
-  keylink:     0,
+  keylink:     4,
   links:       [
     'https://pbs.twimg.com/media/FgXjRhjXkAAPjgK?format=jpg&name=small',
     'https://pbs.twimg.com/media/FdOtTWjWIAADUwn?format=jpg&name=small',
@@ -195,7 +212,8 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/FN9hgLiXwAENsg7?format=jpg&name=small',
     'https://pbs.twimg.com/media/FNdjbGaXwAMJeax?format=jpg&name=small',
     'https://pbs.twimg.com/media/FMwD88oWYAAnuDQ?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FKfB_7PaUAAs7Zr?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FKfB_7PaUAAs7Zr?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FkY9IsvXkAEgMNX?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -220,7 +238,8 @@ export const DATA_CURRY:SpotItem[] = [{
   links:       [
     'https://pbs.twimg.com/media/Fc6UqmJWIAAmhEU?format=jpg&name=small',
     'https://pbs.twimg.com/media/Fap6WCWWIAEuYXo?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FMQu_PkWYAMoIox?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FMQu_PkWYAMoIox?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FiOHM-GXEAEryaz?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -231,16 +250,6 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/Fb3KPgwXkAA7Ixd?format=jpg&name=small'
-  ]
-}, {
-  ...INIT_SPOT,
-  id:          '2F3F2F5C-56B2-49F1-BC64-2DF8E5B29F6A',
-  title:       'トルカリ',
-  description: '',
-  location:    {lon: 139.64844752577207, lat: 35.70957646770888},
-  keylink:     0,
-  links:       [
-    'https://pbs.twimg.com/media/FbycGtaXkAIMiHs?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -275,18 +284,20 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/FSc2BmJXEAA3pvB?format=jpg&name=small',
     'https://pbs.twimg.com/media/FNTd_tsWYAYo18u?format=jpg&name=small',
     'https://pbs.twimg.com/media/FMqfBzwXMAIUGYt?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FLET6oJaQAAXFCr?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FLET6oJaQAAXFCr?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FitAsq8XwAAqPJW?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
   id:          '6c56a270-f4b3-4dd8-9e82-93e143535a44',
   title:       'バンコクスパイス',
-  description: '上品な味わいのタイ料理のお店。\n\n![タイカレー](https://pbs.twimg.com/media/FbTUxBrXwAEqX3u?format=jpg&name=small)\n\n[バンコクスパイス](https://bangkokspice.owst.jp)',
+  description: '上品な味わいのタイ料理のお店。\n\n![マッサマンカレー](https://pbs.twimg.com/media/FbTUxBrXwAEqX3u?format=jpg&name=small)\n\n[バンコクスパイス](https://bangkokspice.owst.jp)',
   location:    {lon: 139.69657596116662, lat: 35.692736570173274},
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/FbTUxBrXwAEqX3u?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FYuUS4DX0AE2GL0?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FYuUS4DX0AE2GL0?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FiDmLgVXEAA_u1X?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -335,7 +346,7 @@ export const DATA_CURRY:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '42bef7af-544a-4d88-9408-cc8e2437f988',
   title:       'ほなまた',
-  description: '',
+  description: '![盛り合わせカレー](https://pbs.twimg.com/media/FVnZxr6XsAEwgTz?format=jpg&name=small)',
   location:    {lon: 135.5031030284174, lat: 34.684417205470815},
   keylink:     0,
   links:       [
@@ -345,11 +356,12 @@ export const DATA_CURRY:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '5fd27b78-9d0d-474e-9ba9-ee0f0af90ff3',
   title:       '和魂印才たんどーる',
-  description: '',
+  description: 'インド料理をベースに､梅､ゴマ､根菜､昆布､乾物といった和素材を使ったカレー屋さん。\n\n![3種盛りカレー](https://pbs.twimg.com/media/Fix9tTFXkAEJwWK?format=jpg&name=small)\n\n[和魂印才たんどーる](https://tandoor1997.com/)',
   location:    {lon: 139.68548648426065, lat: 35.68487559641879},
   keylink:     0,
   links:       [
-    'https://pbs.twimg.com/media/FUPNm67WUAAs_hg?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FUPNm67WUAAs_hg?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Fix9tTFXkAEJwWK?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -398,11 +410,12 @@ export const DATA_CURRY:SpotItem[] = [{
   ...INIT_SPOT,
   id:          'd3943b3d-dfdd-4712-ac47-4dc3c647b68c',
   title:       'バサノバ',
-  description: '',
+  description: 'グリーンカレーそば、トムヤムクンそばなど、個性的なラーメンのお店。\n\n![グリーンカレーソバ](https://pbs.twimg.com/media/FjLsjSLWAAAqYd-?format=jpg&name=small)\n\n[バサノバ](https://www.instagram.com/bassanovaramen/)',
   location:    {lon: 139.6602310247363, lat: 35.66388633034487},
   keylink:     0,
   links:       [
-    'https://pbs.twimg.com/media/FSIB8QfWUAEw1wY?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FSIB8QfWUAEw1wY?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FjLsjSLWAAAqYd-?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -458,6 +471,17 @@ export const DATA_CURRY:SpotItem[] = [{
   ]
 }, {
   ...INIT_SPOT,
+  id:          'c7bbdec5-8058-4817-850c-2f3dd5e4cadd',
+  title:       'きんもちカレー',
+  description: 'シンプルなスパイスカレーで、辛さを自由にカスタマイズできるお店。\n\n![チキンカレー](https://pbs.twimg.com/media/FfUmrCZXoAEDtY8?format=jpg&name=small)\n\n[きんもちカレー](https://twitter.com/Ioq0HTLC9XjOoKU)',
+  location:    {lon: 139.68978618457868, lat: 35.685312980933425},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FfUmrCZXoAEDtY8?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FinpRJNXoAA8oJ6?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
   id:          'dcd0b67a-dd58-4159-9658-9480e44c6e8c',
   title:       'ポニピリカ',
   description: '抜群に美味しいスープカレーのお店。\n\n![カレー](https://pbs.twimg.com/media/Fgcs0SrXoAEBSAz?format=jpg&name=small)',
@@ -465,7 +489,28 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/Fgcs0SrXoAEBSAz?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FhAwCO7WQAIwMjz?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FhAwCO7WQAIwMjz?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Fj_XZPRWQAAi_bu?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '01fc4937-cafc-47a1-be76-a18fcbb8be79',
+  title:       'チャオサイゴンパリバール',
+  description: 'アジアン屋台料理のお店。\n\n![グリーンカレー](https://pbs.twimg.com/media/FfzgNZdWYAc4Ofp?format=jpg&name=small)\n\n[チャオサイゴンパリバール](https://tabelog.com/tokyo/A1318/A131808/13270955/)',
+  location:    {lon: 139.65841495826558, lat: 35.673006125159354},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FfzgNZdWYAc4Ofp?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'b2bd3a04-fd3f-4938-bc91-910312083628',
+  title:       'チャオサイゴンパリバール',
+  description: 'アジアン屋台料理のお店。\n\n![グリーンカレー](https://pbs.twimg.com/media/FfzgNZdWYAc4Ofp?format=jpg&name=small)\n\n[チャオサイゴンパリバール](https://tabelog.com/tokyo/A1318/A131808/13270955/)',
+  location:    {lon: 139.65841495826558, lat: 35.673006125159354},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FfzgNZdWYAc4Ofp?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -506,5 +551,97 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/FhLesG_WAAAZGs7?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '5af9a708-69df-4c74-a964-effca4f371e6',
+  title:       'ポトフ料理 joie (ジョワ)',
+  description: '熱々の鍋で提供されるポトフカレー。\n\n![ポトフカレー](https://pbs.twimg.com/media/FiYn_PnXEAEzY82?format=jpg&name=small)\n\nトリュフ香るスープも選べる。![きのこクリーン&生トリュフのポトフカレー](https://pbs.twimg.com/media/FjbJk9oWQAITlQX?format=jpg&name=small)\n\n[ポトフ料理 joie (ジョワ)](https://www.instagram.com/pot_au_feu_joie/)',
+  location:    {lon: 139.71279540858623, lat: 35.688649495858826},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FiYn_PnXEAEzY82?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FjbJk9oWQAITlQX?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '90a10509-75f3-4305-8aeb-607f5e8df80f',
+  title:       'ジャイヒンド',
+  description: '元五星レストランのシェフがやってる北インドカレーのお店。\n\n![北インドカレー](https://pbs.twimg.com/media/FewxGbpWIAEdPRa?format=jpg&name=small)\n\n[ジャイヒンド](https://tabelog.com/tokyo/A1318/A131808/13044522/)',
+  location:    {lon: 139.6676152710841, lat: 35.67435961480318},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FewxGbpWIAEdPRa?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'c38d79fa-7558-4bcc-b152-b2ed5fcf61f1',
+  title:       'トルカリ高円寺店',
+  description: 'ベンガル家庭料理のお店。\n\n![ビリヤニ](https://pbs.twimg.com/media/FbycGtaXkAIMiHs?format=jpg&name=small)\n\n[トルカリ高円寺店](https://twitter.com/torkarikouenji)',
+  location:    {lon: 139.6492176134142, lat: 35.70620167274712},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FbycGtaXkAIMiHs?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'a2e68cba-1436-42ec-87d3-ec4b23ed6814',
+  title:       'SpiceCurry Fifty',
+  description: '個性的な味わいのスパイスカレー屋さん。\n\n![三種盛りカレー](https://pbs.twimg.com/media/FiiftcVWQAYp1Fx?format=jpg&name=small)\n\n[SpiceCurry Fifty](https://www.instagram.com/spicecurry_fifty/)',
+  location:    {lon: 139.66744801156668, lat: 35.66026308717452},
+  keylink:     1,
+  links:       [
+    'https://pbs.twimg.com/media/FiiftcVWQAYp1Fx?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FjWLMwwXEAEueFX?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'db927759-9f85-41d5-b753-ed1c9e1f98c0',
+  title:       'フクモナ',
+  description: 'ランチに美味しいカレーを提供しているカフェ。\n\n![キーマカレー](https://pbs.twimg.com/media/FjGwyCsWIAExjhJ?format=jpg&name=small)とってもキメの細かい挽肉を使った舌触りの滑らかなキーマカレー!\n\n[フクモナ](http://fukumona.com/)',
+  location:    {lon: 135.23942672689333, lat: 34.834312912952875},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FjGwyCsWIAExjhJ?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '59d05971-3c83-442c-96b9-3c8507e5beea',
+  title:       'タイ料理 Benjarong',
+  description: 'タイ人が作る本場のタイ料理のお店。\n\n![グリーンカレー](https://pbs.twimg.com/media/Fjl4edcWIAE0Kzd?format=jpg&name=small)\n\n[タイ料理 Benjarong](https://tabelog.com/okinawa/A4703/A470404/47027332/)',
+  location:    {lon: 127.73546984210724, lat: 26.2756056296556},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/Fjl4edcWIAE0Kzd?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '44857754-5bfe-4773-a5cd-95bcda627ecd',
+  title:       '大阪マドラス22号店',
+  description: '30種類のスパイスと4種類のフルーツを1週間かけて煮込んだ情熱カレーのお店。\n\n![大阪マドラスカレー](https://pbs.twimg.com/media/Fjvvo4qXoAA67yX?format=jpg&name=small)\n\n[大阪マドラス22号店](https://madrascurry.jp)',
+  location:    {lon: 139.66848475389625, lat: 35.66293084904597},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/Fjvvo4qXoAA67yX?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'be10387b-3097-4172-8ca6-e2cf1a1f1c71',
+  title:       '時計仕掛けのスパイス',
+  description: 'ゴージャスな具に目を奪われる、こだわりの薬膳出汁カレーのお店。\n\n![三種盛り](https://pbs.twimg.com/media/FkEWQxTXoAA2Vzv?format=jpg&name=small)\n\n[薬膳出汁カレー時計仕掛けのスパイス](https://twitter.com/LC5pJakuAv3XDD4/)',
+  location:    {lon: 139.77030965542497, lat: 35.69264185068271},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FkEWQxTXoAA2Vzv?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'ca3f9962-fe00-41da-a72a-c88f5d65f257',
+  title:       'スパイスカレーまるせ',
+  description: '古民家を改造したスパイスカレー屋さん。美味しいだけでなく、駅近で便利!!\n\n![三種盛り](https://pbs.twimg.com/media/Fky6HZ0WQAEsUcR?format=jpg&name=small)\n\n[スパイスカレーまるせ](https://www.currymaruse.com/)',
+  location:    {lon: 135.496886755402, lat: 34.71190876820046},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/Fky6HZ0WQAEsUcR?format=jpg&name=small'
   ]
 }]

@@ -2,7 +2,7 @@ import {FC, ReactNode, useCallback} from 'react'
 import styled from 'styled-components'
 import {useCesium} from 'resium'
 import {DataListPalet, DataListBox, DataListItem} from '1_atoms/DataList'
-import {useSpotItem} from './useSpotItem'
+import {useVisualItemUtil} from 'controller/useVisualItem'
 
 const Span = styled.span`
   display:  inline-block;
@@ -16,12 +16,12 @@ type Props = {
 }
 export const SpotList:FC<Props> = ({header, cashkey, spots}) => {
   const {viewer} = useCesium()
-  const {pickItem} = useSpotItem(cashkey)
+  const {pickOne} = useVisualItemUtil(cashkey)
 
   const selectItem = useCallback((id:string) => {
-    pickItem(id)
+    pickOne(id)
     viewer.flyTo(viewer.entities.getById(id))
-  }, [viewer, pickItem])
+  }, [viewer, pickOne])
 
   return <DataListPalet title={header}>
     <DataListBox>
