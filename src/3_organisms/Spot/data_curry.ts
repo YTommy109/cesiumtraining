@@ -114,7 +114,8 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/FQMpfn8XMAEgGEO?format=jpg&name=small',
     'https://pbs.twimg.com/media/FNOGpzGX0AEDlUy?format=jpg&name=small',
     'https://pbs.twimg.com/media/FL2jo1dWYBwsJNL?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FK94x_0aIAI_ZmE?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FK94x_0aIAI_ZmE?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Fme1pT-X0AISfe-?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -504,16 +505,6 @@ export const DATA_CURRY:SpotItem[] = [{
   ]
 }, {
   ...INIT_SPOT,
-  id:          'b2bd3a04-fd3f-4938-bc91-910312083628',
-  title:       'チャオサイゴンパリバール',
-  description: 'アジアン屋台料理のお店。\n\n![グリーンカレー](https://pbs.twimg.com/media/FfzgNZdWYAc4Ofp?format=jpg&name=small)\n\n[チャオサイゴンパリバール](https://tabelog.com/tokyo/A1318/A131808/13270955/)',
-  location:    {lon: 139.65841495826558, lat: 35.673006125159354},
-  keylink:     0,
-  links:       [
-    'https://pbs.twimg.com/media/FfzgNZdWYAc4Ofp?format=jpg&name=small'
-  ]
-}, {
-  ...INIT_SPOT,
   id:          '8333deab-77f4-4404-938c-0b50c17f2b81',
   title:       'BAGBAG',
   description: 'スープカレーの本場。\n\n![カレー](https://pbs.twimg.com/media/Fgh2ZSsXgAAaZGt?format=jpg&name=small)\n\n[BAGBAG](https://bag-bag.jp/shop/minami1jou/)',
@@ -643,5 +634,15 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/Fky6HZ0WQAEsUcR?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '5d480314-f33e-499a-84d5-05041c19bfe0',
+  title:       'デリー銀座店',
+  description: 'セブンイレブンのカレーフェスで再現されてたカシミールカレーの本家!!\n\n![二種盛り](https://pbs.twimg.com/media/FmkNGETWIAIhIUO?format=jpg&name=small)\n\n[デリー銀座店](https://www.delhi.co.jp/store/ginza.php)',
+  location:    {lon: 139.76085352690788, lat: 35.67140057627135},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FmkNGETWIAIhIUO?format=jpg&name=small'
   ]
 }]
