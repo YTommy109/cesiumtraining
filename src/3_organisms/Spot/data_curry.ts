@@ -335,13 +335,14 @@ export const DATA_CURRY:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '6b8e1faa-801a-4edf-ab67-4d7df8ddc114',
   title:       '般°若',
-  description: 'カレー好きの松尾さんがプロデュースしたスパイスカレー屋さん。\n\n![カツカレー](https://pbs.twimg.com/media/FPtv63_WQAAZpWY?format=jpg&name=small)\n\n[般°若](http://www.pannya.jp)',
+  description: 'カレー好きの松尾貴史さんがプロデュースしたスパイスカレー屋さん。\n\n![カツカレー](https://pbs.twimg.com/media/FPtv63_WQAAZpWY?format=jpg&name=small)\n\n[般°若](http://www.pannya.jp)',
   location:    {lon: 139.66879531156678, lat: 35.66319149816798},
   keylink:     3,
   links:       [
     'https://pbs.twimg.com/media/FVvxa9jXoAAmXJ6?format=jpg&name=small',
     'https://pbs.twimg.com/media/FRLhcueXwAcy1MJ?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FPtv63_WQAAZpWY?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FPtv63_WQAAZpWY?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FnIQctoWQAUdMol?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -644,5 +645,15 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/FmkNGETWIAIhIUO?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'bbc9416b-6379-48fd-a59d-eceb13da0f4f',
+  title:       '46ma',
+  description: '下北沢カレー王座決定戦2連覇を誇る 46ma の特製チキンカレー!!!\n\n![特製チキンカレー](https://pbs.twimg.com/media/FnNnojKXoAEwXFp?format=jpg&name=small)\n\n[46ma](https://www.46ma-simokitazawa.com/)',
+  location:    {lon: 139.66945210001276, lat: 35.66172874767686},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FnNnojKXoAEwXFp?format=jpg&name=small'
   ]
 }]
