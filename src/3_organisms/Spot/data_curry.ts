@@ -48,7 +48,8 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/FNZeYSYX0AIasA9?format=jpg&name=small',
     'https://pbs.twimg.com/media/FLSSv_TX0BgxTVS?format=jpg&name=small',
     'https://pbs.twimg.com/media/FKpQB9magAAQWIk?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FkeUHc_WAAAF0kD?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FkeUHc_WAAAF0kD?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FnSjaobXkAAEvhk?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -128,7 +129,8 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/Ff9zSYLWQAAfKHU?format=jpg&name=small',
     'https://pbs.twimg.com/media/Fd4Hn7ZWIAEdqwK?format=jpg&name=small',
     'https://pbs.twimg.com/media/FWJ8tedXkAAMdCM?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FiTC79nXEAAWTzk?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FiTC79nXEAAWTzk?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FniAa8rWIAATprQ?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -655,5 +657,15 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/FnNnojKXoAEwXFp?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'd19038d4-56e5-40a8-9b2f-f8cad98a00aa',
+  title:       'MIZUTANI CURRY',
+  description: 'まだ Google Map に載ってない (2023/01/26時点) 新しいスパイスカレー屋さん\n\n![三種盛り](https://pbs.twimg.com/media/FnYJO_zXoAAE18r?format=jpg&name=small)\n\n[MIZUTANI CURRY](https://www.instagram.com/mizutanicurry/)',
+  location:    {lon: 139.6687837511837, lat: 35.663122036659374},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FnYJO_zXoAAE18r?format=jpg&name=small'
   ]
 }]
