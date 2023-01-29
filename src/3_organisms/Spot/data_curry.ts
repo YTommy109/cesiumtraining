@@ -668,4 +668,14 @@ export const DATA_CURRY:SpotItem[] = [{
   links:       [
     'https://pbs.twimg.com/media/FnYJO_zXoAAE18r?format=jpg&name=small'
   ]
+}, {
+  ...INIT_SPOT,
+  id:          '582c0d54-f490-4464-9411-f51389bb9eb9',
+  title:       'スパイスカレー食堂 中野坂上店',
+  description: 'スリランカ航空グループシェフ監修で、本場の味を再現するスリランカカレー屋さん。\n\n![ブラックポーク&パリップ](https://pbs.twimg.com/media/FnnJto7X0AACmSQ?format=jpg&name=small)\n\n[スパイスカレー食堂](https://www.spicecurrylabo.com/)',
+  location:    {lon: 139.6797288557434, lat: 35.69765965260493},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FnnJto7X0AACmSQ?format=jpg&name=small'
+  ]
 }]
