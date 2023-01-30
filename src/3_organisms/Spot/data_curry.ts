@@ -678,4 +678,14 @@ export const DATA_CURRY:SpotItem[] = [{
   links:       [
     'https://pbs.twimg.com/media/FnnJto7X0AACmSQ?format=jpg&name=small'
   ]
+}, {
+  ...INIT_SPOT,
+  id:          'b7d4e2d0-426f-45ae-968b-2166b496a50b',
+  title:       'TOKYO SPICE CURRY 赤と黒',
+  description: '下北沢では珍しいカシミールカレーが食べられる。\n\n![広島県産牡蠣の薬膳カレー](https://pbs.twimg.com/media/FnsFqE1XgAAftEh?format=jpg&name=small)\n\n[TOKYO SPICE CURRY 赤と黒](https://twitter.com/akakuro_curry/)',
+  location:    {lon: 139.66818648457817, lat: 35.661321185095005},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FnsFqE1XgAAftEh?format=jpg&name=small'
+  ]
 }]
