@@ -175,7 +175,8 @@ export const DATA_CURRY:SpotItem[] = [{
   location:    {lon: 139.66634188240832, lat: 35.66493182777607},
   keylink:     0,
   links:       [
-    'https://pbs.twimg.com/media/FeHWrXTWAAIAumQ?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FeHWrXTWAAIAumQ?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Fn2Y__JXEAgmsaG?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -687,5 +688,15 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/FnsFqE1XgAAftEh?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '73d9d82d-edaf-4a88-a49a-a7816d37b428',
+  title:       '平日昼だけ',
+  description: '和にとことんこだわったカレーを提供するカレー屋さん。\n\n![和だしそぼろカレー](https://pbs.twimg.com/media/FnxPMMCWQAA7YrT?format=jpg&name=small)\n\n[平日昼だけ](https://www.instagram.com/heijituhirudake/)',
+  location:    {lon: 139.62222126923797, lat: 35.70505262091246},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FnxPMMCWQAA7YrT?format=jpg&name=small'
   ]
 }]
