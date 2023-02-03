@@ -699,4 +699,14 @@ export const DATA_CURRY:SpotItem[] = [{
   links:       [
     'https://pbs.twimg.com/media/FnxPMMCWQAA7YrT?format=jpg&name=small'
   ]
+}, {
+  ...INIT_SPOT,
+  id:          'a4c2c15d-39ac-48fc-9853-c807e3fc9e5b',
+  title:       'uni-BAR',
+  description: '本格的なスパイスカレーを出してくれる BAR。\n\n![ポークビンダルーとスパイシーチキン](https://pbs.twimg.com/media/FoA55IMX0AA8BLE?format=jpg&name=small)\n\n[uni-BAR](https://unibar.exblog.jp/)',
+  location:    {lon: 139.66272478664942, lat: 35.67508260439993},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FoA55IMX0AA8BLE?format=jpg&name=small'
+  ]
 }]
