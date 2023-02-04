@@ -709,4 +709,14 @@ export const DATA_CURRY:SpotItem[] = [{
   links:       [
     'https://pbs.twimg.com/media/FoA55IMX0AA8BLE?format=jpg&name=small'
   ]
+}, {
+  ...INIT_SPOT,
+  id:          'ead5dbe0-404b-4fcb-805c-1a44cf8ee79b',
+  title:       'トトノカレー',
+  description: 'スリランカ人に教わったチキンカレーを提供してくださるカレー屋さん。\n\n![パンチカレーとマスターカレーの二種盛り](https://pbs.twimg.com/media/FoGDS6oXgAAu3pF?format=jpg&name=small)\n\n[トトノカレー](https://totono.co.jp/curry/)',
+  location:    {lon: 139.66746645595921, lat: 35.67831125740291},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FoGDS6oXgAAu3pF?format=jpg&name=small'
+  ]
 }]
