@@ -719,4 +719,34 @@ export const DATA_CURRY:SpotItem[] = [{
   links:       [
     'https://pbs.twimg.com/media/FoGDS6oXgAAu3pF?format=jpg&name=small'
   ]
+}, {
+  ...INIT_SPOT,
+  id:          '6ff1237f-a76b-4222-afb7-f76dfcde9273',
+  title:       '天馬屋',
+  description: 'カレーパンが有名なお店。\n\n![薬膳チキンカレー](https://pbs.twimg.com/media/FoQIkC2WIAAFlPH?format=jpg&name=small)\n\n[天馬屋](https://tabelog.com/tokyo/A1318/A131802/13163101/)',
+  location:    {lon: 139.66820546945004, lat: 35.66117050236051},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FoQIkC2WIAAFlPH?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'bd0d4ba4-8d8c-42c6-a289-5525357ef14b',
+  title:       'ミラクルブレンド',
+  description: 'インド系のスパイス&ビストロ。\n\n![チキンティッカマサラ](https://pbs.twimg.com/media/FoVgG8IXsAE9i0m?format=jpg&name=small)\n\n[ミラクルブレンド](https://miracle-blend.jp/)',
+  location:    {lon: 139.62136365595967, lat: 35.7043095618653},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FoVgG8IXsAE9i0m?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '82c77233-739e-4658-b7a8-af96147e804f',
+  title:       '家帝 イエティ 大原店',
+  description: 'インド系のカレー屋さん。珍しくカツカレーがあったりする。\n\n![カツカレー](https://pbs.twimg.com/media/FofzHkjaMAAM35m?format=jpg&name=small)\n\n[家帝 イエティ 大原店](https://yeti-oohara.owst.jp/)',
+  location:    {lon: 139.6602268589105, lat: 35.67332644539149},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FofzHkjaMAAM35m?format=jpg&name=small'
+  ]
 }]
