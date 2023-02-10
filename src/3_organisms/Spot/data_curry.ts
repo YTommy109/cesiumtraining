@@ -30,7 +30,8 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/FL7-EhnXMAIzGys?format=jpg&name=small',
     'https://pbs.twimg.com/media/Fi8rtvpXgAA-iN0?format=jpg&name=small',
     'https://pbs.twimg.com/media/Fj6gK6AXoAA3KaA?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FkoZDKgXoAEV91P?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FkoZDKgXoAEV91P?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Fmz3l3wXoAYPnGd?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -77,7 +78,8 @@ export const DATA_CURRY:SpotItem[] = [{
   links:       [
     'https://pbs.twimg.com/media/FWFBA_aWYAUlxwt?format=jpg&name=small',
     'https://pbs.twimg.com/media/FfKTWf5XkAMgjkr?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FU9WERvXoAA6nKq?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FU9WERvXoAA6nKq?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FmvJZXCWQAIxXmu?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
