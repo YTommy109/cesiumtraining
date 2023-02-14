@@ -79,7 +79,8 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/FWFBA_aWYAUlxwt?format=jpg&name=small',
     'https://pbs.twimg.com/media/FfKTWf5XkAMgjkr?format=jpg&name=small',
     'https://pbs.twimg.com/media/FU9WERvXoAA6nKq?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FmvJZXCWQAIxXmu?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FmvJZXCWQAIxXmu?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FpZu_IbX0AAvjvk?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -314,7 +315,8 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/Faf037MXoAAaR_A?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FYq4h3GX0AASl7G?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FYq4h3GX0AASl7G?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Fo5VVFsXsAA5UN9?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -507,7 +509,8 @@ export const DATA_CURRY:SpotItem[] = [{
   location:    {lon: 139.65841495826558, lat: 35.673006125159354},
   keylink:     0,
   links:       [
-    'https://pbs.twimg.com/media/FfzgNZdWYAc4Ofp?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FfzgNZdWYAc4Ofp?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FpdYa-iXoAM0xL6?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -729,7 +732,8 @@ export const DATA_CURRY:SpotItem[] = [{
   location:    {lon: 139.66820546945004, lat: 35.66117050236051},
   keylink:     0,
   links:       [
-    'https://pbs.twimg.com/media/FoQIkC2WIAAFlPH?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FoQIkC2WIAAFlPH?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Fpih-pEXwAAEQEZ?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -750,5 +754,15 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/FofzHkjaMAAM35m?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '4a882681-aec8-41fa-a6e6-1c2212ed62bb',
+  title:       'スパイスカレーアミバ',
+  description: '酸味のあるすっきりしたピリ辛味のカレー屋さん。\n\n![ポークカレーとエビイカカレー](https://pbs.twimg.com/media/FqGy3a6X0AAX9Ih?format=jpg&name=small)\n\n[スパイスカレーアミバ](https://twitter.com/spicecurryamiba)',
+  location:    {lon: 139.66926521363212, lat: 35.68997379789511},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FqGy3a6X0AAX9Ih?format=jpg&name=small'
   ]
 }]
