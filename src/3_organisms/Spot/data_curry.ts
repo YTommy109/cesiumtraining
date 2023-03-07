@@ -765,4 +765,14 @@ export const DATA_CURRY:SpotItem[] = [{
   links:       [
     'https://pbs.twimg.com/media/FqGy3a6X0AAX9Ih?format=jpg&name=small'
   ]
+}, {
+  ...INIT_SPOT,
+  id:          'fb4cbaa8-f6ee-4a86-91e8-6df1efcc7d25',
+  title:       'Curry&Cafe 茶話',
+  description: '太宰府カレーとドライキーマカレーの二種盛り。アクセントの梅干しがスパイスカレーにピッタリ!!\n\n![欲張りダブル](https://pbs.twimg.com/media/Fqb039zXoAUkaQ_?format=jpg&name=small)\n\n[Curry&Cafe 茶話](https://www.instagram.com/curryandcafe_sawa/)',
+  location:    {lon: 130.5342916442852, lat: 33.52220931175584},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/Fqb039zXoAUkaQ_?format=jpg&name=small'
+  ]
 }]
