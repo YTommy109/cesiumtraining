@@ -24,7 +24,8 @@ module.exports = {
   ],
   rules: {
     'no-multi-spaces':                                  'off',
-    'key-spacing':                                      ['error', {align: 'value'}],
+    "key-spacing": "off",
+    "@typescript-eslint/key-spacing": "off",
     '@typescript-eslint/consistent-type-definitions':   'off',
     '@typescript-eslint/type-annotation-spacing':       ['error', { before: false, after: false, overrides: { arrow: { before: true, after: true } } }],
     '@typescript-eslint/object-curly-spacing':          ['error', 'never'],
