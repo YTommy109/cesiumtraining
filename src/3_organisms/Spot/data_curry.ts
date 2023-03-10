@@ -775,4 +775,14 @@ export const DATA_CURRY:SpotItem[] = [{
   links:       [
     'https://pbs.twimg.com/media/Fqb039zXoAUkaQ_?format=jpg&name=small'
   ]
+}, {
+  ...INIT_SPOT,
+  id:          '1311393d-b4fa-4ac8-9b49-a546da932334',
+  title:       'ハルダモンカレー',
+  description: '煮干しだしの効いた美味しいカレー!\n\n![パラクチキンカレーと煮干しだしキーマ(魚と挽肉)](https://pbs.twimg.com/media/Fq1JMZJXsAAhsMJ?format=jpg&name=small)\n\n[ハルダモンカレー](https://www.instagram.com/harudamoncurry/)',
+  location:    {lon: 139.6807485982865, lat: 35.66937278534384},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/Fq1JMZJXsAAhsMJ?format=jpg&name=small'
+  ]
 }]
