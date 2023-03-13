@@ -722,7 +722,8 @@ export const DATA_CURRY:SpotItem[] = [{
   location:    {lon: 139.66746645595921, lat: 35.67831125740291},
   keylink:     0,
   links:       [
-    'https://pbs.twimg.com/media/FoGDS6oXgAAu3pF?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FoGDS6oXgAAu3pF?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FrEYURQWYAARuWd?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
