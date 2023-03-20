@@ -692,7 +692,8 @@ export const DATA_CURRY:SpotItem[] = [{
   location:    {lon: 139.66818648457817, lat: 35.661321185095005},
   keylink:     0,
   links:       [
-    'https://pbs.twimg.com/media/FnsFqE1XgAAftEh?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FnsFqE1XgAAftEh?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FrJh2hTXwAEKBNL?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -785,5 +786,15 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/Fq1JMZJXsAAhsMJ?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '3c1eccab-c464-4f27-b8b3-078fcea96660',
+  title:       'DIAMOND BIRYANI',
+  description: 'ビリヤニ専門店の究極カレー!\n\n![チキンカレー](https://pbs.twimg.com/media/FrY-jQqWYAAP5L6?format=jpg&name=small)\n\n[DIAMOND BIRYANI](https://tabelog.com/osaka/A2701/A270101/27095755/)',
+  location:    {lon: 135.49359509773004, lat: 34.71122822806653},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FrY-jQqWYAAP5L6?format=jpg&name=small'
   ]
 }]
