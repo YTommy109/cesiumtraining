@@ -435,7 +435,8 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/FPomRlUXMA0yDOU?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FO6P--EX0AAYtNZ?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FO6P--EX0AAYtNZ?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FryunLQXgAAzClh?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
