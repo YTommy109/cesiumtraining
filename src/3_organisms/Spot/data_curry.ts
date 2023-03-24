@@ -30,7 +30,8 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/FL7-EhnXMAIzGys?format=jpg&name=small',
     'https://pbs.twimg.com/media/Fi8rtvpXgAA-iN0?format=jpg&name=small',
     'https://pbs.twimg.com/media/Fj6gK6AXoAA3KaA?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FkoZDKgXoAEV91P?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FkoZDKgXoAEV91P?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Fmz3l3wXoAYPnGd?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -48,7 +49,8 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/FNZeYSYX0AIasA9?format=jpg&name=small',
     'https://pbs.twimg.com/media/FLSSv_TX0BgxTVS?format=jpg&name=small',
     'https://pbs.twimg.com/media/FKpQB9magAAQWIk?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FkeUHc_WAAAF0kD?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FkeUHc_WAAAF0kD?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FnSjaobXkAAEvhk?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -76,7 +78,9 @@ export const DATA_CURRY:SpotItem[] = [{
   links:       [
     'https://pbs.twimg.com/media/FWFBA_aWYAUlxwt?format=jpg&name=small',
     'https://pbs.twimg.com/media/FfKTWf5XkAMgjkr?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FU9WERvXoAA6nKq?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FU9WERvXoAA6nKq?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FmvJZXCWQAIxXmu?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FpZu_IbX0AAvjvk?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -114,7 +118,8 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/FQMpfn8XMAEgGEO?format=jpg&name=small',
     'https://pbs.twimg.com/media/FNOGpzGX0AEDlUy?format=jpg&name=small',
     'https://pbs.twimg.com/media/FL2jo1dWYBwsJNL?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FK94x_0aIAI_ZmE?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FK94x_0aIAI_ZmE?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Fme1pT-X0AISfe-?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -127,7 +132,8 @@ export const DATA_CURRY:SpotItem[] = [{
     'https://pbs.twimg.com/media/Ff9zSYLWQAAfKHU?format=jpg&name=small',
     'https://pbs.twimg.com/media/Fd4Hn7ZWIAEdqwK?format=jpg&name=small',
     'https://pbs.twimg.com/media/FWJ8tedXkAAMdCM?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FiTC79nXEAAWTzk?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FiTC79nXEAAWTzk?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FniAa8rWIAATprQ?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -172,7 +178,8 @@ export const DATA_CURRY:SpotItem[] = [{
   location:    {lon: 139.66634188240832, lat: 35.66493182777607},
   keylink:     0,
   links:       [
-    'https://pbs.twimg.com/media/FeHWrXTWAAIAumQ?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FeHWrXTWAAIAumQ?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Fn2Y__JXEAgmsaG?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -308,7 +315,8 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/Faf037MXoAAaR_A?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FYq4h3GX0AASl7G?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FYq4h3GX0AASl7G?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Fo5VVFsXsAA5UN9?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -334,13 +342,14 @@ export const DATA_CURRY:SpotItem[] = [{
   ...INIT_SPOT,
   id:          '6b8e1faa-801a-4edf-ab67-4d7df8ddc114',
   title:       '般°若',
-  description: 'カレー好きの松尾さんがプロデュースしたスパイスカレー屋さん。\n\n![カツカレー](https://pbs.twimg.com/media/FPtv63_WQAAZpWY?format=jpg&name=small)\n\n[般°若](http://www.pannya.jp)',
+  description: 'カレー好きの松尾貴史さんがプロデュースしたスパイスカレー屋さん。\n\n![カツカレー](https://pbs.twimg.com/media/FPtv63_WQAAZpWY?format=jpg&name=small)\n\n[般°若](http://www.pannya.jp)',
   location:    {lon: 139.66879531156678, lat: 35.66319149816798},
   keylink:     3,
   links:       [
     'https://pbs.twimg.com/media/FVvxa9jXoAAmXJ6?format=jpg&name=small',
     'https://pbs.twimg.com/media/FRLhcueXwAcy1MJ?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FPtv63_WQAAZpWY?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FPtv63_WQAAZpWY?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FnIQctoWQAUdMol?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -426,7 +435,8 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/FPomRlUXMA0yDOU?format=jpg&name=small',
-    'https://pbs.twimg.com/media/FO6P--EX0AAYtNZ?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FO6P--EX0AAYtNZ?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FryunLQXgAAzClh?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -500,17 +510,8 @@ export const DATA_CURRY:SpotItem[] = [{
   location:    {lon: 139.65841495826558, lat: 35.673006125159354},
   keylink:     0,
   links:       [
-    'https://pbs.twimg.com/media/FfzgNZdWYAc4Ofp?format=jpg&name=small'
-  ]
-}, {
-  ...INIT_SPOT,
-  id:          'b2bd3a04-fd3f-4938-bc91-910312083628',
-  title:       'チャオサイゴンパリバール',
-  description: 'アジアン屋台料理のお店。\n\n![グリーンカレー](https://pbs.twimg.com/media/FfzgNZdWYAc4Ofp?format=jpg&name=small)\n\n[チャオサイゴンパリバール](https://tabelog.com/tokyo/A1318/A131808/13270955/)',
-  location:    {lon: 139.65841495826558, lat: 35.673006125159354},
-  keylink:     0,
-  links:       [
-    'https://pbs.twimg.com/media/FfzgNZdWYAc4Ofp?format=jpg&name=small'
+    'https://pbs.twimg.com/media/FfzgNZdWYAc4Ofp?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FpdYa-iXoAM0xL6?format=jpg&name=small'
   ]
 }, {
   ...INIT_SPOT,
@@ -643,5 +644,158 @@ export const DATA_CURRY:SpotItem[] = [{
   keylink:     0,
   links:       [
     'https://pbs.twimg.com/media/Fky6HZ0WQAEsUcR?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '5d480314-f33e-499a-84d5-05041c19bfe0',
+  title:       'デリー銀座店',
+  description: 'セブンイレブンのカレーフェスで再現されてたカシミールカレーの本家!!\n\n![二種盛り](https://pbs.twimg.com/media/FmkNGETWIAIhIUO?format=jpg&name=small)\n\n[デリー銀座店](https://www.delhi.co.jp/store/ginza.php)',
+  location:    {lon: 139.76085352690788, lat: 35.67140057627135},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FmkNGETWIAIhIUO?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'bbc9416b-6379-48fd-a59d-eceb13da0f4f',
+  title:       '46ma',
+  description: '下北沢カレー王座決定戦2連覇を誇る 46ma の特製チキンカレー!!!\n\n![特製チキンカレー](https://pbs.twimg.com/media/FnNnojKXoAEwXFp?format=jpg&name=small)\n\n[46ma](https://www.46ma-simokitazawa.com/)',
+  location:    {lon: 139.66945210001276, lat: 35.66172874767686},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FnNnojKXoAEwXFp?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'd19038d4-56e5-40a8-9b2f-f8cad98a00aa',
+  title:       'MIZUTANI CURRY',
+  description: 'まだ Google Map に載ってない (2023/01/26時点) 新しいスパイスカレー屋さん\n\n![三種盛り](https://pbs.twimg.com/media/FnYJO_zXoAAE18r?format=jpg&name=small)\n\n[MIZUTANI CURRY](https://www.instagram.com/mizutanicurry/)',
+  location:    {lon: 139.6687837511837, lat: 35.663122036659374},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FnYJO_zXoAAE18r?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '582c0d54-f490-4464-9411-f51389bb9eb9',
+  title:       'スパイスカレー食堂 中野坂上店',
+  description: 'スリランカ航空グループシェフ監修で、本場の味を再現するスリランカカレー屋さん。\n\n![ブラックポーク&パリップ](https://pbs.twimg.com/media/FnnJto7X0AACmSQ?format=jpg&name=small)\n\n[スパイスカレー食堂](https://www.spicecurrylabo.com/)',
+  location:    {lon: 139.6797288557434, lat: 35.69765965260493},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FnnJto7X0AACmSQ?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'b7d4e2d0-426f-45ae-968b-2166b496a50b',
+  title:       'TOKYO SPICE CURRY 赤と黒',
+  description: '下北沢では珍しいカシミールカレーが食べられる。\n\n![広島県産牡蠣の薬膳カレー](https://pbs.twimg.com/media/FnsFqE1XgAAftEh?format=jpg&name=small)\n\n[TOKYO SPICE CURRY 赤と黒](https://twitter.com/akakuro_curry/)',
+  location:    {lon: 139.66818648457817, lat: 35.661321185095005},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FnsFqE1XgAAftEh?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FrJh2hTXwAEKBNL?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '73d9d82d-edaf-4a88-a49a-a7816d37b428',
+  title:       '平日昼だけ',
+  description: '和にとことんこだわったカレーを提供するカレー屋さん。\n\n![和だしそぼろカレー](https://pbs.twimg.com/media/FnxPMMCWQAA7YrT?format=jpg&name=small)\n\n[平日昼だけ](https://www.instagram.com/heijituhirudake/)',
+  location:    {lon: 139.62222126923797, lat: 35.70505262091246},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FnxPMMCWQAA7YrT?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'a4c2c15d-39ac-48fc-9853-c807e3fc9e5b',
+  title:       'uni-BAR',
+  description: '本格的なスパイスカレーを出してくれる BAR。\n\n![ポークビンダルーとスパイシーチキン](https://pbs.twimg.com/media/FoA55IMX0AA8BLE?format=jpg&name=small)\n\n[uni-BAR](https://unibar.exblog.jp/)',
+  location:    {lon: 139.66272478664942, lat: 35.67508260439993},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FoA55IMX0AA8BLE?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'ead5dbe0-404b-4fcb-805c-1a44cf8ee79b',
+  title:       'トトノカレー',
+  description: 'スリランカ人に教わったチキンカレーを提供してくださるカレー屋さん。\n\n![パンチカレーとマスターカレーの二種盛り](https://pbs.twimg.com/media/FoGDS6oXgAAu3pF?format=jpg&name=small)\n\n[トトノカレー](https://totono.co.jp/curry/)',
+  location:    {lon: 139.66746645595921, lat: 35.67831125740291},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FoGDS6oXgAAu3pF?format=jpg&name=small',
+    'https://pbs.twimg.com/media/FrEYURQWYAARuWd?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '6ff1237f-a76b-4222-afb7-f76dfcde9273',
+  title:       '天馬屋',
+  description: 'カレーパンが有名なお店。\n\n![薬膳チキンカレー](https://pbs.twimg.com/media/FoQIkC2WIAAFlPH?format=jpg&name=small)\n\n[天馬屋](https://tabelog.com/tokyo/A1318/A131802/13163101/)',
+  location:    {lon: 139.66820546945004, lat: 35.66117050236051},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FoQIkC2WIAAFlPH?format=jpg&name=small',
+    'https://pbs.twimg.com/media/Fpih-pEXwAAEQEZ?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'bd0d4ba4-8d8c-42c6-a289-5525357ef14b',
+  title:       'ミラクルブレンド',
+  description: 'インド系のスパイス&ビストロ。\n\n![チキンティッカマサラ](https://pbs.twimg.com/media/FoVgG8IXsAE9i0m?format=jpg&name=small)\n\n[ミラクルブレンド](https://miracle-blend.jp/)',
+  location:    {lon: 139.62136365595967, lat: 35.7043095618653},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FoVgG8IXsAE9i0m?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '82c77233-739e-4658-b7a8-af96147e804f',
+  title:       '家帝 イエティ 大原店',
+  description: 'インド系のカレー屋さん。珍しくカツカレーがあったりする。\n\n![カツカレー](https://pbs.twimg.com/media/FofzHkjaMAAM35m?format=jpg&name=small)\n\n[家帝 イエティ 大原店](https://yeti-oohara.owst.jp/)',
+  location:    {lon: 139.6602268589105, lat: 35.67332644539149},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FofzHkjaMAAM35m?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '4a882681-aec8-41fa-a6e6-1c2212ed62bb',
+  title:       'スパイスカレーアミバ',
+  description: '酸味のあるすっきりしたピリ辛味のカレー屋さん。\n\n![ポークカレーとエビイカカレー](https://pbs.twimg.com/media/FqGy3a6X0AAX9Ih?format=jpg&name=small)\n\n[スパイスカレーアミバ](https://twitter.com/spicecurryamiba)',
+  location:    {lon: 139.66926521363212, lat: 35.68997379789511},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FqGy3a6X0AAX9Ih?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          'fb4cbaa8-f6ee-4a86-91e8-6df1efcc7d25',
+  title:       'Curry&Cafe 茶話',
+  description: '太宰府カレーとドライキーマカレーの二種盛り。アクセントの梅干しがスパイスカレーにピッタリ!!\n\n![欲張りダブル](https://pbs.twimg.com/media/Fqb039zXoAUkaQ_?format=jpg&name=small)\n\n[Curry&Cafe 茶話](https://www.instagram.com/curryandcafe_sawa/)',
+  location:    {lon: 130.5342916442852, lat: 33.52220931175584},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/Fqb039zXoAUkaQ_?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '1311393d-b4fa-4ac8-9b49-a546da932334',
+  title:       'ハルダモンカレー',
+  description: '煮干しだしの効いた美味しいカレー!\n\n![パラクチキンカレーと煮干しだしキーマ(魚と挽肉)](https://pbs.twimg.com/media/Fq1JMZJXsAAhsMJ?format=jpg&name=small)\n\n[ハルダモンカレー](https://www.instagram.com/harudamoncurry/)',
+  location:    {lon: 139.6807485982865, lat: 35.66937278534384},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/Fq1JMZJXsAAhsMJ?format=jpg&name=small'
+  ]
+}, {
+  ...INIT_SPOT,
+  id:          '3c1eccab-c464-4f27-b8b3-078fcea96660',
+  title:       'DIAMOND BIRYANI',
+  description: 'ビリヤニ専門店の究極カレー!\n\n![チキンカレー](https://pbs.twimg.com/media/FrY-jQqWYAAP5L6?format=jpg&name=small)\n\n[DIAMOND BIRYANI](https://tabelog.com/osaka/A2701/A270101/27095755/)',
+  location:    {lon: 135.49359509773004, lat: 34.71122822806653},
+  keylink:     0,
+  links:       [
+    'https://pbs.twimg.com/media/FrY-jQqWYAAP5L6?format=jpg&name=small'
   ]
 }]
