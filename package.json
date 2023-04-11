@@ -27,7 +27,7 @@
     "vite-plugin-svgr": "^2.2.2"
   },
   "devDependencies": {
-    "@tanstack/react-query-devtools": "^4.12.0",
+    "@tanstack/react-query-devtools": "^4.29.1",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@types/styled-components": "^5.1.26",
